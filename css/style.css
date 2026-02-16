@@ -195,19 +195,23 @@ h4 { font-size: 1.1rem; }
 }
 
 /* --- Recipe Card (text-only, no image) --- */
-.card {
+a.card {
+  display: flex;
+  flex-direction: column;
   background: var(--bg);
   border-radius: var(--radius);
   border: var(--border);
   box-shadow: var(--shadow);
   transition: box-shadow var(--transition), transform var(--transition);
-  display: flex;
-  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
-.card:hover {
+a.card:hover {
   box-shadow: 6px 6px 0px #000000;
   transform: translate(-2px, -2px);
+  color: inherit;
 }
 
 .card__body {
@@ -227,14 +231,10 @@ h4 { font-size: 1.1rem; }
 .card__title {
   margin-bottom: 10px;
   font-size: 1.35rem;
-}
-
-.card__title a {
   color: var(--text);
-  text-decoration: none;
 }
 
-.card__title a:hover {
+a.card:hover .card__title {
   color: var(--pink-hover);
 }
 
