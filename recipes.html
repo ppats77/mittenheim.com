@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes - Mittenheim</title>
+  <meta name="description" content="Browse all Mittenheim recipes. Filter by cuisine, meal type, or difficulty.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Mittenheim</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/recipes.html" class="active">Recipes</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <h1>All Recipes</h1>
+      <p>Every dish we've shared, all in one place. Use the filters to find exactly what you're craving.</p>
+    </div>
+  </section>
+
+  <!-- Filter + Grid -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="middle eastern">Middle Eastern</button>
+        <button class="filter-btn" data-filter="dinner">Dinner</button>
+        <button class="filter-btn" data-filter="lunch">Lunch</button>
+        <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+        <button class="filter-btn" data-filter="easy">Easy</button>
+      </div>
+
+      <div class="recipes-grid" id="all-recipes">
+
+        <div class="card" data-tags="middle eastern, dinner">
+          <a href="/recipes/spiced-lamb-flatbread/" class="card__image">
+            <img src="/images/placeholder.svg" alt="Spiced Lamb Flatbread">
+          </a>
+          <div class="card__body">
+            <h3 class="card__title"><a href="/recipes/spiced-lamb-flatbread/">Spiced Lamb Flatbread</a></h3>
+            <p class="card__desc">Tender spiced lamb on crispy homemade flatbread, topped with fresh herbs and a drizzle of tahini yogurt.</p>
+            <div class="card__tags">
+              <span class="tag">Middle Eastern</span>
+              <span class="tag">Dinner</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mittenheim. Made with love and good ingredients.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

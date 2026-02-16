@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mittenheim - A Food Blog</title>
+  <meta name="description" content="Mittenheim is a food blog sharing heartfelt recipes, stories, and the joy of home cooking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">Mittenheim</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/recipes.html">Recipes</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Good food, told with heart</h1>
+      <p>Recipes passed down, discovered, and dreamed up &mdash; each one with a story worth sharing. Welcome to our kitchen.</p>
+    </div>
+  </section>
+
+  <!-- Latest Recipes -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest Recipes</h2>
+        <a href="/recipes.html">View all &rarr;</a>
+      </div>
+
+      <div class="recipes-grid" id="latest-recipes">
+        <!-- Recipe cards will be added here as recipes are published -->
+
+        <div class="card">
+          <a href="/recipes/spiced-lamb-flatbread/" class="card__image">
+            <img src="/images/placeholder.svg" alt="Spiced Lamb Flatbread">
+          </a>
+          <div class="card__body">
+            <h3 class="card__title"><a href="/recipes/spiced-lamb-flatbread/">Spiced Lamb Flatbread</a></h3>
+            <p class="card__desc">Tender spiced lamb on crispy homemade flatbread, topped with fresh herbs and a drizzle of tahini yogurt.</p>
+            <div class="card__tags">
+              <span class="tag">Middle Eastern</span>
+              <span class="tag">Dinner</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mittenheim. Made with love and good ingredients.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
