@@ -156,7 +156,6 @@ h4 { font-size: 1.1rem; }
 .hero {
   padding: 100px 0 80px;
   text-align: center;
-  border-bottom: var(--border);
 }
 
 .hero h1 {
