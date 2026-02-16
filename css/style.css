@@ -1,6 +1,7 @@
 /* ============================================
    Mittenheim Food Blog - Design System
-   Gumroad-inspired: clean, minimal, generous whitespace
+   Gumroad neubrutalism: black, white, #FF90E8 pink
+   Thick borders, hard shadows, high contrast
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -12,17 +13,19 @@
 
 :root {
   --bg: #FFFFFF;
-  --bg-alt: #F9F9F7;
-  --text: #1A1A1A;
-  --text-body: #4A4A4A;
-  --accent: #E07A5F;
-  --accent-hover: #C96A51;
-  --border: #E8E8E4;
-  --radius: 8px;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --bg-alt: #F4F4F0;
+  --black: #000000;
+  --text: #000000;
+  --text-body: #333333;
+  --pink: #FF90E8;
+  --pink-hover: #e87bd0;
+  --border: 2px solid #000000;
+  --border-light: 1px solid #000000;
+  --radius: 6px;
+  --shadow: 4px 4px 0px #000000;
+  --shadow-sm: 2px 2px 0px #000000;
   --max-width: 1200px;
-  --transition: 0.2s ease;
+  --transition: 0.15s ease;
 }
 
 html {
@@ -39,13 +42,15 @@ body {
 }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
   transition: color var(--transition);
 }
 
 a:hover {
-  color: var(--accent-hover);
+  color: var(--pink-hover);
 }
 
 img {
@@ -57,8 +62,8 @@ img {
 h1, h2, h3, h4 {
   color: var(--text);
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 h1 { font-size: 3rem; }
@@ -81,17 +86,13 @@ h4 { font-size: 1.1rem; }
   background: var(--bg-alt);
 }
 
-.text-center {
-  text-align: center;
-}
-
 /* --- Navigation --- */
 .nav {
   position: sticky;
   top: 0;
   z-index: 100;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  border-bottom: var(--border);
 }
 
 .nav__inner {
@@ -102,14 +103,15 @@ h4 { font-size: 1.1rem; }
 }
 
 .nav__logo {
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   color: var(--text);
-  letter-spacing: -0.03em;
+  text-decoration: none;
+  letter-spacing: -0.04em;
 }
 
 .nav__logo:hover {
-  color: var(--text);
+  color: var(--pink);
 }
 
 .nav__links {
@@ -119,15 +121,16 @@ h4 { font-size: 1.1rem; }
 }
 
 .nav__links a {
-  color: var(--text-body);
+  color: var(--text);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
   transition: color var(--transition);
 }
 
 .nav__links a:hover,
 .nav__links a.active {
-  color: var(--text);
+  color: var(--pink-hover);
 }
 
 .nav__toggle {
@@ -141,9 +144,10 @@ h4 { font-size: 1.1rem; }
 .nav__toggle span {
   display: block;
   width: 24px;
-  height: 2px;
+  height: 2.5px;
   background: var(--text);
   margin: 5px 0;
+  border-radius: 1px;
   transition: transform var(--transition), opacity var(--transition);
 }
 
@@ -151,16 +155,17 @@ h4 { font-size: 1.1rem; }
 .hero {
   padding: 100px 0 80px;
   text-align: center;
+  border-bottom: var(--border);
 }
 
 .hero h1 {
   margin-bottom: 20px;
-  font-size: 3.5rem;
-  letter-spacing: -0.03em;
+  font-size: 3.8rem;
+  letter-spacing: -0.04em;
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 560px;
   margin: 0 auto;
   font-size: 1.15rem;
   color: var(--text-body);
@@ -170,7 +175,7 @@ h4 { font-size: 1.1rem; }
 .recipes-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 28px;
 }
 
 .section-header {
@@ -186,42 +191,39 @@ h4 { font-size: 1.1rem; }
 
 .section-header a {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* --- Recipe Card --- */
 .card {
   background: var(--bg);
   border-radius: var(--radius);
+  border: var(--border);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
 .card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px #000000;
+  transform: translate(-2px, -2px);
 }
 
 .card__image {
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--bg-alt);
+  border-bottom: var(--border);
 }
 
 .card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card:hover .card__image img {
-  transform: scale(1.03);
 }
 
 .card__body {
-  padding: 24px;
+  padding: 20px;
 }
 
 .card__title {
@@ -230,14 +232,15 @@ h4 { font-size: 1.1rem; }
 
 .card__title a {
   color: var(--text);
+  text-decoration: none;
 }
 
 .card__title a:hover {
-  color: var(--accent);
+  color: var(--pink-hover);
 }
 
 .card__desc {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--text-body);
   margin-bottom: 16px;
   display: -webkit-box;
@@ -249,19 +252,20 @@ h4 { font-size: 1.1rem; }
 .card__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .tag {
   display: inline-block;
-  padding: 4px 12px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   border-radius: 100px;
-  background: var(--bg-alt);
-  color: var(--text-body);
+  border: 1.5px solid var(--black);
+  background: var(--pink);
+  color: var(--black);
 }
 
 /* --- Filter Bar --- */
@@ -276,25 +280,28 @@ h4 { font-size: 1.1rem; }
 .filter-btn {
   padding: 8px 20px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: inherit;
-  border: 1px solid var(--border);
+  border: var(--border);
   border-radius: 100px;
   background: var(--bg);
-  color: var(--text-body);
+  color: var(--text);
   cursor: pointer;
   transition: all var(--transition);
+  box-shadow: var(--shadow-sm);
 }
 
 .filter-btn:hover {
-  border-color: var(--text-body);
-  color: var(--text);
+  background: var(--bg-alt);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #000000;
 }
 
 .filter-btn.active {
-  background: var(--text);
+  background: var(--black);
   color: var(--bg);
-  border-color: var(--text);
+  box-shadow: none;
+  transform: translate(2px, 2px);
 }
 
 /* --- Recipe Detail Page --- */
@@ -303,6 +310,7 @@ h4 { font-size: 1.1rem; }
   height: 480px;
   overflow: hidden;
   background: var(--bg-alt);
+  border-bottom: var(--border);
 }
 
 .recipe-hero img {
@@ -314,7 +322,7 @@ h4 { font-size: 1.1rem; }
 .recipe-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
 }
 
 .recipe-header {
@@ -329,25 +337,27 @@ h4 { font-size: 1.1rem; }
   color: #fff;
   font-size: 2.8rem;
   margin-bottom: 12px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 
 .recipe-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
   margin-bottom: 8px;
 }
 
 .recipe-meta span {
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
 }
 
 .recipe-meta .tag {
-  background: rgba(255,255,255,0.2);
-  color: #fff;
+  background: var(--pink);
+  color: var(--black);
+  border-color: rgba(255,255,255,0.3);
 }
 
 .recipe-content {
@@ -365,8 +375,10 @@ h4 { font-size: 1.1rem; }
 }
 
 .recipe-box {
-  background: var(--bg-alt);
+  background: var(--bg);
+  border: var(--border);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 48px;
   margin-bottom: 48px;
 }
@@ -374,7 +386,7 @@ h4 { font-size: 1.1rem; }
 .recipe-box h2 {
   margin-bottom: 32px;
   padding-bottom: 16px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: var(--border);
 }
 
 .recipe-box h3 {
@@ -410,6 +422,8 @@ h4 { font-size: 1.1rem; }
 .about-photo {
   border-radius: var(--radius);
   overflow: hidden;
+  border: var(--border);
+  box-shadow: var(--shadow);
   background: var(--bg-alt);
   aspect-ratio: 3 / 4;
 }
@@ -430,31 +444,23 @@ h4 { font-size: 1.1rem; }
 
 /* --- Footer --- */
 .footer {
-  border-top: 1px solid var(--border);
+  border-top: var(--border);
   padding: 40px 0;
   text-align: center;
   font-size: 0.85rem;
   color: var(--text-body);
+  background: var(--black);
+  color: rgba(255,255,255,0.6);
 }
 
 .footer a {
-  color: var(--text-body);
+  color: rgba(255,255,255,0.6);
   margin: 0 12px;
+  text-decoration: none;
 }
 
 .footer a:hover {
-  color: var(--text);
-}
-
-/* --- Empty State --- */
-.empty-state {
-  text-align: center;
-  padding: 80px 24px;
-  color: var(--text-body);
-}
-
-.empty-state p {
-  font-size: 1.1rem;
+  color: var(--pink);
 }
 
 /* --- Buttons --- */
@@ -462,29 +468,41 @@ h4 { font-size: 1.1rem; }
   display: inline-block;
   padding: 12px 28px;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   font-family: inherit;
   border-radius: var(--radius);
-  border: none;
+  border: var(--border);
   cursor: pointer;
   transition: all var(--transition);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }
 
 .btn--primary {
-  background: var(--accent);
-  color: #fff;
+  background: var(--pink);
+  color: var(--black);
 }
 
 .btn--primary:hover {
-  background: var(--accent-hover);
-  color: #fff;
+  background: var(--pink-hover);
+  color: var(--black);
 }
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
   .recipes-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 20px;
   }
 
   .about-layout {
@@ -513,7 +531,11 @@ h4 { font-size: 1.1rem; }
 
   .recipes-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .card {
+    box-shadow: 3px 3px 0px #000000;
   }
 
   .nav__links {
@@ -524,7 +546,7 @@ h4 { font-size: 1.1rem; }
     right: 0;
     flex-direction: column;
     background: var(--bg);
-    border-bottom: 1px solid var(--border);
+    border-bottom: var(--border);
     padding: 16px 24px;
     gap: 16px;
   }
@@ -591,17 +613,20 @@ h4 { font-size: 1.1rem; }
   .recipe-meta .tag {
     background: #eee;
     color: #333;
+    border-color: #ccc;
   }
 
   .recipe-box {
     border: 1px solid #ccc;
+    box-shadow: none;
     break-inside: avoid;
   }
 
-  .recipe-story {
-    break-after: avoid;
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
 
-  a { color: #000; }
+  a { color: #000; text-decoration: none; }
   a::after { content: none; }
 }

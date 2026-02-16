@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
-  <rect width="400" height="300" fill="#F9F9F7"/>
-  <path d="M185 120 C185 120 175 140 175 155 C175 160.5 180.4 165 185 165 C189.6 165 195 160.5 195 155 C195 140 185 120 185 120Z" fill="#E8E8E4"/>
-  <path d="M200 110 C200 110 188 135 188 152 C188 158.6 194.4 164 200 164 C205.6 164 212 158.6 212 152 C212 135 200 110 200 110Z" fill="#E07A5F" opacity="0.6"/>
-  <path d="M215 120 C215 120 205 140 205 155 C205 160.5 210.4 165 215 165 C219.6 165 225 160.5 225 155 C225 140 215 120 215 120Z" fill="#E8E8E4"/>
-  <circle cx="200" cy="185" r="30" stroke="#E8E8E4" stroke-width="3" fill="none"/>
-  <text x="200" y="230" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#BCBCB8">Recipe Photo</text>
+  <rect width="400" height="300" fill="#F4F4F0"/>
+  <rect x="0.5" y="0.5" width="399" height="299" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M185 120 C185 120 175 140 175 155 C175 160.5 180.4 165 185 165 C189.6 165 195 160.5 195 155 C195 140 185 120 185 120Z" fill="#E0E0DC"/>
+  <path d="M200 110 C200 110 188 135 188 152 C188 158.6 194.4 164 200 164 C205.6 164 212 158.6 212 152 C212 135 200 110 200 110Z" fill="#FF90E8" opacity="0.7"/>
+  <path d="M215 120 C215 120 205 140 205 155 C205 160.5 210.4 165 215 165 C219.6 165 225 160.5 225 155 C225 140 215 120 215 120Z" fill="#E0E0DC"/>
+  <circle cx="200" cy="185" r="30" stroke="#000" stroke-width="2" fill="none"/>
+  <text x="200" y="230" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#999">Recipe Photo</text>
 </svg>
