@@ -2,6 +2,7 @@
    Mittenheim Food Blog - Design System
    Gumroad neubrutalism: black, white, #FF90E8 pink
    Thick borders, hard shadows, high contrast
+   Text-first, no-photo design
    ============================================ */
 
 /* --- Reset & Base --- */
@@ -194,14 +195,15 @@ h4 { font-size: 1.1rem; }
   font-weight: 600;
 }
 
-/* --- Recipe Card --- */
+/* --- Recipe Card (text-only, no image) --- */
 .card {
   background: var(--bg);
   border-radius: var(--radius);
   border: var(--border);
-  overflow: hidden;
   box-shadow: var(--shadow);
   transition: box-shadow var(--transition), transform var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -209,25 +211,23 @@ h4 { font-size: 1.1rem; }
   transform: translate(-2px, -2px);
 }
 
-.card__image {
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: var(--bg-alt);
-  border-bottom: var(--border);
-}
-
-.card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .card__body {
-  padding: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
 }
 
 .card__title {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-size: 1.35rem;
 }
 
 .card__title a {
@@ -242,17 +242,11 @@ h4 { font-size: 1.1rem; }
 .card__desc {
   font-size: 0.92rem;
   color: var(--text-body);
-  margin-bottom: 16px;
+  line-height: 1.6;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
 }
 
 .tag {
@@ -304,40 +298,23 @@ h4 { font-size: 1.1rem; }
   transform: translate(2px, 2px);
 }
 
-/* --- Recipe Detail Page --- */
-.recipe-hero {
-  position: relative;
-  height: 480px;
-  overflow: hidden;
-  background: var(--bg-alt);
+/* --- Recipe Detail Page (text header, no hero image) --- */
+.recipe-hero--text {
+  background: var(--black);
   border-bottom: var(--border);
+  padding: 80px 0 64px;
 }
 
-.recipe-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.recipe-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
-}
-
-.recipe-header {
+.recipe-hero__inner {
   max-width: 800px;
-  margin: -80px auto 0;
-  position: relative;
-  z-index: 1;
+  margin: 0 auto;
   padding: 0 24px;
 }
 
-.recipe-header h1 {
+.recipe-hero--text h1 {
   color: #fff;
-  font-size: 2.8rem;
-  margin-bottom: 12px;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  font-size: 3rem;
+  letter-spacing: -0.03em;
 }
 
 .recipe-meta {
@@ -345,19 +322,19 @@ h4 { font-size: 1.1rem; }
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .recipe-meta span {
   font-size: 0.9rem;
   font-weight: 600;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.7);
 }
 
 .recipe-meta .tag {
   background: var(--pink);
   color: var(--black);
-  border-color: rgba(255,255,255,0.3);
+  border-color: var(--pink);
 }
 
 .recipe-content {
@@ -411,27 +388,10 @@ h4 { font-size: 1.1rem; }
   padding-left: 8px;
 }
 
-/* --- About Page --- */
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 64px;
-  align-items: start;
-}
-
-.about-photo {
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: var(--border);
-  box-shadow: var(--shadow);
-  background: var(--bg-alt);
-  aspect-ratio: 3 / 4;
-}
-
-.about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* --- About Page (text-only, centered) --- */
+.about-text--centered {
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .about-text h1 {
@@ -448,7 +408,6 @@ h4 { font-size: 1.1rem; }
   padding: 40px 0;
   text-align: center;
   font-size: 0.85rem;
-  color: var(--text-body);
   background: var(--black);
   color: rgba(255,255,255,0.6);
 }
@@ -505,17 +464,9 @@ h4 { font-size: 1.1rem; }
     gap: 20px;
   }
 
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about-photo {
-    max-width: 400px;
-  }
-
   h1 { font-size: 2.4rem; }
   .hero h1 { font-size: 2.8rem; }
+  .recipe-hero--text h1 { font-size: 2.4rem; }
 }
 
 @media (max-width: 600px) {
@@ -571,8 +522,11 @@ h4 { font-size: 1.1rem; }
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  .recipe-hero { height: 320px; }
-  .recipe-header h1 { font-size: 2rem; }
+  .recipe-hero--text {
+    padding: 48px 0 40px;
+  }
+
+  .recipe-hero--text h1 { font-size: 2rem; }
   .recipe-box { padding: 24px; }
 
   .section-header {
@@ -583,7 +537,7 @@ h4 { font-size: 1.1rem; }
 
 /* --- Print Styles --- */
 @media print {
-  .nav, .footer, .recipe-hero__overlay, .filter-bar {
+  .nav, .footer, .filter-bar {
     display: none;
   }
 
@@ -592,18 +546,13 @@ h4 { font-size: 1.1rem; }
     color: #000;
   }
 
-  .recipe-hero {
-    height: auto;
-    max-height: 300px;
+  .recipe-hero--text {
+    background: none;
+    padding: 24px 0;
   }
 
-  .recipe-header {
-    margin-top: 0;
-  }
-
-  .recipe-header h1 {
+  .recipe-hero--text h1 {
     color: #000;
-    text-shadow: none;
   }
 
   .recipe-meta span {
