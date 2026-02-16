@@ -101,7 +101,6 @@ h4 { font-size: 1.1rem; }
   align-items: center;
   justify-content: space-between;
   height: 72px;
-  position: relative;
 }
 
 .nav__logo {
@@ -121,9 +120,6 @@ h4 { font-size: 1.1rem; }
   align-items: center;
   gap: 32px;
   list-style: none;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .nav__links a {
@@ -523,7 +519,6 @@ a.card:hover .card__title {
     top: 72px;
     left: 0;
     right: 0;
-    transform: none;
     flex-direction: column;
     background: var(--bg);
     border-bottom: var(--border);
