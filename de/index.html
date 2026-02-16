@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mittenheim - Ein Food Blog</title>
+  <meta name="description" content="Mittenheim ist ein Food Blog mit herzlichen Rezepten, Geschichten und der Freude am Kochen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="alternate" hreflang="de" href="/de/">
+  <link rel="alternate" hreflang="en" href="/">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/de/" class="nav__logo">Mittenheim</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/de/recipes.html">Rezepte</a></li>
+        <li><a href="/de/about.html">&Uuml;ber uns</a></li>
+      </ul>
+      <div class="nav__right">
+        <a href="/" class="nav__lang">EN</a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Men&uuml; umschalten">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Gutes Essen, von Herzen erz&auml;hlt</h1>
+      <p>Rezepte, die weitergegeben, entdeckt und erdacht wurden &mdash; jedes mit einer Geschichte, die es wert ist, geteilt zu werden. Willkommen in unserer K&uuml;che.</p>
+    </div>
+  </section>
+
+  <!-- Latest Recipes -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Neueste Rezepte</h2>
+        <a href="/de/recipes.html">Alle ansehen &rarr;</a>
+      </div>
+
+      <div class="recipes-grid" id="latest-recipes">
+
+        <a class="card" href="/de/recipes/holiday-mulled-wine/">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Getr&auml;nke</span>
+              <span class="tag">Feiertag</span>
+              <span class="tag">Einfach</span>
+            </div>
+            <h3 class="card__title">Festlicher Gl&uuml;hwein mit Goji-Beeren</h3>
+            <p class="card__desc">Warmer Rotwein mit Gewürzen, Apfelmost, Zimt, Sternanis, Kardamom, Ingwer, Orange und Goji-Beeren.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/de/recipes/weeknight-curry/">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Vegan</span>
+              <span class="tag">Abendessen</span>
+              <span class="tag">Einfach</span>
+            </div>
+            <h3 class="card__title">Unser liebstes Feierabend-Curry</h3>
+            <p class="card__desc">Ein seidiges Curry aus einem Topf mit Dosentomaten, Kokosmilch, Blumenkohl, Tofu und Spinat. Fertig in 35 Minuten.</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mittenheim. Mit Liebe und guten Zutaten gemacht.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

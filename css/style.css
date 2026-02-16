@@ -152,6 +152,27 @@ h4 { font-size: 1.1rem; }
   transition: transform var(--transition), opacity var(--transition);
 }
 
+/* --- Language Switcher --- */
+.nav__lang {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1.5px solid var(--black);
+  border-radius: 100px;
+  background: var(--bg);
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all var(--transition);
+  margin-left: 8px;
+}
+
+.nav__lang:hover {
+  background: var(--pink);
+  color: var(--black);
+}
+
 /* --- Hero --- */
 .hero {
   padding: 100px 0 80px;
@@ -507,6 +528,12 @@ a.card:hover .card__title {
 
   .nav__toggle {
     display: block;
+  }
+
+  .nav__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   .nav__toggle.open span:nth-child(1) {
