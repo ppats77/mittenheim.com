@@ -101,6 +101,7 @@ h4 { font-size: 1.1rem; }
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  position: relative;
 }
 
 .nav__logo {
@@ -117,8 +118,12 @@ h4 { font-size: 1.1rem; }
 
 .nav__links {
   display: flex;
+  align-items: center;
   gap: 32px;
   list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav__links a {
@@ -165,12 +170,15 @@ h4 { font-size: 1.1rem; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: all var(--transition);
-  margin-left: 8px;
 }
 
 .nav__lang:hover {
   background: var(--pink);
   color: var(--black);
+}
+
+.nav__links a.nav__lang {
+  font-size: 0.8rem;
 }
 
 /* --- Hero --- */
@@ -515,6 +523,7 @@ a.card:hover .card__title {
     top: 72px;
     left: 0;
     right: 0;
+    transform: none;
     flex-direction: column;
     background: var(--bg);
     border-bottom: var(--border);
@@ -530,10 +539,8 @@ a.card:hover .card__title {
     display: block;
   }
 
-  .nav__right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .nav__links .nav__lang {
+    align-self: flex-start;
   }
 
   .nav__toggle.open span:nth-child(1) {
