@@ -375,6 +375,20 @@ a.card:hover .card__title {
   margin-bottom: 1em;
 }
 
+/* --- Recipe Photo --- */
+.recipe-photo {
+  margin: 48px 0;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.recipe-photo img {
+  width: 100%;
+  display: block;
+}
+
 .recipe-box {
   background: var(--bg);
   border: var(--border);
@@ -556,6 +570,7 @@ a.card:hover .card__title {
 
   .recipe-hero--text h1 { font-size: 2rem; }
   .recipe-box { padding: 24px; }
+  .recipe-photo { margin: 32px 0; box-shadow: 3px 3px 0px #000; }
 
   .section-header {
     flex-direction: column;
@@ -591,6 +606,11 @@ a.card:hover .card__title {
     background: #eee;
     color: #333;
     border-color: #ccc;
+  }
+
+  .recipe-photo {
+    box-shadow: none;
+    border: 1px solid #ccc;
   }
 
   .recipe-box {
