@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mittenheim.com/sitemap.xml
