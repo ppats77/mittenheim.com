@@ -38,6 +38,20 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mittenheim.com/recipes/spicy-wonton-sauce/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/spicy-wonton-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/spicy-wonton-sauce/"/>
+    <lastmod>2026-02-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/de/recipes/spicy-wonton-sauce/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/spicy-wonton-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/spicy-wonton-sauce/"/>
+    <lastmod>2026-02-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mittenheim.com/recipes/gnocchi-gorgonzola/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/gnocchi-gorgonzola/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/gnocchi-gorgonzola/"/>
