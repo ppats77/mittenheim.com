@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="bar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezepte - Mittenheim</title>
+  <meta name="description" content="Olle Mittenheim-Rezepte durchst&ouml;bern. Noch K&uuml;ch, Mahlzeit oder Schwierigkeit filtern.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="alternate" hreflang="en" href="/recipes.html">
+  <link rel="alternate" hreflang="de" href="/de/recipes.html">
+  <link rel="alternate" hreflang="bar" href="/by/recipes.html">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://mittenheim.com/by/recipes.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mittenheim">
+  <meta property="og:title" content="Rezepte">
+  <meta property="og:description" content="Olle Mittenheim-Rezepte durchstöbern. Noch Küch, Mahlzeit oder Schwierigkeit filtern.">
+  <meta property="og:url" content="https://mittenheim.com/by/recipes.html">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rezepte">
+  <meta name="twitter:description" content="Olle Mittenheim-Rezepte durchstöbern. Noch Küch, Mahlzeit oder Schwierigkeit filtern.">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="/by/" class="nav__logo">Mittenheim</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/by/recipes.html" class="active">Rezepte</a></li>
+        <li><a href="/by/about.html">&Uuml;ber mia</a></li>
+        <li><a href="/recipes.html" class="nav__lang">EN</a></li>
+        <li><a href="/de/recipes.html" class="nav__lang">DE</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Men&uuml; umschalten">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="hero" style="padding-bottom: 40px; border-bottom: none;">
+    <div class="container">
+      <h1>Olle Rezepte</h1>
+      <p>Olle Gerichte, de i teilt hab, auf oam Fleck. Nimm de Filter, dass&rsquo;d genau des findst, auf was&rsquo;d Lust hast.</p>
+    </div>
+  </section>
+
+  <!-- Filter + Grid -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-filter="all">Olle</button>
+        <button class="filter-btn" data-filter="middle eastern">Nah&ouml;stlich</button>
+        <button class="filter-btn" data-filter="vegan">Vegan</button>
+        <button class="filter-btn" data-filter="dinner">Abendessn</button>
+        <button class="filter-btn" data-filter="lunch">Mittogessn</button>
+        <button class="filter-btn" data-filter="breakfast">Fr&uuml;ahst&uuml;ck</button>
+        <button class="filter-btn" data-filter="drinks">Getr&auml;nke</button>
+        <button class="filter-btn" data-filter="holiday">Feiertog</button>
+        <button class="filter-btn" data-filter="baking">Backn</button>
+        <button class="filter-btn" data-filter="easy">Oafach</button>
+      </div>
+
+      <div class="recipes-grid" id="all-recipes">
+
+        <a class="card" href="/by/recipes/chicken-in-milk/" data-tags="dinner">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Abendessn</span>
+            </div>
+            <h3 class="card__title">Hendl in Muich</h3>
+            <p class="card__desc">A ganzes Hendl in Butter goldbraun obrata, dann in Muich mit Salbei, Zitronenschoin, Zimt und Knofe gschmort. D&rsquo;Muich gerinnt zua genialsten So&szlig;n.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/rahmschwammerl/" data-tags="dinner, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Abendessn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Rahmschwammerl</h3>
+            <p class="card__desc">Boarische Rahmso&szlig;n mit trockane Eierschwammerl, Gem&uuml;asbr&uuml;ah, Sahne und am Hauch Zitronenschoin.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/stuffed-pita-mushrooms/" data-tags="lunch, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Mittogessn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Gf&uuml;llte Pita mit Schwammerl</h3>
+            <p class="card__desc">Obratane Pita gf&uuml;llt mit gw&uuml;rztn Schwammerl, Knofe, K&uuml;mme und Cayenne. Schnell und macht satt.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/carrot-cake/" data-tags="baking">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+            </div>
+            <h3 class="card__title">M&ouml;hrenkuacha</h3>
+            <p class="card__desc">M&ouml;hrenkuacha ohne Mehl mit gmahlane Haselniss, Paniermehl, Zitronenschoin und Zimt. Leicht, saftig und nussig.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/potato-salad/" data-tags="lunch, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Mittogessn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Erdäpfesalat mit Cr&egrave;me fra&icirc;che</h3>
+            <p class="card__desc">Neue und blaue Erdäpfe in frischem Cr&egrave;me-fra&icirc;che-Dressing mit Oliven&ouml;l, Zitron, Radieserl und Kr&auml;utln.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/garlic-sherry-mushrooms/" data-tags="dinner, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Abendessn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Schwammerl in Knofe-Sherry</h3>
+            <p class="card__desc">Goldbraun obratane Schwammerl mit Knofe, trocknam Sherry, Cayennepfeffa und frischer Petersui. Fuchzehn Minutn.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/quark-apple-bake/" data-tags="baking, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Quarkauflauf mit &Auml;pfe</h3>
+            <p class="card__desc">Fluffiger Quark-Grie&szlig;-Auflauf &uuml;ber zarte &Auml;pfe. Oafachs Wohlf&uuml;hldessert, fertig in unter oaner Stund.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/hot-chocolate/" data-tags="drinks, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Getr&auml;nke</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Hoasse Trinkschokolad</h3>
+            <p class="card__desc">Echte hoasse Schokolad aus gschmolzaner Zartbitter- und Muichschokolad, warmer Muich, Zimt und wei&szlig;e Schokoladnsp&auml;n.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/mussels-tomato-sauce/" data-tags="dinner">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Abendessn</span>
+            </div>
+            <h3 class="card__title">Muscheln in Tomatnso&szlig;n</h3>
+            <p class="card__desc">Drei Kilo Muscheln, ged&auml;mpft in am aromatischn Tomatnsud mit Wei&szlig;wein, Rosmarin, Thymian und trockane Chilis. Dazua frischs Baguette.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/easter-bread-kulich/" data-tags="baking, holiday">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+              <span class="tag">Feiertog</span>
+            </div>
+            <h3 class="card__title">Osterbrot (Kulich)</h3>
+            <p class="card__desc">Traditionells osteurop&auml;ischs Osterbrot mit Rosinen, Zitronat, Mandln und am Schuss Rum. Drei Mal gehn lassn, a goldener Nachmittag.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/spicy-wonton-sauce/" data-tags="vegan, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Vegan</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Scharfe Wonton-So&szlig;n mit F&uuml;nf-Gw&uuml;rze-Pulver</h3>
+            <p class="card__desc">A w&uuml;rzige Dip-So&szlig;n mit Soja, Chili&ouml;l und chinesischem F&uuml;nf-Gw&uuml;rze-Pulver. Fertig in 5 Minutn.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/gnocchi-gorgonzola/" data-tags="lunch, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Mittogessn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Pasta mit Gorgonzolaso&szlig;n</h3>
+            <p class="card__desc">Schnelle, samtige Gorgonzola-Sahnesoßn &uuml;ber Fusilli mit ger&ouml;stete Pinienkern und Schnittlauch. Sechs Zuatatn, zwanzg Minutn.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/strawberry-rhubarb-pie/" data-tags="baking">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+            </div>
+            <h3 class="card__title">Erdbeer-Rhabarber-Pie</h3>
+            <p class="card__desc">Klassischer Doppelkrustn-Pie mit buttrigem M&uuml;rbeteig, frische Erdbeern und herbem Rhabarber. De kalifornische Seitn vo meiner K&uuml;ch.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/strawberry-cream-cake/" data-tags="baking">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+            </div>
+            <h3 class="card__title">Erdbeerkuacha</h3>
+            <p class="card__desc">D&uuml;nner Biskuitbodn mit s&auml;uerlicher Quarkcrem und am Berg frischer Erdbeern. Klassiker aus da B&auml;ckerei.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/rhubarb-meringue-cake/" data-tags="baking">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+            </div>
+            <h3 class="card__title">Rhabarberkuacha mit Mandlbaiser</h3>
+            <p class="card__desc">Buttriger R&uuml;hrkuacha mit Rhabarber im Teig und oaner dicken Schicht Mandlbaiser. Zwoa Mal backn, a Kuacha zum Staunen.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/raspberry-sour-cream-cake/" data-tags="baking, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Sauerrahm-Himbeer-Kuacha</h3>
+            <p class="card__desc">Leichter Kuacha mit Oliven&ouml;l, Schmand, Zitrusschoin, Oaschnee und frische Himbeern. Mit Puderzucker best&auml;ubt.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/hefezopf/" data-tags="baking, breakfast">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Backn</span>
+              <span class="tag">Fr&uuml;ahst&uuml;ck</span>
+            </div>
+            <h3 class="card__title">Hefezopf</h3>
+            <p class="card__desc">Klassischer Hefezopf mit Hagelzucker &mdash; woach, goldbraun und aufgessn, bevor er abk&uuml;hlt.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/holiday-mulled-wine/" data-tags="drinks, holiday, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Getr&auml;nke</span>
+              <span class="tag">Feiertog</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Festlicher Gl&uuml;hwein mit Goji-Beeren</h3>
+            <p class="card__desc">Warmer Rotwein mit Gw&uuml;rz, Apfemosd, Zimt, Sternanis, Kardamom, Ingwer, Oranga und Goji-Beeren.</p>
+          </div>
+        </a>
+
+        <a class="card" href="/by/recipes/weeknight-curry/" data-tags="vegan, dinner, easy">
+          <div class="card__body">
+            <div class="card__tags">
+              <span class="tag">Vegan</span>
+              <span class="tag">Abendessn</span>
+              <span class="tag">Oafach</span>
+            </div>
+            <h3 class="card__title">Mei liebsts Feierabend-Curry</h3>
+            <p class="card__desc">A seidigs Curry aus oam Topf mit Dosentomatn, Kokosmilch, Blumenkohl, Tofu und Spinat. Fertig in 35 Minutn.</p>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mittenheim. Mit Liab und guade Zuatatn gmacht.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

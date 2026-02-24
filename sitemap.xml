@@ -5,42 +5,70 @@
     <loc>https://mittenheim.com/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/"/>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/de/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/"/>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/recipes.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes.html"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes.html"/>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/de/recipes.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes.html"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes.html"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes.html"/>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/about.html"/>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/de/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/about.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/about.html"/>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/recipes/quark-apple-bake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/quark-apple-bake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/quark-apple-bake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/quark-apple-bake/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -48,6 +76,15 @@
     <loc>https://mittenheim.com/de/recipes/quark-apple-bake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/quark-apple-bake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/quark-apple-bake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/quark-apple-bake/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/quark-apple-bake/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/quark-apple-bake/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/quark-apple-bake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/quark-apple-bake/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -55,6 +92,7 @@
     <loc>https://mittenheim.com/recipes/hot-chocolate/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/hot-chocolate/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/hot-chocolate/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/hot-chocolate/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -62,6 +100,15 @@
     <loc>https://mittenheim.com/de/recipes/hot-chocolate/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/hot-chocolate/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/hot-chocolate/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/hot-chocolate/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/hot-chocolate/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/hot-chocolate/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/hot-chocolate/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/hot-chocolate/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -69,6 +116,7 @@
     <loc>https://mittenheim.com/recipes/mussels-tomato-sauce/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/mussels-tomato-sauce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/mussels-tomato-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/mussels-tomato-sauce/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -76,6 +124,15 @@
     <loc>https://mittenheim.com/de/recipes/mussels-tomato-sauce/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/mussels-tomato-sauce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/mussels-tomato-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/mussels-tomato-sauce/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/mussels-tomato-sauce/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/mussels-tomato-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/mussels-tomato-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/mussels-tomato-sauce/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -83,6 +140,7 @@
     <loc>https://mittenheim.com/recipes/easter-bread-kulich/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/easter-bread-kulich/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/easter-bread-kulich/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/easter-bread-kulich/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -90,6 +148,15 @@
     <loc>https://mittenheim.com/de/recipes/easter-bread-kulich/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/easter-bread-kulich/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/easter-bread-kulich/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/easter-bread-kulich/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/easter-bread-kulich/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/easter-bread-kulich/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/easter-bread-kulich/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/easter-bread-kulich/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -97,6 +164,7 @@
     <loc>https://mittenheim.com/recipes/chicken-in-milk/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/chicken-in-milk/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/chicken-in-milk/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/chicken-in-milk/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -104,6 +172,15 @@
     <loc>https://mittenheim.com/de/recipes/chicken-in-milk/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/chicken-in-milk/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/chicken-in-milk/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/chicken-in-milk/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/chicken-in-milk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/chicken-in-milk/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/chicken-in-milk/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/chicken-in-milk/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -111,6 +188,7 @@
     <loc>https://mittenheim.com/recipes/rahmschwammerl/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/rahmschwammerl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/rahmschwammerl/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/rahmschwammerl/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -118,6 +196,15 @@
     <loc>https://mittenheim.com/de/recipes/rahmschwammerl/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/rahmschwammerl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/rahmschwammerl/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/rahmschwammerl/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/rahmschwammerl/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/rahmschwammerl/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/rahmschwammerl/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/rahmschwammerl/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -125,6 +212,7 @@
     <loc>https://mittenheim.com/recipes/stuffed-pita-mushrooms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/stuffed-pita-mushrooms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/stuffed-pita-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/stuffed-pita-mushrooms/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -132,6 +220,15 @@
     <loc>https://mittenheim.com/de/recipes/stuffed-pita-mushrooms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/stuffed-pita-mushrooms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/stuffed-pita-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/stuffed-pita-mushrooms/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/stuffed-pita-mushrooms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/stuffed-pita-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/stuffed-pita-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/stuffed-pita-mushrooms/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -139,6 +236,7 @@
     <loc>https://mittenheim.com/recipes/carrot-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/carrot-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/carrot-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/carrot-cake/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -146,6 +244,15 @@
     <loc>https://mittenheim.com/de/recipes/carrot-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/carrot-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/carrot-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/carrot-cake/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/carrot-cake/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/carrot-cake/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/carrot-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/carrot-cake/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -153,6 +260,7 @@
     <loc>https://mittenheim.com/recipes/potato-salad/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/potato-salad/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/potato-salad/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/potato-salad/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -160,6 +268,15 @@
     <loc>https://mittenheim.com/de/recipes/potato-salad/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/potato-salad/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/potato-salad/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/potato-salad/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/potato-salad/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/potato-salad/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/potato-salad/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/potato-salad/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -167,6 +284,7 @@
     <loc>https://mittenheim.com/recipes/garlic-sherry-mushrooms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/garlic-sherry-mushrooms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/garlic-sherry-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/garlic-sherry-mushrooms/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -174,6 +292,15 @@
     <loc>https://mittenheim.com/de/recipes/garlic-sherry-mushrooms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/garlic-sherry-mushrooms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/garlic-sherry-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/garlic-sherry-mushrooms/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/garlic-sherry-mushrooms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/garlic-sherry-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/garlic-sherry-mushrooms/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/garlic-sherry-mushrooms/"/>
     <lastmod>2026-02-23</lastmod>
     <priority>0.8</priority>
   </url>
@@ -181,6 +308,7 @@
     <loc>https://mittenheim.com/recipes/spicy-wonton-sauce/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/spicy-wonton-sauce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/spicy-wonton-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/spicy-wonton-sauce/"/>
     <lastmod>2026-02-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -188,6 +316,15 @@
     <loc>https://mittenheim.com/de/recipes/spicy-wonton-sauce/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/spicy-wonton-sauce/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/spicy-wonton-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/spicy-wonton-sauce/"/>
+    <lastmod>2026-02-20</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/spicy-wonton-sauce/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/spicy-wonton-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/spicy-wonton-sauce/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/spicy-wonton-sauce/"/>
     <lastmod>2026-02-20</lastmod>
     <priority>0.8</priority>
   </url>
@@ -195,6 +332,7 @@
     <loc>https://mittenheim.com/recipes/gnocchi-gorgonzola/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/gnocchi-gorgonzola/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/gnocchi-gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/gnocchi-gorgonzola/"/>
     <lastmod>2026-02-18</lastmod>
     <priority>0.8</priority>
   </url>
@@ -202,6 +340,15 @@
     <loc>https://mittenheim.com/de/recipes/gnocchi-gorgonzola/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/gnocchi-gorgonzola/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/gnocchi-gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/gnocchi-gorgonzola/"/>
+    <lastmod>2026-02-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/gnocchi-gorgonzola/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/gnocchi-gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/gnocchi-gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/gnocchi-gorgonzola/"/>
     <lastmod>2026-02-18</lastmod>
     <priority>0.8</priority>
   </url>
@@ -209,6 +356,7 @@
     <loc>https://mittenheim.com/recipes/strawberry-rhubarb-pie/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/strawberry-rhubarb-pie/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/strawberry-rhubarb-pie/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/strawberry-rhubarb-pie/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -216,6 +364,15 @@
     <loc>https://mittenheim.com/de/recipes/strawberry-rhubarb-pie/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/strawberry-rhubarb-pie/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/strawberry-rhubarb-pie/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/strawberry-rhubarb-pie/"/>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/strawberry-rhubarb-pie/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/strawberry-rhubarb-pie/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/strawberry-rhubarb-pie/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/strawberry-rhubarb-pie/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -223,6 +380,7 @@
     <loc>https://mittenheim.com/recipes/strawberry-cream-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/strawberry-cream-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/strawberry-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/strawberry-cream-cake/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -230,6 +388,15 @@
     <loc>https://mittenheim.com/de/recipes/strawberry-cream-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/strawberry-cream-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/strawberry-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/strawberry-cream-cake/"/>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/strawberry-cream-cake/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/strawberry-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/strawberry-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/strawberry-cream-cake/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -237,6 +404,7 @@
     <loc>https://mittenheim.com/recipes/rhubarb-meringue-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/rhubarb-meringue-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/rhubarb-meringue-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/rhubarb-meringue-cake/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -244,6 +412,15 @@
     <loc>https://mittenheim.com/de/recipes/rhubarb-meringue-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/rhubarb-meringue-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/rhubarb-meringue-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/rhubarb-meringue-cake/"/>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/rhubarb-meringue-cake/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/rhubarb-meringue-cake/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/rhubarb-meringue-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/rhubarb-meringue-cake/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -251,6 +428,7 @@
     <loc>https://mittenheim.com/recipes/raspberry-sour-cream-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/raspberry-sour-cream-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/raspberry-sour-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/raspberry-sour-cream-cake/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -258,6 +436,15 @@
     <loc>https://mittenheim.com/de/recipes/raspberry-sour-cream-cake/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/raspberry-sour-cream-cake/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/raspberry-sour-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/raspberry-sour-cream-cake/"/>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/raspberry-sour-cream-cake/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/raspberry-sour-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/raspberry-sour-cream-cake/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/raspberry-sour-cream-cake/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -265,6 +452,7 @@
     <loc>https://mittenheim.com/recipes/hefezopf/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/hefezopf/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/hefezopf/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/hefezopf/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -272,6 +460,15 @@
     <loc>https://mittenheim.com/de/recipes/hefezopf/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/hefezopf/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/hefezopf/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/hefezopf/"/>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/hefezopf/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/hefezopf/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/hefezopf/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/hefezopf/"/>
     <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
@@ -279,24 +476,42 @@
     <loc>https://mittenheim.com/recipes/holiday-mulled-wine/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/holiday-mulled-wine/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/holiday-mulled-wine/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/holiday-mulled-wine/"/>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/de/recipes/holiday-mulled-wine/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/holiday-mulled-wine/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/holiday-mulled-wine/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/holiday-mulled-wine/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/holiday-mulled-wine/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/holiday-mulled-wine/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/holiday-mulled-wine/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/holiday-mulled-wine/"/>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/recipes/weeknight-curry/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/weeknight-curry/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/weeknight-curry/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/weeknight-curry/"/>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mittenheim.com/de/recipes/weeknight-curry/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/weeknight-curry/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/weeknight-curry/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/weeknight-curry/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/weeknight-curry/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/weeknight-curry/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/weeknight-curry/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/weeknight-curry/"/>
     <priority>0.8</priority>
   </url>
 </urlset>

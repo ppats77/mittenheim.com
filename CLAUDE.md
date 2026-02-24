@@ -60,13 +60,19 @@ The site is intentionally designed without photos. This is NOT a "placeholder" s
 - Single-column centered text layout (class: `about-text--centered`, max-width 680px)
 - No photo/image placeholder
 
-## Bilingual Support (English + German)
-The site is bilingual. English is at root (`/`), German is under `/de/`.
+## Trilingual Support (English + German + Bavarian)
+The site is trilingual. English is at root (`/`), German (Hochdeutsch) is under `/de/`, Bavarian is under `/by/`.
 - Shared assets (CSS, JS, images) stay at root — referenced with absolute paths
-- Every page has `<link rel="alternate" hreflang="...">` tags for both languages
-- Every page has a language switcher pill (`EN`/`DE`) in the nav bar
-- `data-tags` on recipe cards stay in English (internal, JS matches against them) — only visible tag labels are translated
-- On mobile, the language switcher stays visible next to the hamburger (not hidden in dropdown)
+- Every page has three `<link rel="alternate" hreflang="...">` tags: `en`, `de`, `bar` (ISO 639-3 for Bavarian)
+- Every page shows two language switcher pills in the nav bar (linking to the other two languages)
+  - EN pages: `DE` + `BY` pills
+  - DE pages: `EN` + `BY` pills
+  - BY pages: `EN` + `DE` pills
+- `data-tags` on recipe cards stay in English across all three languages (internal, JS matches against them) — only visible tag labels are translated
+- On mobile, the language switcher pills stay visible next to the hamburger (not hidden in dropdown)
+- DE pages use proper Hochdeutsch (standard German) — no Bavarian dialect
+- BY pages use full Bavarian dialect throughout (story, recipe box, notes)
+- BY pages use `<html lang="bar">`, `og:locale` = `de_DE` (no standard Bavarian locale exists)
 
 ## File Structure
 ```
@@ -77,22 +83,27 @@ mittenheim/
 ├── recipes.html                    # EN all recipes: filter bar + grid
 ├── css/style.css                   # Single stylesheet, full design system
 ├── js/main.js                      # Mobile nav toggle + recipe filtering
-├── images/                         # Recipe photos (empty for now)
+├── images/                         # Recipe photos
 ├── recipes/
-│   ├── weeknight-curry/index.html  # EN recipe from Golubka Kitchen
-│   └── holiday-mulled-wine/index.html  # EN mulled wine recipe
-├── de/                             # German mirror
+│   └── [slug]/index.html           # EN recipe pages (19 recipes)
+├── de/                             # German (Hochdeutsch) mirror
 │   ├── index.html                  # DE homepage
 │   ├── about.html                  # DE about (Über uns)
 │   ├── recipes.html                # DE all recipes (Rezepte)
 │   └── recipes/
-│       ├── weeknight-curry/index.html   # DE curry recipe
-│       └── holiday-mulled-wine/index.html # DE mulled wine recipe
+│       └── [slug]/index.html       # DE recipe pages (19 recipes)
+├── by/                             # Bavarian dialect mirror
+│   ├── index.html                  # BY homepage
+│   ├── about.html                  # BY about (Über mia)
+│   ├── recipes.html                # BY all recipes (Rezepte)
+│   └── recipes/
+│       └── [slug]/index.html       # BY recipe pages (19 recipes)
+├── sitemap.xml                     # Sitemap with three-way hreflang cross-refs
 ├── CLAUDE.md                       # This file
 └── README.md                       # Deploy instructions
 ```
 
-## How to Add a New Recipe (Bilingual)
+## How to Add a New Recipe (Trilingual)
 
 ### Step 1: Create the English recipe page
 Create `recipes/[slug]/index.html`. Use this exact structure:
@@ -111,6 +122,7 @@ Create `recipes/[slug]/index.html`. Use this exact structure:
   <link rel="stylesheet" href="/css/style.css">
   <link rel="alternate" hreflang="en" href="/recipes/[slug]/">
   <link rel="alternate" hreflang="de" href="/de/recipes/[slug]/">
+  <link rel="alternate" hreflang="bar" href="/by/recipes/[slug]/">
 </head>
 <body>
 
@@ -121,15 +133,14 @@ Create `recipes/[slug]/index.html`. Use this exact structure:
       <ul class="nav__links" id="nav-links">
         <li><a href="/recipes.html">Recipes</a></li>
         <li><a href="/about.html">About</a></li>
+        <li><a href="/de/recipes/[slug]/" class="nav__lang">DE</a></li>
+        <li><a href="/by/recipes/[slug]/" class="nav__lang">BY</a></li>
       </ul>
-      <div class="nav__right">
-        <a href="/de/recipes/[slug]/" class="nav__lang">DE</a>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
@@ -189,16 +200,30 @@ Create `recipes/[slug]/index.html`. Use this exact structure:
 </html>
 ```
 
-### Step 2: Create the German recipe page
+### Step 2: Create the German (Hochdeutsch) recipe page
 Create `de/recipes/[slug]/index.html` with translated content. Key differences:
-- `<html lang="de">`, hreflang links swapped
-- Nav: "Rezepte", "Über uns", lang switcher shows "EN" linking to `/recipes/[slug]/`
+- `<html lang="de">`, three hreflang links (en, de, bar)
+- Nav: "Rezepte", "Über uns", two lang pills: "EN" linking to `/recipes/[slug]/` and "BY" linking to `/by/recipes/[slug]/`
 - All internal links point to `/de/...` paths
 - Recipe box headers: "Das Rezept", "Zutaten", "Zubereitung", "Anmerkungen"
-- Tags display in German (but `data-tags` stay in English)
+- Tags display in standard German (but `data-tags` stay in English)
 - Date format: `15. Februar 2026`
 - Footer: "Mit Liebe und guten Zutaten gemacht."
 - Back link: "← Zurück zu allen Rezepten" linking to `/de/recipes.html`
+- **Important**: Use proper Hochdeutsch only — no Bavarian dialect
+
+### Step 2b: Create the Bavarian recipe page
+Create `by/recipes/[slug]/index.html` with Bavarian dialect content. Key differences:
+- `<html lang="bar">`, three hreflang links (en, de, bar)
+- Nav: "Rezepte", "Über mia", two lang pills: "EN" linking to `/recipes/[slug]/` and "DE" linking to `/de/recipes/[slug]/`
+- All internal links point to `/by/...` paths
+- Recipe box headers: "Des Rezept", "Zuatatn", "Zuabreitung", "Anmerkuunga"
+- Tags display in Bavarian (Abendessn, Oafach, Backn, Mittogessn, Früahstück, Feiertog, Getränke, etc.) but `data-tags` stay in English
+- Date format: `15. Februar 2026`
+- Footer: "Mit Liab und guade Zuatatn gmacht."
+- Back link: "← Zruck zu olle Rezepte" linking to `/by/recipes.html`
+- `og:locale` = `de_DE` (no standard Bavarian locale exists)
+- Full Bavarian dialect throughout: story, recipe box, instructions, notes, JSON-LD
 
 ### Step 3: Add English card to `recipes.html` and `index.html`
 Add ABOVE existing cards (newest first). Cards are `<a>` tags with `data-tags` for filtering:
@@ -216,41 +241,58 @@ Add ABOVE existing cards (newest first). Cards are `<a>` tags with `data-tags` f
 </a>
 ```
 
-**Important**: `data-tags` must be lowercase and comma-separated. The filter buttons match against these. If a new tag category is needed, add a `<button class="filter-btn" data-filter="[tag]">[Tag]</button>` to the filter bar (both EN and DE versions).
+**Important**: `data-tags` must be lowercase and comma-separated. The filter buttons match against these. If a new tag category is needed, add a `<button class="filter-btn" data-filter="[tag]">[Tag]</button>` to the filter bar (EN, DE, and BY versions).
 
 On `index.html`, same HTML but without `data-tags`. Keep only the 6 most recent.
 
 ### Step 4: Add German card to `de/recipes.html` and `de/index.html`
 Same structure as Step 3, but:
 - `href` points to `/de/recipes/[slug]/`
-- Title and description in German
+- Title and description in standard German (Hochdeutsch)
 - Tag labels in German (e.g. "Abendessen" not "Dinner")
 - `data-tags` stay in English (the JS filter matches against these)
 
-### Step 5: Commit and push
+### Step 5: Add Bavarian card to `by/recipes.html` and `by/index.html`
+Same structure as Step 3, but:
+- `href` points to `/by/recipes/[slug]/`
+- Title and description in Bavarian dialect
+- Tag labels in Bavarian (e.g. "Abendessn", "Oafach", "Backn")
+- `data-tags` stay in English (the JS filter matches against these)
+
+### Step 6: Commit and push
 ```bash
-git add recipes/[slug] de/recipes/[slug] index.html recipes.html de/index.html de/recipes.html
-git commit -m "Add [recipe name] recipe (EN + DE)"
+git add recipes/[slug] de/recipes/[slug] by/recipes/[slug] index.html recipes.html de/index.html de/recipes.html by/index.html by/recipes.html
+git commit -m "Add [recipe name] recipe (EN + DE + BY)"
 git push
 ```
 GitHub Actions auto-deploys to Cloudflare Pages within ~30 seconds.
 
 ## Filter System
-- Filter buttons in `recipes.html` use `data-filter` attribute
-- Recipe cards use `data-tags` attribute (lowercase, comma-separated)
+- Filter buttons in `recipes.html`, `de/recipes.html`, and `by/recipes.html` use `data-filter` attribute
+- Recipe cards use `data-tags` attribute (lowercase, comma-separated) — same English values across all three languages
 - JS in `main.js` handles filtering by matching `data-filter` against `data-tags` using `.includes()`
-- Current filter buttons: All, Middle Eastern, Vegan, Dinner, Lunch, Breakfast, Easy
-- Add new filter buttons as new tag categories appear
+- Current filter buttons: All, Middle Eastern, Vegan, Dinner, Lunch, Breakfast, Drinks, Holiday, Baking, Easy
+- Add new filter buttons as new tag categories appear (in all three language versions)
 
 ## Existing Tags in Use
 - **Cuisine**: Middle Eastern
 - **Diet**: Vegan
-- **Meal**: Dinner (Lunch and Breakfast buttons exist but no recipes yet)
+- **Meal**: Dinner, Lunch, Breakfast
+- **Type**: Drinks, Holiday, Baking
 - **Difficulty**: Easy
 
-## Current Recipes
-1. **Holiday Mulled Wine with Goji Berries** (`/recipes/holiday-mulled-wine/` | `/de/recipes/holiday-mulled-wine/`) — Drinks, Holiday, Easy. Warm spiced red wine with apple cider and goji berries.
-2. **Our Favorite Weeknight Curry** (`/recipes/weeknight-curry/` | `/de/recipes/weeknight-curry/`) — Vegan, Dinner, Easy. Adapted from Golubka Kitchen. One-pot curry with crushed tomatoes, coconut milk, cauliflower, tofu, spinach.
+### Tag Labels by Language
+| data-tag | EN | DE | BY |
+|---|---|---|---|
+| dinner | Dinner | Abendessen | Abendessn |
+| lunch | Lunch | Mittagessen | Mittogessn |
+| breakfast | Breakfast | Frühstück | Früahstück |
+| baking | Baking | Backen | Backn |
+| drinks | Drinks | Getränke | Getränke |
+| holiday | Holiday | Feiertag | Feiertog |
+| easy | Easy | Einfach | Oafach |
+| vegan | Vegan | Vegan | Vegan |
+| middle eastern | Middle Eastern | Nahöstlich | Nahöstlich |
 
 ## Infrastructure Details
 - **Cloudflare Account ID**: `c2d8b5aa95401b0321bd5160cecfed48`
