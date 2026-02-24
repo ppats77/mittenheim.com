@@ -94,6 +94,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mittenheim.com/recipes/chicken-in-milk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/chicken-in-milk/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/chicken-in-milk/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/de/recipes/chicken-in-milk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/chicken-in-milk/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/chicken-in-milk/"/>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mittenheim.com/recipes/rahmschwammerl/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/rahmschwammerl/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/rahmschwammerl/"/>
