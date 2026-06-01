@@ -982,3 +982,97 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
   a { color: #000; text-decoration: none; }
   a::after { content: none; }
 }
+
+/* ===== Trip calendar (month grid) ===== */
+.cal-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.cal-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.85rem;
+}
+.cal-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.cal-swatch {
+  width: 14px; height: 14px;
+  border: var(--border-light);
+  border-radius: 3px;
+  display: inline-block;
+}
+.cal-swatch--plan { background: var(--pink); }
+.cal-swatch--rest { background: var(--bg-alt); }
+.cal-swatch--travel { background: var(--black); }
+.cal-swatch--today { background: #fff; border: 2px solid var(--pink); }
+
+.trip-calendar { display: flex; flex-direction: column; gap: 40px; }
+.cal-month__title {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+.cal-weekday {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-body);
+  padding-bottom: 4px;
+}
+.cal-day {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.cal-day:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-sm);
+}
+.cal-day--plan { background: var(--pink); }
+.cal-day--rest { background: var(--bg-alt); }
+.cal-day--travel { background: var(--black); color: #fff; }
+.cal-day--empty {
+  border: none;
+  background: transparent;
+  pointer-events: none;
+}
+.cal-day--empty:hover { transform: none; box-shadow: none; }
+.cal-day--today {
+  outline: 3px solid var(--pink);
+  outline-offset: 2px;
+  box-shadow: var(--shadow);
+}
+.cal-day__num { pointer-events: none; }
+
+/* Day-page prev/next nav */
+.trip-daynav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.trip-daynav a { white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .cal-grid { gap: 3px; }
+  .cal-day { font-size: 0.8rem; }
+  .cal-month__title { font-size: 1.15rem; }
+}
