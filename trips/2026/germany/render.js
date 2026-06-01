@@ -44,13 +44,16 @@ function renderBlocks(blocks) {
   return (blocks || []).map(renderBlock).join('\n        ');
 }
 
-function head(title) {
+function head(title, { description = '', url = '' } = {}) {
+  const fullTitle = `${title} - Mittenheim Trips`;
+  const img = 'https://mittenheim.com/images/og-image.png';
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${esc(title)} - Mittenheim Trips</title>
+  <title>${esc(fullTitle)}</title>
+  <meta name="description" content="${esc(description)}">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +61,17 @@ function head(title) {
   <link rel="stylesheet" href="/css/style.css">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mittenheim">
+  <meta property="og:title" content="${esc(fullTitle)}">
+  <meta property="og:description" content="${esc(description)}">${url ? `
+  <meta property="og:url" content="${esc(url)}">` : ''}
+  <meta property="og:image" content="${img}">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="${esc(fullTitle)}">
+  <meta name="twitter:description" content="${esc(description)}">
+  <meta name="twitter:image" content="${img}">
 </head>
 <body>`;
 }
@@ -75,9 +89,12 @@ const FOOTER = `  <!-- Footer -->
 
 function renderDayPage({ trip, iso, day, prevSlug, nextSlug, weekday, monthEN, dayNum }) {
   const base = '/trips/2026/germany/';
+  const slug = lib.slugFor(iso);
   const prev = prevSlug ? `<a href="${base}${prevSlug}/">&larr; Prev</a>` : '<span></span>';
   const next = nextSlug ? `<a href="${base}${nextSlug}/">Next &rarr;</a>` : '<span></span>';
-  return `${head(day.title)}
+  const desc = `${weekday}, ${monthEN} ${dayNum} — ${day.summary || day.title} · Summer in Germany 2026.`;
+  const url = `https://mittenheim.com${base}${slug}/`;
+  return `${head(day.title, { description: desc, url })}
 
   <!-- Navigation -->
   <nav class="nav">
@@ -163,7 +180,8 @@ function renderOverview(trip) {
       </div>`;
   }).join('\n      ');
 
-  return `${head(trip.name)}
+  const ovDesc = `${range} · ${trip.travelers}. Day-by-day calendar of our summer in Germany — home base ${trip.base}, with day trips, road trips, remote-work weeks and time off.`;
+  return `${head(trip.name, { description: ovDesc, url: `https://mittenheim.com${base}` })}
 
   <!-- Navigation -->
   <nav class="nav">
