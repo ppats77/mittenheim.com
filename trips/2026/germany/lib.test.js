@@ -42,6 +42,7 @@ test('monthGrids groups trip dates into months with correct leading blanks', () 
 
   const [jun, jul, aug] = grids;
   assert.strictEqual(jun.monthEN, 'June');
+  assert.strictEqual(jun.year, 2026);
   assert.strictEqual(jun.leadingBlanks, 0);   // Jun 8 is a Monday
   assert.strictEqual(jun.dates.length, 23);   // Jun 8..30
   assert.strictEqual(jul.leadingBlanks, 2);   // Jul 1 is a Wednesday
@@ -50,8 +51,11 @@ test('monthGrids groups trip dates into months with correct leading blanks', () 
   assert.strictEqual(aug.dates.length, 12);   // Aug 1..12
 });
 
-test('monthGrids leadingBlanks is based on the FIRST in-trip date of each month', () => {
-  // June trip starts on the 8th (Mon) -> 0 blanks before the 8th in the grid row
-  const grids = lib.monthGrids('2026-06-08', '2026-08-12');
-  assert.strictEqual(grids[0].dates[0], '2026-06-08');
+test('monthGrids leadingBlanks uses the first IN-TRIP date, not the 1st of the month', () => {
+  // Range starts mid-month (Jul 10, Fri): leadingBlanks must align to Jul 10, not Jul 1 (Wed).
+  const grids = lib.monthGrids('2026-07-10', '2026-07-20');
+  assert.strictEqual(grids.length, 1);
+  assert.strictEqual(grids[0].dates[0], '2026-07-10');
+  assert.strictEqual(grids[0].leadingBlanks, lib.weekdayIndexMon('2026-07-10'));
+  assert.notStrictEqual(grids[0].leadingBlanks, lib.weekdayIndexMon('2026-07-01'));
 });

@@ -58,10 +58,11 @@ function monthGrids(startISO, endISO) {
   }
   return [...byMonth.entries()].map(([key, monthDates]) => {
     const first = monthDates[0];
+    const p = parts(first);
     return {
       key,
-      monthEN: parts(first).monthEN,
-      year: parts(first).year,
+      monthEN: p.monthEN,
+      year: p.year,
       leadingBlanks: weekdayIndexMon(first),
       dates: monthDates,
     };
