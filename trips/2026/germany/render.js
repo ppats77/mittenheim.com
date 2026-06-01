@@ -32,7 +32,7 @@ function renderBlock(b) {
     case 'alert':
       return `<div class="trip-alert">${b.html}</div>`;
     case 'photo':
-      return `<div class="recipe-photo"><img src="${b.src}" alt="${esc(b.alt || '')}" loading="lazy"></div>`;
+      return `<div class="recipe-photo"><img src="${esc(b.src)}" alt="${esc(b.alt || '')}" loading="lazy"></div>`;
     default:
       return '';
   }

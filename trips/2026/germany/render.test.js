@@ -48,3 +48,29 @@ test('renderDayPage omits prev link on first day, next on last', () => {
   assert.doesNotMatch(first, /&larr; Prev/);
   assert.match(first, /Next &rarr;/);
 });
+
+test('renderBlock step renders nested blocks recursively with open toggle', () => {
+  const html = render.renderBlock({
+    kind: 'step', time: '09:00', label: 'Morning', open: true,
+    blocks: [{ kind: 'note', html: '<p>inner</p>' }],
+  });
+  assert.match(html, /<details class="trip-step" open>/);
+  assert.match(html, /trip-step__time/);
+  assert.match(html, /trip-step__body/);
+  assert.match(html, /<p>inner<\/p>/);          // nested block rendered
+  // closed by default when open is falsy
+  const closed = render.renderBlock({ kind: 'step', label: 'X', blocks: [] });
+  assert.match(closed, /<details class="trip-step">/);
+  assert.doesNotMatch(closed, / open>/);
+});
+
+test('escaping boundary: title is escaped, author HTML blocks are not', () => {
+  // title goes through esc()
+  const page = render.renderDayPage({ trip: { name: 'T' }, iso: '2026-06-10',
+    day: { title: 'A < B & C', phase: 'x', type: 'plan', summary: '', blocks: [] },
+    prevSlug: null, nextSlug: null, weekday: 'Wednesday', monthEN: 'June', dayNum: 10 });
+  assert.match(page, /A &lt; B &amp; C/);       // title escaped
+  // note.html passes through verbatim (author-trusted)
+  const note = render.renderBlocks([{ kind: 'note', html: '<p><strong>hi</strong></p>' }]);
+  assert.match(note, /<p><strong>hi<\/strong><\/p>/);
+});
