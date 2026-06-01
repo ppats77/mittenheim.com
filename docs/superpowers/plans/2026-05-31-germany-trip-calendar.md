@@ -1073,8 +1073,12 @@ git commit -m "feat(trips): generate Germany 2026 calendar + link from trips ind
 
 - [ ] **Step 1: Run the whole test suite**
 
-Run: `node --test trips/2026/germany/`
-Expected: all tests across `lib.test.js` + `render.test.js` PASS (0 failures).
+Run: `node --test trips/2026/germany/*.test.js`
+Expected: all tests across `lib.test.js` + `render.test.js` PASS (0 failures) — 16 tests total.
+
+Note: do NOT pass the bare directory (`node --test trips/2026/germany/`). Node v24 treats a
+bare directory arg as a module to load (not a test-discovery root) and errors with
+"Cannot find module". Use the `*.test.js` glob above, or `cd trips/2026/germany && node --test`.
 
 - [ ] **Step 2: Verify idempotency (re-running build produces no diff)**
 
