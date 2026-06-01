@@ -59,3 +59,25 @@ test('monthGrids leadingBlanks uses the first IN-TRIP date, not the 1st of the m
   assert.strictEqual(grids[0].leadingBlanks, lib.weekdayIndexMon('2026-07-10'));
   assert.notStrictEqual(grids[0].leadingBlanks, lib.weekdayIndexMon('2026-07-01'));
 });
+
+test('days.js has every trip date present exactly once', () => {
+  const trip = require('./days.js');
+  const expected = lib.eachDate(trip.start, trip.end);
+  assert.strictEqual(Object.keys(trip.days).length, expected.length);
+  for (const iso of expected) {
+    assert.ok(trip.days[iso], `missing day ${iso}`);
+    assert.ok(['travel', 'plan', 'rest'].includes(trip.days[iso].type),
+      `bad type for ${iso}`);
+  }
+});
+
+test('days.js seeds the three flight anchors', () => {
+  const trip = require('./days.js');
+  assert.strictEqual(trip.days['2026-06-08'].type, 'travel');
+  assert.strictEqual(trip.days['2026-06-09'].type, 'travel');
+  assert.strictEqual(trip.days['2026-08-12'].type, 'travel');
+  const blob = JSON.stringify(trip.days);
+  for (const fn of ['DE2097', 'DE4427', 'DE4304', 'DE2096']) {
+    assert.ok(blob.includes(fn), `missing flight ${fn}`);
+  }
+});
