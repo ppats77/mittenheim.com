@@ -12,7 +12,7 @@ const phases = [
 
 function phaseFor(iso) {
   const p = phases.find((ph) => iso >= ph.from && iso <= ph.to);
-  return p ? p.id : phases[0].id;
+  return p ? p.id : null;
 }
 
 // Start every day as a rest placeholder; seeded days overwrite below.
@@ -76,7 +76,8 @@ days['2026-08-12'] = {
   summary: 'MUC 09:15 → FRA → SFO, arrive San Francisco 14:30 same day.',
   blocks: [
     { kind: 'timing', rows: [
-      ['06:00', 'Leave Oberschleißheim for MUC (be there ~07:15 — 60 min min at MUC)'],
+      ['05:30', 'Leave Oberschleißheim for MUC (~30–40 min drive)'],
+      ['06:15', 'At MUC — check-in deadline is 180 min before a US flight'],
       ['09:15', 'Depart Munich (MUC) — DE4304 (operated by German Airways)'],
       ['10:10', 'Arrive Frankfurt (FRA)'],
       ['11:40', 'Depart Frankfurt (FRA) — Condor DE2096'],
@@ -85,7 +86,7 @@ days['2026-08-12'] = {
     { kind: 'place', name: '✈️ Condor DE4304 + DE2096 · MUC → FRA → SFO',
       detail: 'MUC 09:15 → FRA 10:10, then FRA 11:40 → SFO 14:30 (11h50m)<br>Economy (Classic) · 1 checked bag (23kg) + 1 carry-on (8kg) each<br>Check-in deadline: 180 min for US flights' },
     { kind: 'checklist', items: [
-      'Online check-in 24h before (MUC needs 60 min check-in → gate)',
+      'Online check-in 24h before; at MUC allow 180 min (US flight) + 60 min check-in→gate',
       'Pack the night before',
       'Last fridge/trash/keys check at the house',
     ] },

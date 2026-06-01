@@ -66,7 +66,7 @@ test('days.js has every trip date present exactly once', () => {
   assert.strictEqual(Object.keys(trip.days).length, expected.length);
   for (const iso of expected) {
     assert.ok(trip.days[iso], `missing day ${iso}`);
-    assert.ok(['travel', 'plan', 'rest'].includes(trip.days[iso].type),
+    assert.ok(['travel', 'plan', 'rest'].includes(trip.days[iso].type), // 'plan' is the type future filled-in days will use
       `bad type for ${iso}`);
   }
 });
