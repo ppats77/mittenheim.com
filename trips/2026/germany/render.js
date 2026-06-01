@@ -135,8 +135,10 @@ function renderOverview(trip) {
       const p = lib.parts(iso);
       const day = trip.days[iso];
       const slug = lib.slugFor(iso);
-      const flight = day.type === 'travel' ? ' &#9992;' : '';
-      return `<a class="cal-day cal-day--${day.type}" href="${base}${slug}/" data-date="${iso}" title="${esc(day.summary || '')}"><span class="cal-day__num">${p.day}${flight}</span></a>`;
+      // Icon: a day may set its own (e.g. '🚗' for a drive); travel days
+      // default to a plane if none is specified. Non-travel days show none.
+      const icon = day.icon ? ` ${day.icon}` : (day.type === 'travel' ? ' &#9992;' : '');
+      return `<a class="cal-day cal-day--${day.type}" href="${base}${slug}/" data-date="${iso}" title="${esc(day.summary || '')}"><span class="cal-day__num">${p.day}${icon}</span></a>`;
     }).join('');
     const weekdayHdr = WEEKDAYS_DE.map((w) => `<div class="cal-weekday">${w}</div>`).join('');
     return `<div class="cal-month">

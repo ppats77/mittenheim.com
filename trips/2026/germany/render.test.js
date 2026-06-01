@@ -100,6 +100,21 @@ test('renderOverview emits 3 months with correct blanks and day links', () => {
   assert.match(html, /cal-legend/);
 });
 
+test('renderOverview uses a custom day.icon, defaults travel days to a plane', () => {
+  const trip = {
+    name: 'T', base: 'B', travelers: 'X', start: '2026-06-08', end: '2026-06-09',
+    days: {
+      '2026-06-08': { title: 'Drive', type: 'travel', icon: '🚗', summary: '', blocks: [] },
+      '2026-06-09': { title: 'Fly', type: 'travel', summary: '', blocks: [] },
+    },
+  };
+  const html = render.renderOverview(trip);
+  // June 8 cell shows the custom car icon
+  assert.match(html, /data-date="2026-06-08"[^>]*><span class="cal-day__num">8 🚗</);
+  // June 9 cell falls back to the plane entity
+  assert.match(html, /data-date="2026-06-09"[^>]*><span class="cal-day__num">9 &#9992;</);
+});
+
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');

@@ -93,6 +93,158 @@ days['2026-08-12'] = {
   ],
 };
 
+// --- Leg 1: France road trip (Chérac, Charente-Maritime) ---
+// Sun Jun 14 drive out (direct), stay through Jun 23, Wed Jun 24 drive home.
+days['2026-06-14'] = {
+  title: 'Drive to Chérac, France',
+  phase: 'arrival',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Long direct drive Oberschleißheim → Chérac (~1,200 km, ~12 h).',
+  blocks: [
+    { kind: 'place', name: '🚗 Oberschleißheim → Chérac (Charente-Maritime)',
+      detail: '~1,200 km · ~12 h driving · direct, no overnight stop<br>Route: A8/A40 via Switzerland or A6 through France — check tolls & vignette' },
+    { kind: 'timing', rows: [
+      ['Early AM', 'Leave Oberschleißheim — full tank, fresh start'],
+      ['Midday', 'Halfway break (lunch + driver swap)'],
+      ['Evening', 'Arrive Chérac'],
+    ] },
+    { kind: 'checklist', items: [
+      'Swiss vignette / French tolls (péage) — cash + card ready',
+      'Passports/IDs for all four',
+      'Snacks, water, playlists, offline maps downloaded',
+      'Warnweste (hi-vis vests) + warning triangle in the car (required in France)',
+    ] },
+  ],
+};
+days['2026-06-24'] = {
+  title: 'Drive back — Chérac → Oberschleißheim',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Long direct drive home from Chérac (~1,200 km, ~12 h).',
+  blocks: [
+    { kind: 'place', name: '🚗 Chérac → Oberschleißheim',
+      detail: '~1,200 km · ~12 h driving · direct<br>Leave early to beat traffic and arrive at a reasonable hour' },
+    { kind: 'checklist', items: [
+      'Full tank before the motorway',
+      'Tolls / vignette ready again',
+      'Pack the car the night before',
+    ] },
+  ],
+};
+// Stay days in Chérac (Jun 15–23): mark as "away" with the location.
+for (const iso of eachDate('2026-06-15', '2026-06-23')) {
+  const p = parts(iso);
+  days[iso] = {
+    title: `Chérac — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
+    phase: 'summer',
+    type: 'plan',
+    summary: 'In Chérac, France.',
+    blocks: [
+      { kind: 'note', html: '<p>📍 <strong>Chérac, Charente-Maritime, France.</strong> To be planned.</p>' },
+    ],
+  };
+}
+
+// --- Leg 2: Northern loop (Oldenburg → Klixbüll → Berlin) ---
+// Wed Jul 1 → Oldenburg (3 nts), Sat Jul 4 → Klixbüll (3 nts), Tue Jul 7 → Berlin (3 nts), Fri Jul 10 home.
+days['2026-07-01'] = {
+  title: 'Drive to Oldenburg',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Oberschleißheim → Oldenburg (~700 km, ~7 h). 3 nights.',
+  blocks: [
+    { kind: 'place', name: '🚗 Oberschleißheim → Oldenburg',
+      detail: '~700 km · ~7 h driving<br>3 nights in Oldenburg (Jul 1–4)' },
+    { kind: 'note', html: '<p>First leg of the northern loop. Overnight in Oldenburg.</p>' },
+  ],
+};
+for (const iso of eachDate('2026-07-02', '2026-07-03')) {
+  const p = parts(iso);
+  days[iso] = {
+    title: `Oldenburg — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
+    phase: 'summer',
+    type: 'plan',
+    summary: 'In Oldenburg.',
+    blocks: [
+      { kind: 'note', html: '<p>📍 <strong>Oldenburg.</strong> To be planned.</p>' },
+    ],
+  };
+}
+days['2026-07-04'] = {
+  title: 'Drive to Klixbüll (Nordfriesland)',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Oldenburg → Klixbüll (~230 km, ~2.5 h). 3 nights near the North Sea.',
+  blocks: [
+    { kind: 'place', name: '🚗 Oldenburg → Klixbüll',
+      detail: '~230 km · ~2.5 h driving<br>3 nights in Klixbüll, Nordfriesland (Jul 4–7) — near Niebüll & the North Sea coast' },
+    { kind: 'note', html: '<p>Short hop north. Klixbüll is the base for Sylt / Wadden Sea day trips.</p>' },
+  ],
+};
+for (const iso of eachDate('2026-07-05', '2026-07-06')) {
+  const p = parts(iso);
+  days[iso] = {
+    title: `Klixbüll — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
+    phase: 'summer',
+    type: 'plan',
+    summary: 'In Klixbüll, Nordfriesland.',
+    blocks: [
+      { kind: 'note', html: '<p>📍 <strong>Klixbüll, Nordfriesland.</strong> To be planned.</p>' },
+    ],
+  };
+}
+days['2026-07-07'] = {
+  title: 'Drive to Berlin — Hotel Sachsenhof',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Klixbüll → Berlin (~470 km, ~5 h). Hotel Sachsenhof, 3 nights.',
+  blocks: [
+    { kind: 'place', name: '🚗 Klixbüll → Berlin',
+      detail: '~470 km · ~5 h driving' },
+    { kind: 'place', name: '🏨 Hotel Sachsenhof, Berlin',
+      detail: 'Motzstr. 7, Tempelhof-Schöneberg, 10777 Berlin<br>Check-in Tue Jul 7 (from 3:00 PM) · Check-out Fri Jul 10 (by 12:00 PM)<br>Quadruple Room · 2 adults + 2 kids (13, 15) · 3 nights<br>Confirmation 6622466272 · Tel +49 30 2162074',
+      maps: 'Hotel Sachsenhof Motzstrasse 7 Berlin' },
+    { kind: 'checklist', items: [
+      'Booking confirmation 6622466272 + PIN handy at check-in',
+      'Breakfast is €14 pp/night (pay at property if you want it)',
+      'Pay at property on arrival',
+    ] },
+  ],
+};
+for (const iso of eachDate('2026-07-08', '2026-07-09')) {
+  const p = parts(iso);
+  days[iso] = {
+    title: `Berlin — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
+    phase: 'summer',
+    type: 'plan',
+    summary: 'In Berlin (Hotel Sachsenhof).',
+    blocks: [
+      { kind: 'note', html: '<p>📍 <strong>Berlin</strong> — based at Hotel Sachsenhof, Schöneberg. To be planned.</p>' },
+    ],
+  };
+}
+days['2026-07-10'] = {
+  title: 'Drive back — Berlin → Oberschleißheim',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Berlin → Oberschleißheim (~590 km, ~6 h). Check out by 12:00.',
+  blocks: [
+    { kind: 'timing', rows: [
+      ['Until 12:00', 'Check out of Hotel Sachsenhof'],
+      ['Midday', 'Drive south (~590 km, ~6 h)'],
+      ['Evening', 'Home in Oberschleißheim'],
+    ] },
+    { kind: 'place', name: '🚗 Berlin → Oberschleißheim',
+      detail: '~590 km · ~6 h driving · mostly A9' },
+  ],
+};
+
 module.exports = { name: 'Summer in Germany 2026', base: 'Oberschleißheim',
   tz: 'Europe/Berlin', travelers: 'Max, Natalia, Seraphima & Luca',
   start: START, end: END, phases, days };
