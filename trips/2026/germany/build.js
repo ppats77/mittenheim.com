@@ -7,8 +7,16 @@ const render = require('./render.js');
 const trip = require('./days.js');
 
 function outDir() {
+  // No --out: write into this source dir (used by Task 9 to generate the live site).
+  // With --out <dir>: write elsewhere (used by tests to generate into a temp dir).
   const i = process.argv.indexOf('--out');
-  return i !== -1 ? process.argv[i + 1] : __dirname;
+  if (i === -1) return __dirname;
+  const dir = process.argv[i + 1];
+  if (!dir) {
+    console.error('--out requires a directory argument');
+    process.exit(1);
+  }
+  return dir;
 }
 
 function write(file, html) {
