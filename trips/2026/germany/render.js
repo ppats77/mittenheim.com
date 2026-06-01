@@ -114,4 +114,85 @@ function renderDayPage({ trip, iso, day, prevSlug, nextSlug, weekday, monthEN, d
 ${FOOTER}`;
 }
 
-module.exports = { renderBlock, renderBlocks, renderDayPage, head, esc, FOOTER };
+const MONTHS_DE = { January:'Januar', February:'Februar', March:'März', April:'April',
+  May:'Mai', June:'Juni', July:'Juli', August:'August', September:'September',
+  October:'Oktober', November:'November', December:'Dezember' };
+const WEEKDAYS_DE = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+
+function renderOverview(trip) {
+  const lib = require('./lib.js');
+  const base = '/trips/2026/germany/';
+  const grids = lib.monthGrids(trip.start, trip.end);
+
+  const monthsHTML = grids.map((g) => {
+    const blanks = Array.from({ length: g.leadingBlanks },
+      () => `<div class="cal-day cal-day--empty"></div>`).join('');
+    const cells = g.dates.map((iso) => {
+      const p = lib.parts(iso);
+      const day = trip.days[iso];
+      const slug = lib.slugFor(iso);
+      const flight = day.type === 'travel' ? ' &#9992;' : '';
+      return `<a class="cal-day cal-day--${day.type}" href="${base}${slug}/" data-date="${iso}" title="${esc(day.summary || '')}"><span class="cal-day__num">${p.day}${flight}</span></a>`;
+    }).join('');
+    const weekdayHdr = WEEKDAYS_DE.map((w) => `<div class="cal-weekday">${w}</div>`).join('');
+    return `<div class="cal-month">
+        <h2 class="cal-month__title">${MONTHS_DE[g.monthEN]} ${g.year}</h2>
+        <div class="cal-grid">
+          ${weekdayHdr}
+          ${blanks}${cells}
+        </div>
+      </div>`;
+  }).join('\n      ');
+
+  return `${head(trip.name)}
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="${base}" class="nav__logo">Germany 2026</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/trips/">All Trips</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="recipe-hero recipe-hero--text">
+    <div class="recipe-hero__inner">
+      <div class="recipe-meta">
+        <span>June 8 – August 12, 2026</span>
+        <span class="tag">Germany</span>
+      </div>
+      <h1>${esc(trip.name)}</h1>
+      <div style="margin-top: 12px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+        ${esc(trip.travelers)} &middot; Home base: ${esc(trip.base)}
+      </div>
+    </div>
+  </div>
+
+  <!-- Calendar -->
+  <div class="recipe-content">
+    <div class="cal-controls">
+      <button class="trip-maps-btn" id="jump-today" type="button">&#128204; Jump to today</button>
+      <div class="cal-legend">
+        <span><i class="cal-swatch cal-swatch--plan"></i> Planned</span>
+        <span><i class="cal-swatch cal-swatch--rest"></i> Open</span>
+        <span><i class="cal-swatch cal-swatch--travel"></i> Travel</span>
+        <span><i class="cal-swatch cal-swatch--today"></i> Today</span>
+      </div>
+    </div>
+
+    <div class="trip-calendar">
+      ${monthsHTML}
+    </div>
+
+    <p style="margin-top: 32px;"><a href="/trips/">&larr; All trips</a></p>
+  </div>
+
+${FOOTER}`;
+}
+
+module.exports = { renderBlock, renderBlocks, renderDayPage, renderOverview, head, esc, FOOTER };

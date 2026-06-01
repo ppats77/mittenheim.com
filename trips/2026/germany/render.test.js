@@ -74,3 +74,28 @@ test('escaping boundary: title is escaped, author HTML blocks are not', () => {
   const note = render.renderBlocks([{ kind: 'note', html: '<p><strong>hi</strong></p>' }]);
   assert.match(note, /<p><strong>hi<\/strong><\/p>/);
 });
+
+const lib = require('./lib.js');
+
+test('renderOverview emits 3 months with correct blanks and day links', () => {
+  const trip = require('./days.js');
+  const html = render.renderOverview(trip);
+  // 3 month titles
+  assert.match(html, /Juni 2026/);
+  assert.match(html, /Juli 2026/);
+  assert.match(html, /August 2026/);
+  // German weekday headers
+  assert.match(html, /cal-weekday/);
+  assert.match(html, />Mo</);
+  assert.match(html, />So</);
+  // Every in-trip date has a linked cell with data-date
+  for (const iso of lib.eachDate(trip.start, trip.end)) {
+    assert.ok(html.includes(`data-date="${iso}"`), `missing cell ${iso}`);
+  }
+  // June grid has 0 leading blanks; July has 2; August has 5
+  const blanks = (html.match(/cal-day--empty/g) || []).length;
+  assert.strictEqual(blanks, 0 + 2 + 5);
+  // Jump-to-today control + legend present
+  assert.match(html, /Jump to today/);
+  assert.match(html, /cal-legend/);
+});
