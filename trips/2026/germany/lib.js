@@ -46,4 +46,26 @@ function weekdayIndexMon(iso) {
   return (sundayFirst + 6) % 7;
 }
 
-module.exports = { eachDate, parts, slugFor, weekdayIndexMon, MONTHS_EN, WEEKDAYS_EN };
+// Group the trip's dates by calendar month. leadingBlanks aligns the first
+// in-trip date of each month into a Monday-first 7-col grid.
+function monthGrids(startISO, endISO) {
+  const dates = eachDate(startISO, endISO);
+  const byMonth = new Map(); // 'YYYY-MM' -> [iso,...]
+  for (const iso of dates) {
+    const key = iso.slice(0, 7);
+    if (!byMonth.has(key)) byMonth.set(key, []);
+    byMonth.get(key).push(iso);
+  }
+  return [...byMonth.entries()].map(([key, monthDates]) => {
+    const first = monthDates[0];
+    return {
+      key,
+      monthEN: parts(first).monthEN,
+      year: parts(first).year,
+      leadingBlanks: weekdayIndexMon(first),
+      dates: monthDates,
+    };
+  });
+}
+
+module.exports = { eachDate, parts, slugFor, weekdayIndexMon, monthGrids, MONTHS_EN, WEEKDAYS_EN };
