@@ -1,5 +1,7 @@
 'use strict';
 
+const lib = require('./lib.js');
+
 const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -120,9 +122,11 @@ const MONTHS_DE = { January:'Januar', February:'Februar', March:'März', April:'
 const WEEKDAYS_DE = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
 
 function renderOverview(trip) {
-  const lib = require('./lib.js');
   const base = '/trips/2026/germany/';
   const grids = lib.monthGrids(trip.start, trip.end);
+  const s = lib.parts(trip.start);
+  const e = lib.parts(trip.end);
+  const range = `${s.monthEN} ${s.day} – ${e.monthEN} ${e.day}, ${e.year}`;
 
   const monthsHTML = grids.map((g) => {
     const blanks = Array.from({ length: g.leadingBlanks },
@@ -163,7 +167,7 @@ function renderOverview(trip) {
   <div class="recipe-hero recipe-hero--text">
     <div class="recipe-hero__inner">
       <div class="recipe-meta">
-        <span>June 8 – August 12, 2026</span>
+        <span>${range}</span>
         <span class="tag">Germany</span>
       </div>
       <h1>${esc(trip.name)}</h1>
