@@ -1032,7 +1032,7 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
   padding-bottom: 6px;
 }
 .cal-day {
-  min-height: 78px;
+  min-height: 96px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1055,6 +1055,21 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
 .cal-day--plan { background: var(--pink); }
 .cal-day--rest { background: var(--bg); }
 .cal-day--travel { background: var(--black); color: #fff; }
+/* Tiny one-line(ish) summary under the date number */
+.cal-day__summary {
+  margin-top: 5px;
+  font-size: 0.62rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: var(--text-body);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.cal-day--travel .cal-day__summary { color: rgba(255, 255, 255, 0.82); }
+.cal-day--plan .cal-day__summary { color: rgba(0, 0, 0, 0.72); }
 .cal-day--empty {
   border: none;
   background: transparent;
@@ -1070,6 +1085,34 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
   box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--pink), var(--shadow);
 }
 .cal-day__num { pointer-events: none; }
+
+/* Work-status badge — overlays any day (remote / day off / holiday) */
+.cal-day { position: relative; }
+.cal-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding: 2px 5px;
+  border-radius: 100px;
+  border: 1.5px solid var(--black);
+  background: var(--bg);
+  color: var(--black);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.cal-badge--remote { background: #CDE7FF; }
+.cal-badge--off { background: #FFE39A; }
+.cal-badge--holiday { background: #C8F7C5; }
+/* In the legend the badges sit inline, not absolutely positioned */
+.cal-legend .cal-badge {
+  position: static;
+  font-size: 0.62rem;
+  padding: 3px 8px;
+}
 
 /* Day-page prev/next nav */
 .trip-daynav {

@@ -99,8 +99,10 @@ function renderDayPage({ trip, iso, day, prevSlug, nextSlug, weekday, monthEN, d
       <div class="recipe-meta">
         <span>${weekday}, ${monthEN} ${dayNum}</span>
         <span class="tag">Day Plan</span>
+        ${day.work ? `<span class="tag">${WORK_LABELS[day.work] || ''}</span>` : ''}
       </div>
-      <h1>${esc(day.title)}</h1>
+      <h1>${esc(day.title)}</h1>${day.workNote ? `
+      <div style="margin-top: 12px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">${esc(day.workNote)}</div>` : ''}
     </div>
   </div>
 
@@ -121,6 +123,13 @@ const MONTHS_DE = { January:'Januar', February:'Februar', March:'März', April:'
   October:'Oktober', November:'November', December:'Dezember' };
 const WEEKDAYS_DE = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
 
+// Work-status badge labels (overlay on top of travel/away/open days).
+const WORK_LABELS = {
+  remote: '💻 RW',
+  off: '🏖️ OFF',
+  holiday: '🎆 HOLIDAY',
+};
+
 function renderOverview(trip) {
   const base = '/trips/2026/germany/';
   const grids = lib.monthGrids(trip.start, trip.end);
@@ -138,7 +147,11 @@ function renderOverview(trip) {
       // Icon: a day may set its own (e.g. '🚗' for a drive); travel days
       // default to a plane if none is specified. Non-travel days show none.
       const icon = day.icon ? ` ${day.icon}` : (day.type === 'travel' ? ' &#9992;' : '');
-      return `<a class="cal-day cal-day--${day.type}" href="${base}${slug}/" data-date="${iso}" title="${esc(day.summary || '')}"><span class="cal-day__num">${p.day}${icon}</span></a>`;
+      const summary = day.summary
+        ? `<span class="cal-day__summary">${esc(day.summary)}</span>` : '';
+      const badge = day.work
+        ? `<span class="cal-badge cal-badge--${day.work}">${WORK_LABELS[day.work] || ''}</span>` : '';
+      return `<a class="cal-day cal-day--${day.type}" href="${base}${slug}/" data-date="${iso}" title="${esc(day.summary || '')}">${badge}<span class="cal-day__num">${p.day}${icon}</span>${summary}</a>`;
     }).join('');
     const weekdayHdr = WEEKDAYS_DE.map((w) => `<div class="cal-weekday">${w}</div>`).join('');
     return `<div class="cal-month">
@@ -188,6 +201,9 @@ function renderOverview(trip) {
         <span><i class="cal-swatch cal-swatch--rest"></i> Open</span>
         <span><i class="cal-swatch cal-swatch--travel"></i> Travel</span>
         <span><i class="cal-swatch cal-swatch--today"></i> Today</span>
+        <span class="cal-badge cal-badge--remote">💻 RW</span>
+        <span class="cal-badge cal-badge--off">🏖️ OFF</span>
+        <span class="cal-badge cal-badge--holiday">🎆 HOLIDAY</span>
       </div>
     </div>
 

@@ -245,6 +245,117 @@ days['2026-07-10'] = {
   ],
 };
 
+// --- Leg 3: Italy (Ravenna → Crema) ---
+// Mon Jul 20 drive to Ravenna, stay through Jul 26, Mon Jul 27 → Crema (2 nts), Wed Jul 29 drive home.
+days['2026-07-20'] = {
+  title: 'Drive to Ravenna, Italy',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Oberschleißheim → Ravenna over the Brenner (~580 km, ~7 h).',
+  blocks: [
+    { kind: 'place', name: '🚗 Oberschleißheim → Ravenna',
+      detail: '~580 km · ~7 h driving · via the Brenner Pass (A22)<br>Through Austria & over the Alps into Emilia-Romagna' },
+    { kind: 'timing', rows: [
+      ['Early AM', 'Leave Oberschleißheim — full tank'],
+      ['~2.5 h', 'Brenner Pass — Austrian + Italian motorway tolls'],
+      ['Afternoon', 'Arrive Ravenna (Adriatic coast)'],
+    ] },
+    { kind: 'checklist', items: [
+      'Austrian vignette + Brenner toll; Italian autostrada tolls (Telepass/card)',
+      'Warnweste (hi-vis) + warning triangle — required in Italy & Austria',
+      'Passports/IDs; snacks, water, offline maps',
+      'A/C check — it will be hot on the Adriatic',
+    ] },
+  ],
+};
+// Stay days in Ravenna (Jul 21–26): mark as "away" with the location.
+for (const iso of eachDate('2026-07-21', '2026-07-26')) {
+  const p = parts(iso);
+  days[iso] = {
+    title: `Ravenna — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
+    phase: 'summer',
+    type: 'plan',
+    summary: 'In Ravenna, Italy.',
+    blocks: [
+      { kind: 'note', html: '<p>📍 <strong>Ravenna, Emilia-Romagna, Italy.</strong> Byzantine mosaics, Adriatic beaches nearby. To be planned.</p>' },
+    ],
+  };
+}
+days['2026-07-27'] = {
+  title: 'Drive to Crema — Apartment da Irma in terrazza',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Ravenna → Crema (Lombardy, ~290 km, ~3 h). Apartment, 2 nights.',
+  blocks: [
+    { kind: 'place', name: '🚗 Ravenna → Crema',
+      detail: '~290 km · ~3 h driving' },
+    { kind: 'place', name: '🏠 Apartment "da Irma in terrazza", Crema',
+      detail: 'Via Stazione 112, 1° piano, 26013 Crema, Italy<br>Check-in Mon Jul 27 (3:00–6:00 PM) · Check-out Wed Jul 29 (8:00–10:00 AM)<br>Two-Bedroom Apartment · 2 adults + 2 kids (13, 15) · 2 nights<br>Host: +39 347 768 6561 · Confirmation 6913995215<br>Someone will meet you there to hand over the keys',
+      maps: 'Via Stazione 112 Crema Italy' },
+    { kind: 'checklist', items: [
+      'Confirmation 6913995215 + PIN handy; host meets you at check-in',
+      'Tassa di soggiorno: €2 per person per night, cash on arrival (max 3 nights)',
+      'Already paid via Booking.com (€227.46 incl. cleaning fee) — no further payment due',
+      'Free cancellation was until Jul 12',
+    ] },
+  ],
+};
+days['2026-07-28'] = {
+  title: 'Crema — Tuesday, July 28',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'In Crema, Lombardy.',
+  blocks: [
+    { kind: 'note', html: '<p>📍 <strong>Crema, Lombardy</strong> — the town from <em>Call Me By Your Name</em>. Based at the apartment on Via Stazione. To be planned.</p>' },
+  ],
+};
+days['2026-07-29'] = {
+  title: 'Drive back — Crema → Oberschleißheim',
+  phase: 'summer',
+  type: 'travel',
+  icon: '🚗',
+  summary: 'Check out (by 10:00), drive Crema → Oberschleißheim (~525 km, ~5.5 h).',
+  blocks: [
+    { kind: 'timing', rows: [
+      ['08:00–10:00', 'Check out of the apartment'],
+      ['Morning', 'Drive north over the Alps (~525 km, ~5.5 h)'],
+      ['Evening', 'Home in Oberschleißheim'],
+    ] },
+    { kind: 'place', name: '🚗 Crema → Oberschleißheim',
+      detail: '~525 km · ~5.5 h driving · via the Brenner or the Gotthard/San Bernardino' },
+    { kind: 'checklist', items: [
+      'Settle tassa di soggiorno + return keys',
+      'Full tank + tolls/vignette before the motorway',
+    ] },
+  ],
+};
+
+// --- Work-status overlays (layer on top of whatever each day already is) ---
+// A day keeps its travel/away/open type & summary; `work` adds a corner badge.
+const REMOTE_WEEKS = [
+  ['2026-06-08', '2026-06-12'],
+  ['2026-07-13', '2026-07-17'],
+  ['2026-07-27', '2026-07-31'],
+  ['2026-08-03', '2026-08-07'],
+];
+const VACATION_DAYS = [
+  ['2026-06-16', '2026-06-18'],
+  ['2026-06-23', '2026-06-25'],
+  ['2026-06-30', '2026-07-02'],
+  ['2026-07-07', '2026-07-09'],
+  ['2026-07-21', '2026-07-23'],
+];
+const HOLIDAYS = {
+  '2026-06-19': 'Juneteenth (US holiday)',
+  '2026-07-03': 'Independence Day off (US)',
+};
+
+for (const [a, b] of REMOTE_WEEKS) for (const iso of eachDate(a, b)) if (days[iso]) days[iso].work = 'remote';
+for (const [a, b] of VACATION_DAYS) for (const iso of eachDate(a, b)) if (days[iso]) days[iso].work = 'off';
+for (const iso of Object.keys(HOLIDAYS)) if (days[iso]) { days[iso].work = 'holiday'; days[iso].workNote = HOLIDAYS[iso]; }
+
 module.exports = { name: 'Summer in Germany 2026', base: 'Oberschleißheim',
   tz: 'Europe/Berlin', travelers: 'Max, Natalia, Seraphima & Luca',
   start: START, end: END, phases, days };
