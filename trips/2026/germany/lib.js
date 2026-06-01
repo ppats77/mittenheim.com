@@ -16,8 +16,9 @@ function toISO(date) {
 function eachDate(startISO, endISO) {
   const out = [];
   const end = toDate(endISO);
-  for (let cur = toDate(startISO); cur <= end; cur.setUTCDate(cur.getUTCDate() + 1)) {
+  for (let cur = toDate(startISO); cur <= end; ) {
     out.push(toISO(cur));
+    cur.setUTCDate(cur.getUTCDate() + 1);
   }
   return out;
 }
