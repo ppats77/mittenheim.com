@@ -988,75 +988,86 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 28px;
+  gap: 14px 24px;
+  margin-bottom: 40px;
 }
 .cal-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  font-size: 0.85rem;
+  gap: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
-.cal-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.cal-legend span { display: inline-flex; align-items: center; gap: 7px; }
 .cal-swatch {
-  width: 14px; height: 14px;
-  border: var(--border-light);
-  border-radius: 3px;
+  width: 16px; height: 16px;
+  border: 1.5px solid var(--black);
+  border-radius: 4px;
   display: inline-block;
 }
 .cal-swatch--plan { background: var(--pink); }
-.cal-swatch--rest { background: var(--bg-alt); }
+.cal-swatch--rest { background: var(--bg); }
 .cal-swatch--travel { background: var(--black); }
-.cal-swatch--today { background: #fff; border: 2px solid var(--pink); }
+.cal-swatch--today { background: var(--bg); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--pink); }
 
-.trip-calendar { display: flex; flex-direction: column; gap: 40px; }
+.trip-calendar { display: flex; flex-direction: column; gap: 48px; }
 .cal-month__title {
-  font-size: 1.4rem;
-  margin-bottom: 14px;
-  letter-spacing: -0.02em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -0.03em;
 }
 .cal-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
 }
 .cal-weekday {
   text-align: center;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--text-body);
-  padding-bottom: 4px;
+  padding-bottom: 6px;
 }
 .cal-day {
-  aspect-ratio: 1 / 1;
+  min-height: 78px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 10px;
   border: var(--border);
   border-radius: var(--radius);
-  background: var(--bg-alt);
+  background: var(--bg);
   color: var(--text);
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
   text-decoration: none;
+  box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .cal-day:hover {
   transform: translate(-2px, -2px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow);
 }
 .cal-day--plan { background: var(--pink); }
-.cal-day--rest { background: var(--bg-alt); }
-.cal-day--travel { background: var(--black); color: #fff; border-color: rgba(255, 255, 255, 0.25); }
+.cal-day--rest { background: var(--bg); }
+.cal-day--travel { background: var(--black); color: #fff; }
 .cal-day--empty {
   border: none;
   background: transparent;
+  box-shadow: none;
   pointer-events: none;
 }
 .cal-day--empty:hover { transform: none; box-shadow: none; }
+/* Today: white + pink double ring reads on white, pink AND black cells */
 .cal-day--today {
-  outline: 3px solid var(--pink);
-  outline-offset: 2px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--pink), var(--shadow-sm);
+}
+.cal-day--today:hover {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--pink), var(--shadow);
 }
 .cal-day__num { pointer-events: none; }
 
@@ -1072,7 +1083,12 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
 .trip-daynav a { white-space: nowrap; }
 
 @media (max-width: 600px) {
-  .cal-grid { gap: 3px; }
-  .cal-day { font-size: 0.8rem; }
-  .cal-month__title { font-size: 1.15rem; }
+  .cal-grid { gap: 5px; }
+  .cal-day {
+    min-height: 52px;
+    padding: 6px 7px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+  }
+  .cal-month__title { font-size: 1.25rem; }
 }
