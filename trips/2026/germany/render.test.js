@@ -45,6 +45,6 @@ test('renderDayPage omits prev link on first day, next on last', () => {
   const first = render.renderDayPage({ trip: { name: 'X' }, iso: '2026-06-08',
     day: sampleDay, prevSlug: null, nextSlug: 'june-09',
     weekday: 'Monday', monthEN: 'June', dayNum: 8 });
-  assert.doesNotMatch(first, /← Prev/);
-  assert.match(first, /Next →/);
+  assert.doesNotMatch(first, /&larr; Prev/);
+  assert.match(first, /Next &rarr;/);
 });

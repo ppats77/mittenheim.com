@@ -73,8 +73,8 @@ const FOOTER = `  <!-- Footer -->
 
 function renderDayPage({ trip, iso, day, prevSlug, nextSlug, weekday, monthEN, dayNum }) {
   const base = '/trips/2026/germany/';
-  const prev = prevSlug ? `<a href="${base}${prevSlug}/">← Prev</a>` : '<span></span>';
-  const next = nextSlug ? `<a href="${base}${nextSlug}/">Next →</a>` : '<span></span>';
+  const prev = prevSlug ? `<a href="${base}${prevSlug}/">&larr; Prev</a>` : '<span></span>';
+  const next = nextSlug ? `<a href="${base}${nextSlug}/">Next &rarr;</a>` : '<span></span>';
   return `${head(day.title)}
 
   <!-- Navigation -->
