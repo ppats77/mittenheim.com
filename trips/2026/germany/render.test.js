@@ -99,3 +99,27 @@ test('renderOverview emits 3 months with correct blanks and day links', () => {
   assert.match(html, /Jump to today/);
   assert.match(html, /cal-legend/);
 });
+
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const { execFileSync } = require('node:child_process');
+
+test('build.js writes overview + 66 day pages into target dir', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'germany-build-'));
+  execFileSync('node', [path.join(__dirname, 'build.js'), '--out', tmp], { stdio: 'pipe' });
+
+  assert.ok(fs.existsSync(path.join(tmp, 'index.html')), 'overview missing');
+
+  const trip = require('./days.js');
+  const slugs = lib.eachDate(trip.start, trip.end).map(lib.slugFor);
+  assert.strictEqual(slugs.length, 66);
+  for (const slug of slugs) {
+    assert.ok(fs.existsSync(path.join(tmp, slug, 'index.html')), `missing ${slug}`);
+  }
+  // Spot-check anchor content landed in the right file
+  const arrival = fs.readFileSync(path.join(tmp, 'june-09', 'index.html'), 'utf8');
+  assert.match(arrival, /DE4427/);
+
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
