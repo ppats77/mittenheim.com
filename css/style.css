@@ -1046,7 +1046,7 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
 }
 .cal-day--plan { background: var(--pink); }
 .cal-day--rest { background: var(--bg-alt); }
-.cal-day--travel { background: var(--black); color: #fff; }
+.cal-day--travel { background: var(--black); color: #fff; border-color: rgba(255, 255, 255, 0.25); }
 .cal-day--empty {
   border: none;
   background: transparent;
