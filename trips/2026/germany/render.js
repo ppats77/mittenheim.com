@@ -141,10 +141,18 @@ function renderMatchBlock(matches) {
   const rows = matches.map((m) => {
     const ger = m.isGermany ? ' trip-match--germany' : '';
     const sub = m.group && m.group !== m.round ? m.group : m.round;
+    const ch = m.channels;
+    let chans = '';
+    if (ch) {
+      const part = (flag, name, conf) => name
+        ? `${flag}&nbsp;${esc(name)}${conf === 'expected' ? '*' : ''}` : '';
+      const bits = [part('&#127465;&#127466;', ch.de, ch.deConf), part('&#127468;&#127463;', ch.uk, ch.ukConf)].filter(Boolean);
+      if (bits.length) chans = `<span class="trip-match__chan">${bits.join(' &middot; ')}</span>`;
+    }
     return `        <div class="trip-match${ger}">
           <span class="trip-match__time">${esc(m.cetTime)}</span>
           <span class="trip-match__teams">${esc(m.match)}</span>
-          <span class="trip-match__meta">${esc(sub)}</span>
+          <span class="trip-match__meta">${esc(sub)}</span>${chans}
         </div>`;
   }).join('\n');
   return `

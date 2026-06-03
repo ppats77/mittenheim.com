@@ -17,6 +17,24 @@ const sample = [
     home: 'South Korea', away: 'Czech Republic', group: 'Group A', round: 'Group Stage', venue: 'Guadalajara', isGermany: false },
 ];
 
+test('withChannels attaches channel data and rejects unknown fixtures', () => {
+  const ok = lib.withChannels(sample, { 'Germany v Curacao|2026-06-14': { de: 'ARD', deConf: 'confirmed' } });
+  const g = ok.find((m) => m.match === 'Germany v Curacao');
+  assert.deepStrictEqual(g.channels, { de: 'ARD', deConf: 'confirmed' });
+  // a match with no entry has no channels key
+  assert.strictEqual(ok.find((m) => m.match === 'Netherlands v Japan').channels, undefined);
+  // unknown fixture key throws (keeps channel data honest)
+  assert.throws(() => lib.withChannels(sample, { 'Bogus v Team|2026-06-14': { de: 'ARD' } }), /unknown fixture/);
+});
+
+test('renderChannels: confirmed, expected, and TBC states', () => {
+  assert.match(render.renderChannels({ de: 'ARD', deConf: 'confirmed', uk: 'ITV', ukConf: 'confirmed' }), /ARD/);
+  assert.match(render.renderChannels({ de: 'ARD', deConf: 'confirmed', uk: 'ITV', ukConf: 'confirmed' }), /cup-chan--confirmed/);
+  assert.match(render.renderChannels({ de: 'ARD', deConf: 'expected' }), /exp\./);
+  assert.match(render.renderChannels({ de: 'ARD', deConf: 'expected' }), /cup-chan--tbc/); // UK missing -> TBC chip
+  assert.match(render.renderChannels(undefined), /TBC/); // no data at all
+});
+
 test('groupByCetDate sorts days and matches by kickoff', () => {
   const days = lib.groupByCetDate(sample);
   assert.strictEqual(days.length, 2);

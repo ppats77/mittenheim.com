@@ -49,6 +49,20 @@ const FOOTER = `  <!-- Footer -->
 </body>
 </html>`;
 
+// Channel chips for a match: 🇩🇪 (German free-TV) and 🇬🇧 (UK). "exp." = unofficial
+// projection; absent = not announced -> shown as TBC. Returns '' if no data at all.
+function renderChannels(ch) {
+  if (!ch) {
+    return '<div class="cup-chans"><span class="cup-chan cup-chan--tbc">&#127465;&#127466; / &#127468;&#127463; TBC</span></div>';
+  }
+  const chip = (flag, name, conf) => {
+    if (!name) return `<span class="cup-chan cup-chan--tbc">${flag} TBC</span>`;
+    const exp = conf === 'expected' ? '<span class="cup-chan__exp"> exp.</span>' : '';
+    return `<span class="cup-chan cup-chan--${conf}">${flag} ${esc(name)}${exp}</span>`;
+  };
+  return `<div class="cup-chans">${chip('&#127465;&#127466;', ch.de, ch.deConf)}${chip('&#127468;&#127463;', ch.uk, ch.ukConf)}</div>`;
+}
+
 // One match row. data-germany lets us accent it; flag emoji optional decoration.
 function renderMatch(m) {
   const ger = m.isGermany ? ' cup-match--germany' : '';
@@ -62,6 +76,7 @@ function renderMatch(m) {
             <div class="cup-match__teams">${esc(m.match)}</div>
             <div class="cup-match__meta">${esc(sub)} &middot; ${esc(m.venue)}</div>
           </div>
+          ${renderChannels(m.channels)}
         </div>`;
 }
 
@@ -116,7 +131,8 @@ function renderPage(matches) {
       <div class="cup-watch__body">
         <p><strong>&#127465;&#127466; In Germany (home base):</strong> <strong>ARD</strong> &amp; <strong>ZDF</strong> show 60 of the 104 matches free-to-air &mdash; including every Germany game, the opening match, both semi-finals and the final (also free on their apps/streams). <strong>MagentaTV</strong> (Telekom) carries all 104 live, 44 of them exclusively.</p>
         <p><strong>&#127467;&#127479; On the France trip (Jun 14&ndash;24):</strong> if you have <strong>UK channels</strong>, <strong>BBC One</strong> and <strong>ITV1</strong> split all 104 matches between them, all free (and on BBC iPlayer / ITVX). The <strong>German ARD/ZDF</strong> free games are available too. Both of Germany&rsquo;s first two matches fall during this stay &mdash; Germany v Curacao (Jun 14) and Germany v Ivory Coast (Jun 20) &mdash; carried free on ARD/ZDF and on BBC or ITV.</p>
-        <p class="cup-watch__note">The exact BBC-vs-ITV and ARD-vs-ZDF split per match is only partly announced; check the channel&rsquo;s guide nearer kick-off. Kickoff times below are CET (Germany) with ET shown underneath.</p>
+        <p><strong>Channel chips below each match:</strong> &#127465;&#127466; = German free-TV (ARD/ZDF), &#127468;&#127463; = UK (BBC/ITV). Officially confirmed games are firm; <em>exp.</em> = expected (well-sourced but unofficial projection); <strong>TBC</strong> = not announced yet. The full per-match BBC-vs-ITV split is only published for the home-nation and marquee games &mdash; the rest, and all knockout ties, are confirmed nearer kick-off.</p>
+        <p class="cup-watch__note">Kickoff times below are CET (Germany) with ET shown underneath. Games not on German free-TV are on MagentaTV (pay); in the UK all 104 are free across BBC/ITV.</p>
       </div>
     </details>
 
@@ -139,4 +155,4 @@ function renderPage(matches) {
 ${FOOTER}`;
 }
 
-module.exports = { renderPage, renderMatch, renderDay, head, esc, FOOTER };
+module.exports = { renderPage, renderMatch, renderDay, renderChannels, head, esc, FOOTER };

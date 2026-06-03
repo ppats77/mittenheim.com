@@ -4,7 +4,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const render = require('./render.js');
-const matches = require('./matches.js');
+const lib = require('./lib.js');
+const rawMatches = require('./matches.js');
+const channels = require('./channels.js');
+const matches = lib.withChannels(rawMatches, channels);
 
 function outDir() {
   // No --out: write into this source dir (Task: generate the live /cup page).

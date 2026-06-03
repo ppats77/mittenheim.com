@@ -44,4 +44,18 @@ function groupByCetDate(matches) {
   }));
 }
 
-module.exports = { groupByCetDate, dayLabel, timeToMinutes, toDate, WEEKDAYS_EN, MONTHS_EN };
+// Attach channel info (from channels.js) to each match by 'match|cetDate' key.
+// Throws if a channels.js entry references a fixture that doesn't exist — this
+// keeps the channel data honest (no silent mislabeling).
+function withChannels(matches, channels) {
+  const valid = new Set(matches.map((m) => `${m.match}|${m.cetDate}`));
+  for (const key of Object.keys(channels)) {
+    if (!valid.has(key)) throw new Error(`channels.js references unknown fixture: ${key}`);
+  }
+  return matches.map((m) => {
+    const ch = channels[`${m.match}|${m.cetDate}`];
+    return ch ? { ...m, channels: ch } : m;
+  });
+}
+
+module.exports = { groupByCetDate, dayLabel, timeToMinutes, toDate, withChannels, WEEKDAYS_EN, MONTHS_EN };

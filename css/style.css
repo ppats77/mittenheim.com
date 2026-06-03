@@ -1245,9 +1245,40 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
 .cup-match__main { flex: 1; min-width: 180px; }
 .cup-match__teams { font-weight: 600; font-size: 1.05rem; }
 .cup-match__meta { color: var(--text-body); font-size: 0.82rem; margin-top: 2px; }
+.trip-match__chan { font-size: 0.78rem; font-weight: 600; color: var(--text-body); }
+.trip-match--germany .trip-match__chan { color: rgba(0, 0, 0, 0.7); }
 .cup-match--germany { background: var(--pink); }
 .cup-match--germany .cup-match__et,
 .cup-match--germany .cup-match__meta { color: rgba(0, 0, 0, 0.7); }
+
+/* Channel chips (DE free-TV + UK) */
+.cup-chans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+  margin-top: 2px;
+}
+.cup-chan {
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 100px;
+  border: 1.5px solid var(--black);
+  background: #fff;
+  white-space: nowrap;
+}
+.cup-chan--confirmed { background: #C8F7C5; }   /* green = officially confirmed */
+.cup-chan--expected  { background: #FFF1B8; }   /* amber = expected/unofficial */
+.cup-chan--tbc {
+  background: transparent;
+  border-style: dashed;
+  color: var(--text-body);
+  font-weight: 600;
+}
+.cup-chan__exp { font-weight: 600; font-style: italic; opacity: 0.75; }
+.cup-match--germany .cup-chan { border-color: rgba(0, 0, 0, 0.55); }
 
 @media (max-width: 600px) {
   .cup-match__time { min-width: 64px; }

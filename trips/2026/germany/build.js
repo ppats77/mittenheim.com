@@ -6,14 +6,14 @@ const lib = require('./lib.js');
 const render = require('./render.js');
 const trip = require('./days.js');
 
-// World Cup matches, grouped by the German (CET) day they air on.
-const cupMatches = require('../../../cup/matches.js');
+// World Cup matches (with TV channels), grouped by the German (CET) day they air on.
+const cupLib = require('../../../cup/lib.js');
+const cupMatches = cupLib.withChannels(require('../../../cup/matches.js'), require('../../../cup/channels.js'));
 const matchesByDate = {};
 for (const m of cupMatches) {
   (matchesByDate[m.cetDate] = matchesByDate[m.cetDate] || []).push(m);
 }
 // Sort each day's matches by CET kickoff time.
-const cupLib = require('../../../cup/lib.js');
 for (const d of Object.keys(matchesByDate)) {
   matchesByDate[d].sort((a, b) => cupLib.timeToMinutes(a.cetTime) - cupLib.timeToMinutes(b.cetTime));
 }
