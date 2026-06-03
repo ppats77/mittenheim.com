@@ -87,7 +87,7 @@ const FOOTER = `  <!-- Footer -->
 </body>
 </html>`;
 
-function renderDayPage({ trip, iso, day, prevSlug, nextSlug, weekday, monthEN, dayNum }) {
+function renderDayPage({ trip, iso, day, prevSlug, nextSlug, weekday, monthEN, dayNum, matches }) {
   const base = '/trips/2026/germany/';
   const slug = lib.slugFor(iso);
   const prev = prevSlug ? `<a href="${base}${prevSlug}/">&larr; Prev</a>` : '<span></span>';
@@ -128,11 +128,34 @@ function renderDayPage({ trip, iso, day, prevSlug, nextSlug, weekday, monthEN, d
     <div class="trip-daynav">${prev}${next}</div>
 
         ${renderBlocks(day.blocks)}
-
+${renderMatchBlock(matches)}
     <div class="trip-daynav" style="margin-top:32px;">${prev}<a href="${base}">All days</a>${next}</div>
   </div>
 
 ${FOOTER}`;
+}
+
+// World Cup matches airing in Germany on this day (optional; from cup/matches.js).
+function renderMatchBlock(matches) {
+  if (!matches || !matches.length) return '';
+  const rows = matches.map((m) => {
+    const ger = m.isGermany ? ' trip-match--germany' : '';
+    const sub = m.group && m.group !== m.round ? m.group : m.round;
+    return `        <div class="trip-match${ger}">
+          <span class="trip-match__time">${esc(m.cetTime)}</span>
+          <span class="trip-match__teams">${esc(m.match)}</span>
+          <span class="trip-match__meta">${esc(sub)}</span>
+        </div>`;
+  }).join('\n');
+  return `
+    <details class="trip-step" open>
+      <summary><span class="trip-step__time">&#9917;</span> World Cup today (CET)</summary>
+      <div class="trip-step__body">
+${rows}
+        <p style="margin-top:14px;"><a href="/cup/">Full World Cup schedule &rarr;</a></p>
+      </div>
+    </details>
+`;
 }
 
 const MONTHS_DE = { January:'Januar', February:'Februar', March:'März', April:'April',
@@ -147,8 +170,9 @@ const WORK_LABELS = {
   holiday: '🎆 HOLIDAY',
 };
 
-function renderOverview(trip) {
+function renderOverview(trip, { matchDates } = {}) {
   const base = '/trips/2026/germany/';
+  const hasMatch = matchDates instanceof Set ? matchDates : new Set(matchDates || []);
   const grids = lib.monthGrids(trip.start, trip.end);
   const s = lib.parts(trip.start);
   const e = lib.parts(trip.end);
@@ -168,7 +192,8 @@ function renderOverview(trip) {
         ? `<span class="cal-day__summary">${esc(day.summary)}</span>` : '';
       const badge = day.work
         ? `<span class="cal-badge cal-badge--${day.work}">${WORK_LABELS[day.work] || ''}</span>` : '';
-      return `<a class="cal-day cal-day--${day.type}" href="${base}${slug}/" data-date="${iso}" title="${esc(day.summary || '')}">${badge}<span class="cal-day__num">${p.day}${icon}</span>${summary}</a>`;
+      const ball = hasMatch.has(iso) ? '<span class="cal-day__ball" title="World Cup match today">&#9917;</span>' : '';
+      return `<a class="cal-day cal-day--${day.type}" href="${base}${slug}/" data-date="${iso}" title="${esc(day.summary || '')}">${badge}<span class="cal-day__num">${p.day}${icon}</span>${summary}${ball}</a>`;
     }).join('');
     const weekdayHdr = WEEKDAYS_DE.map((w) => `<div class="cal-weekday">${w}</div>`).join('');
     return `<div class="cal-month">

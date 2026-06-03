@@ -6,6 +6,19 @@ const lib = require('./lib.js');
 const render = require('./render.js');
 const trip = require('./days.js');
 
+// World Cup matches, grouped by the German (CET) day they air on.
+const cupMatches = require('../../../cup/matches.js');
+const matchesByDate = {};
+for (const m of cupMatches) {
+  (matchesByDate[m.cetDate] = matchesByDate[m.cetDate] || []).push(m);
+}
+// Sort each day's matches by CET kickoff time.
+const cupLib = require('../../../cup/lib.js');
+for (const d of Object.keys(matchesByDate)) {
+  matchesByDate[d].sort((a, b) => cupLib.timeToMinutes(a.cetTime) - cupLib.timeToMinutes(b.cetTime));
+}
+const matchDates = new Set(Object.keys(matchesByDate));
+
 function outDir() {
   // No --out: write into this source dir (used by Task 9 to generate the live site).
   // With --out <dir>: write elsewhere (used by tests to generate into a temp dir).
@@ -29,7 +42,7 @@ function main() {
   const dates = lib.eachDate(trip.start, trip.end);
 
   // Overview
-  write(path.join(out, 'index.html'), render.renderOverview(trip));
+  write(path.join(out, 'index.html'), render.renderOverview(trip, { matchDates }));
 
   // Day pages
   dates.forEach((iso, idx) => {
@@ -40,6 +53,7 @@ function main() {
       prevSlug: idx > 0 ? lib.slugFor(dates[idx - 1]) : null,
       nextSlug: idx < dates.length - 1 ? lib.slugFor(dates[idx + 1]) : null,
       weekday: p.weekdayEN, monthEN: p.monthEN, dayNum: p.day,
+      matches: matchesByDate[iso],
     });
     write(path.join(out, slug, 'index.html'), html);
   });
