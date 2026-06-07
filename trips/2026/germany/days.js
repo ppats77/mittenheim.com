@@ -93,6 +93,24 @@ days['2026-08-12'] = {
   ],
 };
 
+// --- Sat Jun 13: School of Rock visit (Luca) ---
+days['2026-06-13'] = {
+  title: 'School of Rock — Performance Program',
+  phase: 'arrival',
+  type: 'plan',
+  summary: 'Luca tries the Performance Program at School of Rock München, 13:30.',
+  blocks: [
+    { kind: 'timing', rows: [
+      ['~13:20', 'Arrive a few minutes early to say hello (Patrick suggested)'],
+      ['13:30', 'Performance Program — Luca meets the guitar teacher at his level'],
+    ] },
+    { kind: 'place', name: '🎸 School of Rock Candidplatz',
+      detail: 'Candidplatz 1, 81543 München<br>General Manager: Patrick Palmer · 089 38 04 7760<br>ppalmer@schoolofrock.com · schoolofrock.de',
+      maps: 'School of Rock Candidplatz 1 München' },
+    { kind: 'note', html: '<p>Performance-based music education. Luca will meet the guitar teacher on the right level — a taster of the Performance Program. Come a few minutes early for a chat.</p>' },
+  ],
+};
+
 // --- Leg 1: France road trip (Chérac, Charente-Maritime) ---
 // Sun Jun 14 drive out (direct), stay through Jun 23, Wed Jun 24 drive home.
 days['2026-06-14'] = {
