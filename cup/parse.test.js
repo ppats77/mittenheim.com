@@ -43,6 +43,7 @@ test('flags Germany matches via home or away', () => {
     'Germany v Curacao',
     'Germany v Ivory Coast',
     'Ecuador v Germany',
+    'Germany v Paraguay',
   ]);
 });
 

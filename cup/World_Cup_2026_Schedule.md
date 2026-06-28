@@ -189,52 +189,52 @@
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 3:00 PM | 9:00 PM | Runner-up A v Runner-up B | Match 73 | Los Angeles |
+| 3:00 PM | 9:00 PM | Canada v South Africa | Match 73 | Los Angeles |
 
 
 ### Monday, Jun 29
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 1:00 PM | 7:00 PM | Winner C v Runner-up F | Match 76 | Houston |
-| 4:30 PM | 10:30 PM | Winner E v 3rd A/B/C/D/F | Match 74 | Boston |
-| 9:00 PM | 3:00 AM (Jun 30) | Winner F v Runner-up C | Match 75 | Monterrey |
+| 1:00 PM | 7:00 PM | Brazil v Japan | Match 76 | Houston |
+| 4:30 PM | 10:30 PM | Germany v Paraguay | Match 74 | Boston |
+| 9:00 PM | 3:00 AM (Jun 30) | Netherlands v Morocco | Match 75 | Monterrey |
 
 
 ### Tuesday, Jun 30
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 1:00 PM | 7:00 PM | Runner-up E v Runner-up I | Match 78 | Dallas |
-| 5:00 PM | 11:00 PM | Winner I v 3rd C/D/F/G/H | Match 77 | New Jersey |
-| 9:00 PM | 3:00 AM (Jul 1) | Winner A v 3rd C/E/F/H/I | Match 79 | Mexico City |
+| 1:00 PM | 7:00 PM | Ivory Coast v Norway | Match 78 | Dallas |
+| 5:00 PM | 11:00 PM | France v Sweden | Match 77 | New Jersey |
+| 9:00 PM | 3:00 AM (Jul 1) | Mexico v Ecuador | Match 79 | Mexico City |
 
 
 ### Wednesday, Jul 1
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 12:00 PM | 6:00 PM | Winner L v 3rd E/H/I/J/K | Match 80 | Atlanta |
-| 4:00 PM | 10:00 PM | Winner G v 3rd A/E/H/I/J | Match 82 | Seattle |
-| 8:00 PM | 2:00 AM (Jul 2) | Winner D v 3rd B/E/F/I/J | Match 81 | Santa Clara |
+| 12:00 PM | 6:00 PM | England v Congo DR | Match 80 | Atlanta |
+| 4:00 PM | 10:00 PM | Belgium v Senegal | Match 82 | Seattle |
+| 8:00 PM | 2:00 AM (Jul 2) | USA v Bosnia & Herz. | Match 81 | Santa Clara |
 
 
 ### Thursday, Jul 2
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 3:00 PM | 9:00 PM | Winner H v Runner-up J | Match 84 | Los Angeles |
-| 7:00 PM | 1:00 AM (Jul 3) | Runner-up K v Runner-up L | Match 83 | Toronto |
-| 11:00 PM | 5:00 AM (Jul 3) | Winner B v 3rd E/F/G/I/J | Match 85 | Vancouver |
+| 3:00 PM | 9:00 PM | Spain v Austria | Match 84 | Los Angeles |
+| 7:00 PM | 1:00 AM (Jul 3) | Portugal v Croatia | Match 83 | Toronto |
+| 11:00 PM | 5:00 AM (Jul 3) | Switzerland v Algeria | Match 85 | Vancouver |
 
 
 ### Friday, Jul 3
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 2:00 PM | 8:00 PM | Runner-up D v Runner-up G | Match 88 | Dallas |
-| 6:00 PM | 12:00 AM (Jul 4) | Winner J v Runner-up H | Match 86 | Miami |
-| 9:30 PM | 3:30 AM (Jul 4) | Winner K v 3rd D/E/I/J/L | Match 87 | Kansas City |
+| 2:00 PM | 8:00 PM | Australia v Egypt | Match 88 | Dallas |
+| 6:00 PM | 12:00 AM (Jul 4) | Argentina v Cape Verde | Match 86 | Miami |
+| 9:30 PM | 3:30 AM (Jul 4) | Colombia v Ghana | Match 87 | Kansas City |
 
 
 ## Round of 16
