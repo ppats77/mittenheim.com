@@ -45,4 +45,13 @@ module.exports = {
   'France v Iraq|2026-06-22':        { de: 'ARD', deConf: 'expected' },
   'Portugal v Uzbekistan|2026-06-23':{ de: 'ARD', deConf: 'expected' },
   'Colombia v DR Congo|2026-06-24':  { de: 'ARD', deConf: 'expected' }, // 4:00 AM CET (Jun 24)
+
+  // ---- Round of 32 (Sechzehntelfinale) German free-TV — per ARD/sportschau official schedule ----
+  // Most R32 games are MagentaTV-only; ARD/ZDF picked a selection. USA v Bosnia (Jul 2, 2 AM) = n.n. (TBC).
+  'Spain v Austria|2026-07-02':         { de: 'ARD', deConf: 'confirmed' },
+  'Portugal v Croatia|2026-07-03':      { de: 'MagentaTV', deConf: 'confirmed' }, // 1:00 AM CET (Jul 3)
+  'Switzerland v Algeria|2026-07-03':   { de: 'ZDF', deConf: 'confirmed' }, // 5:00 AM CET (Jul 3)
+  'Australia v Egypt|2026-07-03':       { de: 'ZDF', deConf: 'confirmed' },
+  'Argentina v Cape Verde|2026-07-04':  { de: 'MagentaTV', deConf: 'confirmed' }, // 12:00 AM CET (Jul 4)
+  'Colombia v Ghana|2026-07-04':        { de: 'ZDF', deConf: 'confirmed' }, // 3:30 AM CET (Jul 4)
 };
