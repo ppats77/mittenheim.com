@@ -179,18 +179,31 @@ days['2026-07-01'] = {
     { kind: 'note', html: '<p>First leg of the northern loop. Overnight in Oldenburg.</p>' },
   ],
 };
-for (const iso of eachDate('2026-07-02', '2026-07-03')) {
-  const p = parts(iso);
-  days[iso] = {
-    title: `Oldenburg — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
-    phase: 'summer',
-    type: 'plan',
-    summary: 'In Oldenburg.',
-    blocks: [
-      { kind: 'note', html: '<p>📍 <strong>Oldenburg.</strong> To be planned.</p>' },
-    ],
-  };
-}
+days['2026-07-02'] = {
+  title: 'Oldenburg — Altstadt & Schloss',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Strolling the Oldenburg old town and Schlossplatz.',
+  blocks: [
+    { kind: 'note', html: '<p>📍 <strong>Oldenburg.</strong> A day around the Altstadt — the cobbled Schlossplatz and the yellow baroque Oldenburger Schloss (now the Landesmuseum für Kunst und Kulturgeschichte).</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-schloss.jpg', alt: 'Crossing the cobbled Schlossplatz in front of the yellow Oldenburger Schloss' },
+    { kind: 'place', name: '🏰 Oldenburger Schloss', detail: 'Schlossplatz 26, 26122 Oldenburg<br>Landesmuseum für Kunst und Kulturgeschichte', maps: 'Oldenburger Schloss Schlossplatz Oldenburg' },
+  ],
+};
+days['2026-07-03'] = {
+  title: 'Day trip to Bremen',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Bremen Altstadt: Marktplatz, Rathaus, Dom & the Town Musicians.',
+  blocks: [
+    { kind: 'note', html: '<p>📍 <strong>Bremen</strong> — an easy hop from Oldenburg (~45 min). The UNESCO-listed Marktplatz with the Rathaus and St.&nbsp;Petri Dom, the Liebfrauenkirche, and of course the <em>Bremer Stadtmusikanten</em> — donkey, dog, cat and rooster. Grabbing the donkey&rsquo;s front legs with both hands is supposed to make a wish come true.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/bremen-rathaus-dom.jpg', alt: 'Bremen Marktplatz with the Rathaus and the twin spires of St. Petri Dom' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/bremen-stadtmusikanten.jpg', alt: 'Natalia, Phima and Luca at the Bremen Town Musicians statue' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/bremen-liebfrauenkirche.jpg', alt: 'The Liebfrauenkirche with cafe umbrellas on the square' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/bremen-marktplatz.jpg', alt: 'Wandering the square by the Liebfrauenkirche' },
+    { kind: 'place', name: '🎺 Bremer Stadtmusikanten', detail: 'Am Markt / west side of the Rathaus, 28195 Bremen<br>Bronze by Gerhard Marcks (1951)', maps: 'Bremer Stadtmusikanten Rathaus Bremen' },
+  ],
+};
 days['2026-07-04'] = {
   title: 'Drive to Klixbüll (Nordfriesland)',
   phase: 'summer',
