@@ -54,4 +54,14 @@ module.exports = {
   'Australia v Egypt|2026-07-03':       { de: 'ZDF', deConf: 'confirmed' },
   'Argentina v Cape Verde|2026-07-04':  { de: 'MagentaTV', deConf: 'confirmed' }, // 12:00 AM CET (Jul 4)
   'Colombia v Ghana|2026-07-04':        { de: 'ZDF', deConf: 'confirmed' }, // 3:30 AM CET (Jul 4)
+
+  // ---- Round of 16 (Achtelfinale) German free-TV — per ARD/sportschau official schedule ----
+  'Canada v Morocco|2026-07-04':        { de: 'ZDF', deConf: 'confirmed' },
+  'Paraguay v France|2026-07-04':       { de: 'MagentaTV', deConf: 'confirmed' }, // 11:00 PM CET
+  'Brazil v Norway|2026-07-05':         { de: 'MagentaTV', deConf: 'confirmed' }, // 10:00 PM CET
+  'Mexico v England|2026-07-06':        { de: 'MagentaTV', deConf: 'confirmed' }, // 2:00 AM CET (Jul 6)
+  'Portugal v Spain|2026-07-06':        { de: 'ZDF', deConf: 'confirmed' },
+  'USA v Belgium|2026-07-07':           { de: 'ARD', deConf: 'confirmed' }, // 2:00 AM CET (Jul 7)
+  'Argentina v Egypt|2026-07-07':       { de: 'ARD', deConf: 'confirmed' },
+  'Switzerland v Colombia|2026-07-07':  { de: 'ARD', deConf: 'confirmed' },
 };

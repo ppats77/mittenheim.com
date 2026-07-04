@@ -244,32 +244,32 @@
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 1:00 PM | 7:00 PM | Winner 73 v Winner 75 | Match 90 | Houston |
-| 5:00 PM | 11:00 PM | Winner 74 v Winner 77 | Match 89 | Philadelphia |
+| 1:00 PM | 7:00 PM | Canada v Morocco | Match 90 | Houston |
+| 5:00 PM | 11:00 PM | Paraguay v France | Match 89 | Philadelphia |
 
 
 ### Sunday, Jul 5
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 4:00 PM | 10:00 PM | Winner 76 v Winner 78 | Match 91 | New Jersey |
-| 8:00 PM | 2:00 AM (Jul 6) | Winner 79 v Winner 80 | Match 92 | Mexico City |
+| 4:00 PM | 10:00 PM | Brazil v Norway | Match 91 | New Jersey |
+| 8:00 PM | 2:00 AM (Jul 6) | Mexico v England | Match 92 | Mexico City |
 
 
 ### Monday, Jul 6
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 3:00 PM | 9:00 PM | Winner 83 v Winner 84 | Match 93 | Dallas |
-| 8:00 PM | 2:00 AM (Jul 7) | Winner 81 v Winner 82 | Match 94 | Seattle |
+| 3:00 PM | 9:00 PM | Portugal v Spain | Match 93 | Dallas |
+| 8:00 PM | 2:00 AM (Jul 7) | USA v Belgium | Match 94 | Seattle |
 
 
 ### Tuesday, Jul 7
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 12:00 PM | 6:00 PM | Winner 86 v Winner 88 | Match 95 | Atlanta |
-| 4:00 PM | 10:00 PM | Winner 85 v Winner 87 | Match 96 | Vancouver |
+| 12:00 PM | 6:00 PM | Argentina v Egypt | Match 95 | Atlanta |
+| 4:00 PM | 10:00 PM | Switzerland v Colombia | Match 96 | Vancouver |
 
 
 ## Quarter-finals
