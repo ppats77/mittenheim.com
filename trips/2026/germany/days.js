@@ -226,6 +226,7 @@ days['2026-07-05'] = {
     { kind: 'photo', src: '/trips/2026/germany/photos/klixbuell-country-road.jpg', alt: 'Phima and Luca on a country lane near Klixbüll' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-flags.jpg', alt: 'Tønder pedestrian street under Danish flag bunting' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-street.jpg', alt: 'Umbrellas out on the cobbles of Tønder Midtby' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/toender-storegade.jpg', alt: 'Storegade under Dannebrog bunting, purple umbrella leading the way' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-events.jpg', alt: 'Events i Toender Midtby 2026 board' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-garden.jpg', alt: 'A rainy garden allee stroll' },
     { kind: 'place', name: '🇩🇰 Tønder Midtby', detail: 'Storegade / Vestergade pedestrian zone, 6270 Tønder, Denmark<br>~20 min drive from Klixbüll', maps: 'Toender Denmark Storegade' },
