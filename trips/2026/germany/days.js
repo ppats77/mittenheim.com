@@ -165,27 +165,65 @@ for (const iso of eachDate('2026-06-15', '2026-06-23')) {
   };
 }
 
+// --- Between the trips: Oberschleißheim days (photo-dated via EXIF) ---
+days['2026-06-26'] = {
+  title: 'At the beekeeper’s — Pfaffenhofen',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Visiting a beekeeper near Pfaffenhofen a.d. Ilm — open hives, honeycomb in hand.',
+  blocks: [
+    { kind: 'note', html: '<p>🐝 An afternoon at a beekeeper&rsquo;s garden up near <strong>Pfaffenhofen an der Ilm</strong> — hives open, a frame of honeycomb straight out of the box, bees everywhere and nobody stung.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/pfaffenhofen-imker.jpg', alt: 'The beekeeper lifting a honeycomb frame out of the hive' },
+  ],
+};
+days['2026-06-27'] = {
+  title: 'Biergarten evening — Oberschleißheim',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Classic Bavarian beer garden night — lanterns, Maß and dancing between the tables.',
+  blocks: [
+    { kind: 'note', html: '<p>🍻 Saturday night at the beer garden in <strong>Oberschleißheim</strong> — lanterns under the chestnut trees, Weißbier and Maßkrüge on the benches, and couples dancing between the tables as the sun went down.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oberschleissheim-biergarten.jpg', alt: 'Beer garden at dusk, lanterns lit, dancing by the trees' },
+  ],
+};
+days['2026-06-30'] = {
+  title: 'Last evening before the northern loop',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Evening walk through the green lanes of Oberschleißheim; packing for the road.',
+  blocks: [
+    { kind: 'note', html: '<p>🚶 A last evening walk through the hedge-lined lanes of <strong>Oberschleißheim</strong> before packing the car — tomorrow the northern loop starts: Oldenburg &rarr; Nordfriesland &rarr; Berlin.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oberschleissheim-lane.jpg', alt: 'The three walking a green hedge-lined lane in Oberschleissheim' },
+  ],
+};
+
 // --- Leg 2: Northern loop (Oldenburg → Klixbüll → Berlin) ---
 // Wed Jul 1 → Oldenburg (3 nts), Sat Jul 4 → Klixbüll (3 nts), Tue Jul 7 → Berlin (3 nts), Fri Jul 10 home.
 days['2026-07-01'] = {
-  title: 'Drive to Oldenburg',
+  title: 'Drive to Oldenburg — gelato on arrival',
   phase: 'summer',
   type: 'travel',
   icon: '🚗',
-  summary: 'Oberschleißheim → Oldenburg (~700 km, ~7 h). 3 nights.',
+  summary: 'Oberschleißheim → Oldenburg (~700 km). Evening gelato stroll through the Altstadt.',
   blocks: [
     { kind: 'place', name: '🚗 Oberschleißheim → Oldenburg',
       detail: '~700 km · ~7 h driving<br>3 nights in Oldenburg (Jul 1–4)' },
-    { kind: 'note', html: '<p>First leg of the northern loop. Overnight in Oldenburg.</p>' },
+    { kind: 'note', html: '<p>Made it north — and straight out for ice cream. An evening stroll through the <strong>Oldenburg Altstadt</strong>: gelato by the old Rathaus, past Caf&eacute; &amp; Bar Celona, and down the lane where umbrellas and lanterns hang overhead between the buildings.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-eis.jpg', alt: 'Ice cream on the walk through the Oldenburg old town' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-ratskeller.jpg', alt: 'Evening square by the Ratskeller with cafe umbrellas' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-umbrellas.jpg', alt: 'Umbrellas and lanterns strung over an Oldenburg lane at dusk' },
   ],
 };
 days['2026-07-02'] = {
-  title: 'Oldenburg — Altstadt & Schloss',
+  title: 'Oldenburg — canal, trains & the Schloss',
   phase: 'summer',
   type: 'plan',
-  summary: 'Strolling the Oldenburg old town and Schlossplatz.',
+  summary: 'Barges on the canal at the Cäcilienbrücke, trainspotting at the Hauptbahnhof, then the Schlossplatz.',
   blocks: [
-    { kind: 'note', html: '<p>📍 <strong>Oldenburg.</strong> A day around the Altstadt — the cobbled Schlossplatz and the yellow baroque Oldenburger Schloss (now the Landesmuseum für Kunst und Kulturgeschichte).</p>' },
+    { kind: 'note', html: '<p>📍 <strong>Oldenburg.</strong> A slow loop through town: watching the barge <em>Emelie&nbsp;D</em> squeeze up the canal at the C&auml;cilienbr&uuml;cke, a detour through the Hauptbahnhof with its timbered platform roofs, and across the cobbled Schlossplatz past the yellow baroque Oldenburger Schloss (now the Landesmuseum).</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-kanal.jpg', alt: 'The barge Emelie D passing the canal walls at the Caecilienbruecke' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-hunte-luca.jpg', alt: 'Luca windblown at the canal railing' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-bahnhof.jpg', alt: 'Watching an Intercity pull in under the wooden platform canopy of Oldenburg Hbf' },
     { kind: 'photo', src: '/trips/2026/germany/photos/oldenburg-schloss.jpg', alt: 'Crossing the cobbled Schlossplatz in front of the yellow Oldenburger Schloss' },
     { kind: 'place', name: '🏰 Oldenburger Schloss', detail: 'Schlossplatz 26, 26122 Oldenburg<br>Landesmuseum für Kunst und Kulturgeschichte', maps: 'Oldenburger Schloss Schlossplatz Oldenburg' },
   ],
@@ -196,10 +234,12 @@ days['2026-07-03'] = {
   type: 'plan',
   summary: 'Bremen Altstadt: Marktplatz, Rathaus, Dom & the Town Musicians.',
   blocks: [
-    { kind: 'note', html: '<p>📍 <strong>Bremen</strong> — an easy hop from Oldenburg (~45 min). The UNESCO-listed Marktplatz with the Rathaus and St.&nbsp;Petri Dom, the Liebfrauenkirche, and of course the <em>Bremer Stadtmusikanten</em> — donkey, dog, cat and rooster. Grabbing the donkey&rsquo;s front legs with both hands is supposed to make a wish come true.</p>' },
+    { kind: 'note', html: '<p>📍 <strong>Bremen</strong> — an easy hop from Oldenburg (~45 min). The UNESCO-listed Marktplatz with the Rathaus and St.&nbsp;Petri Dom, the Liebfrauenkirche, and of course the <em>Bremer Stadtmusikanten</em> — donkey, dog, cat and rooster. Grabbing the donkey&rsquo;s front legs with both hands is supposed to make a wish come true. Then postcard-browsing in the crooked lanes of the <strong>Schnoor</strong> quarter — and Luca made a friend: a giant Ukrainian bear 💙💛 by the Dom.</p>' },
     { kind: 'photo', src: '/trips/2026/germany/photos/bremen-rathaus-dom.jpg', alt: 'Bremen Marktplatz with the Rathaus and the twin spires of St. Petri Dom' },
     { kind: 'photo', src: '/trips/2026/germany/photos/bremen-stadtmusikanten.jpg', alt: 'Natalia, Phima and Luca at the Bremen Town Musicians statue' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/bremen-baer.jpg', alt: 'Luca thumbs-up with a giant Ukrainian bear by the Dom' },
     { kind: 'photo', src: '/trips/2026/germany/photos/bremen-liebfrauenkirche.jpg', alt: 'The Liebfrauenkirche with cafe umbrellas on the square' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/bremen-schnoor.jpg', alt: 'Postcard browsing in the lanes of the Schnoor quarter' },
     { kind: 'photo', src: '/trips/2026/germany/photos/bremen-marktplatz.jpg', alt: 'Wandering the square by the Liebfrauenkirche' },
     { kind: 'place', name: '🎺 Bremer Stadtmusikanten', detail: 'Am Markt / west side of the Rathaus, 28195 Bremen<br>Bronze by Gerhard Marcks (1951)', maps: 'Bremer Stadtmusikanten Rathaus Bremen' },
   ],
@@ -217,28 +257,35 @@ days['2026-07-04'] = {
   ],
 };
 days['2026-07-05'] = {
+  title: 'Day trip to Sylt — Westerland',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Train over the Hindenburgdamm to Westerland: Friedrichstraße, the sea promenade, sunset back at the house.',
+  blocks: [
+    { kind: 'note', html: '<p>🏝️ By train across the <strong>Hindenburgdamm</strong> to <strong>Sylt</strong> — the causeway where the railway runs right through the Wadden Sea. Wandered Westerland&rsquo;s Friedrichstra&szlig;e, then out to the sea promenade: North Sea wind, whitecaps and seagulls. Phima read the whole train ride home; the day ended with pink clouds over the meadow behind the house.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/sylt-westerland.jpg', alt: 'The three walking Friedrichstrasse in Westerland, Sylt' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/sylt-promenade.jpg', alt: 'Windblown on the Westerland sea promenade' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/marschbahn-zug.jpg', alt: 'Phima reading on the train back across the Hindenburgdamm' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/abendsonne-wiese.jpg', alt: 'Sunset over the meadow behind the holiday house' },
+    { kind: 'place', name: '🏖️ Westerland, Sylt', detail: 'Friedrichstraße & Strandpromenade, 25980 Westerland<br>Train from Klanxbüll over the Hindenburgdamm (~40 min)', maps: 'Westerland Sylt Friedrichstrasse' },
+  ],
+};
+days['2026-07-06'] = {
   title: 'Across the border — Tønder, Denmark',
   phase: 'summer',
   type: 'plan',
-  summary: 'Country walk near Klixbüll, then a rainy hop to Tønder 🇩🇰.',
+  summary: 'Morning at the thatched house, a walk in Aventoft on the border, rainy afternoon in Tønder 🇩🇰.',
   blocks: [
-    { kind: 'note', html: '<p>📍 A walk along the country lanes around <strong>Klixbüll</strong>, then across the Danish border to <strong>Tønder</strong> — only ~20 minutes north. Cobbled pedestrian streets under Dannebrog bunting, umbrellas out all day. Just missed the Tønder Marked &amp; Oldtimer-Treffen (Jul 4, per the events board in the Midtby).</p>' },
-    { kind: 'photo', src: '/trips/2026/germany/photos/klixbuell-country-road.jpg', alt: 'Phima and Luca on a country lane near Klixbüll' },
+    { kind: 'note', html: '<p>📍 A slow morning at the thatched-roof holiday house, then a walk through <strong>Aventoft</strong> — the last village before Denmark — and across the border to <strong>Tønder</strong>. Cobbled pedestrian streets under Dannebrog bunting, umbrellas out all afternoon. Just missed the T&oslash;nder Marked &amp; Oldtimer-Treffen (Jul 4, per the events board in the Midtby).</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/ferienhaus-reetdach.jpg', alt: 'Natalia at the thatched brick holiday house, fields behind' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/aventoft-spaziergang.jpg', alt: 'Walking the lanes of Aventoft by the Danish border' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/aventoft-country-road.jpg', alt: 'Phima and Luca on a country lane in Aventoft' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-flags.jpg', alt: 'Tønder pedestrian street under Danish flag bunting' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-street.jpg', alt: 'Umbrellas out on the cobbles of Tønder Midtby' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-storegade.jpg', alt: 'Storegade under Dannebrog bunting, purple umbrella leading the way' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-events.jpg', alt: 'Events i Toender Midtby 2026 board' },
     { kind: 'photo', src: '/trips/2026/germany/photos/toender-garden.jpg', alt: 'A rainy garden allee stroll' },
-    { kind: 'place', name: '🇩🇰 Tønder Midtby', detail: 'Storegade / Vestergade pedestrian zone, 6270 Tønder, Denmark<br>~20 min drive from Klixbüll', maps: 'Toender Denmark Storegade' },
-  ],
-};
-days['2026-07-06'] = {
-  title: 'Klixbüll — Monday, July 6',
-  phase: 'summer',
-  type: 'plan',
-  summary: 'In Klixbüll, Nordfriesland.',
-  blocks: [
-    { kind: 'note', html: '<p>📍 <strong>Klixbüll, Nordfriesland.</strong> To be planned.</p>' },
+    { kind: 'place', name: '🇩🇰 Tønder Midtby', detail: 'Storegade / Vestergade pedestrian zone, 6270 Tønder, Denmark<br>~20 min drive from the house', maps: 'Toender Denmark Storegade' },
   ],
 };
 days['2026-07-07'] = {
