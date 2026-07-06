@@ -216,18 +216,30 @@ days['2026-07-04'] = {
     { kind: 'note', html: '<p>Short hop north. Klixbüll is the base for Sylt / Wadden Sea day trips.</p>' },
   ],
 };
-for (const iso of eachDate('2026-07-05', '2026-07-06')) {
-  const p = parts(iso);
-  days[iso] = {
-    title: `Klixbüll — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
-    phase: 'summer',
-    type: 'plan',
-    summary: 'In Klixbüll, Nordfriesland.',
-    blocks: [
-      { kind: 'note', html: '<p>📍 <strong>Klixbüll, Nordfriesland.</strong> To be planned.</p>' },
-    ],
-  };
-}
+days['2026-07-05'] = {
+  title: 'Across the border — Tønder, Denmark',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Country walk near Klixbüll, then a rainy hop to Tønder 🇩🇰.',
+  blocks: [
+    { kind: 'note', html: '<p>📍 A walk along the country lanes around <strong>Klixbüll</strong>, then across the Danish border to <strong>Tønder</strong> — only ~20 minutes north. Cobbled pedestrian streets under Dannebrog bunting, umbrellas out all day. Just missed the Tønder Marked &amp; Oldtimer-Treffen (Jul 4, per the events board in the Midtby).</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/klixbuell-country-road.jpg', alt: 'Phima and Luca on a country lane near Klixbüll' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/toender-flags.jpg', alt: 'Tønder pedestrian street under Danish flag bunting' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/toender-street.jpg', alt: 'Umbrellas out on the cobbles of Tønder Midtby' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/toender-events.jpg', alt: 'Events i Toender Midtby 2026 board' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/toender-garden.jpg', alt: 'A rainy garden allee stroll' },
+    { kind: 'place', name: '🇩🇰 Tønder Midtby', detail: 'Storegade / Vestergade pedestrian zone, 6270 Tønder, Denmark<br>~20 min drive from Klixbüll', maps: 'Toender Denmark Storegade' },
+  ],
+};
+days['2026-07-06'] = {
+  title: 'Klixbüll — Monday, July 6',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'In Klixbüll, Nordfriesland.',
+  blocks: [
+    { kind: 'note', html: '<p>📍 <strong>Klixbüll, Nordfriesland.</strong> To be planned.</p>' },
+  ],
+};
 days['2026-07-07'] = {
   title: 'Drive to Berlin — Hotel Sachsenhof',
   phase: 'summer',
