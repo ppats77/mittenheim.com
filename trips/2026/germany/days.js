@@ -197,8 +197,8 @@ days['2026-06-30'] = {
   ],
 };
 
-// --- Leg 2: Northern loop (Oldenburg → Klixbüll → Berlin) ---
-// Wed Jul 1 → Oldenburg (3 nts), Sat Jul 4 → Klixbüll (3 nts), Tue Jul 7 → Berlin (3 nts), Fri Jul 10 home.
+// --- Leg 2: Northern loop (Oldenburg → Klanxbüll → Berlin) ---
+// Wed Jul 1 → Oldenburg (3 nts), Sat Jul 4 → Klanxbüll (3 nts), Tue Jul 7 → Berlin (3 nts), Fri Jul 10 home.
 days['2026-07-01'] = {
   title: 'Drive to Oldenburg — gelato on arrival',
   phase: 'summer',
@@ -245,15 +245,15 @@ days['2026-07-03'] = {
   ],
 };
 days['2026-07-04'] = {
-  title: 'Drive to Klixbüll (Nordfriesland)',
+  title: 'Drive to Klanxbüll (Nordfriesland)',
   phase: 'summer',
   type: 'travel',
   icon: '🚗',
-  summary: 'Oldenburg → Klixbüll (~230 km, ~2.5 h). 3 nights near the North Sea.',
+  summary: 'Oldenburg → Klanxbüll (~230 km, ~2.5 h). 3 nights near the North Sea.',
   blocks: [
-    { kind: 'place', name: '🚗 Oldenburg → Klixbüll',
-      detail: '~230 km · ~2.5 h driving<br>3 nights in Klixbüll, Nordfriesland (Jul 4–7) — near Niebüll & the North Sea coast' },
-    { kind: 'note', html: '<p>Short hop north. Klixbüll is the base for Sylt / Wadden Sea day trips.</p>' },
+    { kind: 'place', name: '🚗 Oldenburg → Klanxbüll',
+      detail: '~230 km · ~2.5 h driving<br>3 nights in Klanxbüll, Nordfriesland (Jul 4–7) — last stop before the Hindenburgdamm to Sylt, near Niebüll & the North Sea coast' },
+    { kind: 'note', html: '<p>Short hop north. Klanxbüll is the base for Sylt / Wadden Sea day trips.</p>' },
   ],
 };
 days['2026-07-05'] = {
@@ -293,9 +293,9 @@ days['2026-07-07'] = {
   phase: 'summer',
   type: 'travel',
   icon: '🚗',
-  summary: 'Klixbüll → Berlin (~470 km, ~5 h). Hotel Sachsenhof, 3 nights.',
+  summary: 'Klanxbüll → Berlin (~470 km, ~5 h). Hotel Sachsenhof, 3 nights.',
   blocks: [
-    { kind: 'place', name: '🚗 Klixbüll → Berlin',
+    { kind: 'place', name: '🚗 Klanxbüll → Berlin',
       detail: '~470 km · ~5 h driving' },
     { kind: 'place', name: '🏨 Hotel Sachsenhof, Berlin',
       detail: 'Motzstr. 7, Tempelhof-Schöneberg, 10777 Berlin<br>Check-in Tue Jul 7 (from 3:00 PM) · Check-out Fri Jul 10 (by 12:00 PM)<br>Quadruple Room · 2 adults + 2 kids (13, 15) · 3 nights<br>Confirmation 6622466272 · Tel +49 30 2162074',
