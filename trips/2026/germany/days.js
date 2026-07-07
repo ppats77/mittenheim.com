@@ -289,36 +289,93 @@ days['2026-07-06'] = {
   ],
 };
 days['2026-07-07'] = {
-  title: 'Drive to Berlin — Hotel Sachsenhof',
+  title: 'Drive to Berlin — Döner & Brandenburg Gate at dusk',
   phase: 'summer',
   type: 'travel',
   icon: '🚗',
-  summary: 'Klanxbüll → Berlin (~470 km, ~5 h). Hotel Sachsenhof, 3 nights.',
+  summary: 'Klanxbüll → Berlin (~470 km). Check in ~16:00, Döner in Schöneberg, golden-hour walk to the Brandenburg Gate.',
   blocks: [
     { kind: 'place', name: '🚗 Klanxbüll → Berlin',
       detail: '~470 km · ~5 h driving' },
     { kind: 'place', name: '🏨 Hotel Sachsenhof, Berlin',
       detail: 'Motzstr. 7, Tempelhof-Schöneberg, 10777 Berlin<br>Check-in Tue Jul 7 (from 3:00 PM) · Check-out Fri Jul 10 (by 12:00 PM)<br>Quadruple Room · 2 adults + 2 kids (13, 15) · 3 nights<br>Confirmation 6622466272 · Tel +49 30 2162074',
       maps: 'Hotel Sachsenhof Motzstrasse 7 Berlin' },
+    { kind: 'note', html: '<p>🚇 <strong>Getting around:</strong> park the car and forget it — <strong>Nollendorfplatz U-Bahn (U1/U2/U3/U4) is 3 minutes from the hotel</strong>, and the <strong>U2 line goes almost everywhere on our list</strong> (Potsdamer Platz, Checkpoint Charlie area, Alexanderplatz). Best ticket: the <strong>24-h small-group ticket, zone AB (&ldquo;24-Stunden-Karte Kleingruppe&rdquo;, ~&euro;33)</strong> — covers up to 5 people, cheaper than four singles after 3 rides. Buy it in the BVG Tickets app, or validate (stamp) paper tickets before boarding. Tip: activate it in the evening and it still covers most of the next day. The car stays as backup — Schöneberg streets are paid-parking zones, so ask reception where to leave it for the stay.</p>' },
+    { kind: 'timing', rows: [
+      ['~16:00', 'Check in, drop bags, feet up 30 min'],
+      ['17:30', 'Early dinner: Rüyam Gemüse Kebab, Hauptstr. 26 (~15 min walk) — Döner was invented in Berlin, and this is one of the best, minus Mustafa&rsquo;s queue'],
+      ['19:00', 'Stroll back via Wittenbergplatz — peek at KaDeWe (continental Europe&rsquo;s biggest department store)'],
+      ['19:45', 'U2 Nollendorfplatz → Potsdamer Platz (4 stops) — Wall slabs outside the station, futuristic Sony Center'],
+      ['20:30', 'Walk through the Holocaust Memorial stelae field'],
+      ['21:00', 'Brandenburg Gate at golden hour (sunset ~21:30) — then the Reichstag lawn next door'],
+      ['22:00', 'U2 back from Potsdamer Platz'],
+    ] },
+    { kind: 'place', name: '🥙 Rüyam Gemüse Kebab', detail: 'Hauptstr. 26, 10827 Berlin-Schöneberg<br>~15 min walk from the hotel · cash-friendly, fast queue', maps: 'Rueyam Gemuese Kebab Hauptstrasse 26 Berlin' },
     { kind: 'checklist', items: [
       'Booking confirmation 6622466272 + PIN handy at check-in',
-      'Breakfast is €14 pp/night (pay at property if you want it)',
-      'Pay at property on arrival',
+      'Pay at property on arrival · breakfast €14 pp/night if wanted',
+      'TONIGHT: book the free Reichstag dome slots at bundestag.de for Thu ~20:30 (passport data needed for all four; if online is full, the visitors&rsquo; pavilion next to the Reichstag sells same-day slots from 8:00)',
+      'Install the BVG Tickets app + grab the 24-h Kleingruppe AB ticket',
+      'Book DDR Museum online for Wed afternoon (skips the queue)',
+      'Ask reception about parking the car for the whole stay',
     ] },
   ],
 };
-for (const iso of eachDate('2026-07-08', '2026-07-09')) {
-  const p = parts(iso);
-  days[iso] = {
-    title: `Berlin — ${p.weekdayEN}, ${p.monthEN} ${p.day}`,
-    phase: 'summer',
-    type: 'plan',
-    summary: 'In Berlin (Hotel Sachsenhof).',
-    blocks: [
-      { kind: 'note', html: '<p>📍 <strong>Berlin</strong> — based at Hotel Sachsenhof, Schöneberg. To be planned.</p>' },
-    ],
-  };
-}
+days['2026-07-08'] = {
+  title: 'East Berlin day — the Wall, DDR & Karl-Marx-Allee',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Wall Memorial at Bernauer Straße, Currywurst at Konnopke’s, DDR Museum, Stalinist boulevards. Dinner at Berlin’s oldest restaurant (1621).',
+  blocks: [
+    { kind: 'note', html: '<p>🚩 <strong>The Soviet-flavour day.</strong> Real Wall with death strip and watchtower in the morning, DDR everyday life hands-on in the afternoon, Stalin-era boulevard before dinner. Almost the whole day rides on the <strong>U2 + tram M10</strong> — the M10 follows the old border strip.</p>' },
+    { kind: 'timing', rows: [
+      ['9:00', 'Breakfast at Winterfeldtmarkt (Wed market, 5 min walk from hotel) — pastries, fruit, people-watching on Berlin&rsquo;s prettiest square'],
+      ['10:00', 'U2 → Potsdamer Platz, change to S1/S2 → Nordbahnhof (~25 min)'],
+      ['10:15', 'Berlin Wall Memorial, Bernauer Straße (free): preserved death strip, watchtower, Window of Remembrance, Documentation Center rooftop view'],
+      ['12:15', 'Tram M10 (the &ldquo;Wall tram&rdquo;) → Eberswalder Straße'],
+      ['12:30', 'Lunch: Konnopke&rsquo;s Imbiss under the U2 viaduct — East Berlin&rsquo;s Currywurst institution since 1930 (the DDR classic is &ldquo;ohne Darm&rdquo;, skinless)'],
+      ['14:00', 'U2 Eberswalder Str. → Alexanderplatz (direct): Weltzeituhr world clock, TV Tower from below — East Berlin&rsquo;s showpiece square'],
+      ['14:30', 'DDR Museum (~2 h, booked slot): drive the Trabi simulator, walk through a full DDR flat, open every drawer'],
+      ['17:00', 'U5 one stop → Strausberger Platz: walk Karl-Marx-Allee — Stalin&rsquo;s &ldquo;workers&rsquo; palaces&rdquo;, tiled facades, Kino International — up to the Frankfurter Tor towers'],
+      ['19:30', 'Dinner: Zur letzten Instanz (reserved?) — Berlin&rsquo;s oldest restaurant, est. 1621: Königsberger Klopse, Buletten, Eisbein. Napoleon and Gorbachev both ate here'],
+      ['21:30', 'U2 Klosterstraße → Nollendorfplatz, direct home'],
+    ] },
+    { kind: 'place', name: '🧱 Gedenkstätte Berliner Mauer', detail: 'Bernauer Str. 111, 13355 Berlin<br>Open-air 24/7, free · Documentation Center Tue–Sun 10–18<br>S1/S2 Nordbahnhof', maps: 'Gedenkstaette Berliner Mauer Bernauer Strasse 111' },
+    { kind: 'place', name: '🌭 Konnopke’s Imbiss', detail: 'Schönhauser Allee 44a, 10435 Berlin (under the viaduct)<br>Mon–Fri 10:00–20:00 · since 1930', maps: 'Konnopkes Imbiss Schoenhauser Allee 44a Berlin' },
+    { kind: 'place', name: '🚗 DDR Museum', detail: 'Karl-Liebknecht-Str. 1, 10178 Berlin (Spree side, opposite the Dom)<br>Open daily to 21:00 — book a time slot online', maps: 'DDR Museum Berlin Karl-Liebknecht-Strasse 1' },
+    { kind: 'place', name: '🍖 Zur letzten Instanz', detail: 'Waisenstr. 14–16, 10179 Berlin · est. 1621<br>Reserve: +49 30 242 55 28 · U2 Klosterstraße', maps: 'Zur letzten Instanz Waisenstrasse 14 Berlin' },
+    { kind: 'note', html: '<p>🌦️ <strong>Plan B / extras:</strong> if the weather is kind and nobody is museum-tired, Prater Garten (Berlin&rsquo;s oldest beer garden, 1837, Kastanienallee) is 5 min from Konnopke&rsquo;s. Fernsehturm ride up (203 m) is a fun add-on at Alexanderplatz but needs a pre-booked slot — skip if the queue is silly, the Reichstag dome tomorrow is free and arguably better.</p>' },
+  ],
+};
+days['2026-07-09'] = {
+  title: 'Checkpoint Charlie, East Side Gallery & the Reichstag dome',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Gendarmenmarkt → Checkpoint Charlie → Wall panorama → East Side Gallery → Soviet War Memorial. Street Food Thursday, then sunset from the Reichstag dome.',
+  blocks: [
+    { kind: 'note', html: '<p>🏛️ <strong>Classic Berlin, then the big finale.</strong> Cold-War central in the morning, the painted Wall and the most Soviet place in the city in the afternoon, Berlin&rsquo;s best food event for dinner (it&rsquo;s Thursday!), and sunset from inside the glass dome over the Bundestag.</p>' },
+    { kind: 'timing', rows: [
+      ['9:30', 'U2 → Stadtmitte: Gendarmenmarkt — Konzerthaus + twin French/German cathedrals'],
+      ['10:15', 'Walk 5 min → Checkpoint Charlie: the guardhouse, &ldquo;You are leaving the American sector&rdquo;, free open-air exhibition panels'],
+      ['10:45', 'asisi Panorama DIE MAUER next door (~45 min) — stand on a 1980s Kreuzberg rooftop and look over the Wall into East Berlin. Better than the pricey private Wall museum'],
+      ['11:45', 'Niederkirchnerstraße: 200 m of original Wall + Topography of Terror (free) — where the Gestapo/SS headquarters stood. Short visit, heavy but important'],
+      ['13:00', 'U6 Kochstr. → Mehringdamm (2 stops): the classic West-Berlin Imbiss corner — Curry 36 vs Mustafa&rsquo;s Gemüse Kebap. Pick the shorter queue'],
+      ['14:30', 'U1 Mehringdamm → Warschauer Str.: East Side Gallery — 1.3 km of painted Wall along the Spree, incl. the Brezhnev–Honecker kiss. Oberbaumbrücke photo stop'],
+      ['16:00', 'S-Bahn 1 stop → Treptower Park: Soviet War Memorial — colossal, hushed, the most &ldquo;Soviet taste&rdquo; spot in Berlin. 7,000 Red Army soldiers are buried here'],
+      ['17:45', 'S → Warschauer Str. → U1 → Görlitzer Bahnhof: Street Food Thursday at Markthalle Neun (17:00–22:00) — eat your way around the world, something for each of us'],
+      ['19:30', 'Leave for the Reichstag (U1 → Hallesches Tor → U6 → Friedrichstraße + 10 min walk) — allow time for airport-style security'],
+      ['20:30', 'Reichstag dome slot (booked, passports!): Norman Foster&rsquo;s glass spiral, free audio guide, sunset ~21:27 over the whole city'],
+      ['21:45', 'Brandenburg Gate illuminated, 2 min away — the closing shot of Berlin'],
+      ['22:15', 'S1 Brandenburger Tor → Potsdamer Platz → U2 home'],
+    ] },
+    { kind: 'place', name: '🪖 Checkpoint Charlie + asisi Panorama', detail: 'Friedrichstr. 43–45, 10117 Berlin<br>Panorama daily 10–18 · U2/U6 Stadtmitte / Kochstr.', maps: 'Checkpoint Charlie Friedrichstrasse Berlin' },
+    { kind: 'place', name: '🎨 East Side Gallery', detail: 'Mühlenstr. 3–100, 10243 Berlin · open 24/7, free<br>U1/S Warschauer Straße', maps: 'East Side Gallery Muehlenstrasse Berlin' },
+    { kind: 'place', name: '⭐ Sowjetisches Ehrenmal Treptower Park', detail: 'Puschkinallee, 12435 Berlin · open 24/7, free<br>S8/S9 Treptower Park + 10 min walk<br>(Car fallback: easy parking along Puschkinallee if legs are done)', maps: 'Sowjetisches Ehrenmal Treptower Park Berlin' },
+    { kind: 'place', name: '🍜 Markthalle Neun — Street Food Thursday', detail: 'Eisenbahnstr. 42/43, 10997 Berlin-Kreuzberg<br>Thursdays 17:00–22:00 · U1 Görlitzer Bahnhof', maps: 'Markthalle Neun Eisenbahnstrasse Berlin' },
+    { kind: 'place', name: '🏛️ Reichstag dome', detail: 'Platz der Republik 1, 11011 Berlin<br>Free, booked slot + passports for all four · last entry 21:45<br>Booking: bundestag.de → Visit the dome', maps: 'Reichstag Platz der Republik 1 Berlin' },
+    { kind: 'note', html: '<p>🚗 <strong>Car option for today:</strong> everything runs fine on BVG, but if anyone&rsquo;s feet are done after the East Side Gallery, the Treptower memorial is the one stop where driving genuinely helps (parking on Puschkinallee). Otherwise leave the car at the hotel. 🧸 Souvenir hunt: an <strong>Ampelmännchen</strong> (the East-Berlin traffic-light man) from one of the Ampelmann shops, and a proper <strong>Pfannkuchen</strong> from any bakery — what the rest of Germany calls a &ldquo;Berliner&rdquo;, Berliners call a Pfannkuchen. Optional splurge if the kids want maximum Ost: a <strong>Trabi Safari</strong> convoy ride near Checkpoint Charlie (you drive, they ride).</p>' },
+  ],
+};
 days['2026-07-10'] = {
   title: 'Drive back — Berlin → Oberschleißheim',
   phase: 'summer',
