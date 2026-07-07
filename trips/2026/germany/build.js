@@ -58,7 +58,14 @@ function main() {
     write(path.join(out, slug, 'index.html'), html);
   });
 
-  console.log(`Generated overview + ${dates.length} day pages into ${out}`);
+  // Berlin backstory pages + index
+  const { stories } = require('./stories.js');
+  write(path.join(out, 'berlin', 'index.html'), render.renderStoriesIndex(stories));
+  for (const s of stories) {
+    write(path.join(out, 'berlin', s.slug, 'index.html'), render.renderStoryPage(s));
+  }
+
+  console.log(`Generated overview + ${dates.length} day pages + ${stories.length} backstories into ${out}`);
 }
 
 main();

@@ -319,6 +319,7 @@ days['2026-07-07'] = {
       'Book DDR Museum online for Wed afternoon (skips the queue)',
       'Ask reception about parking the car for the whole stay',
     ] },
+    { kind: 'stories', title: 'Tonight&rsquo;s backstories — read on the drive', ids: ['brandenburger-tor', 'holocaust-mahnmal', 'kadewe', 'berlin-food'] },
   ],
 };
 days['2026-07-08'] = {
@@ -345,6 +346,7 @@ days['2026-07-08'] = {
     { kind: 'place', name: '🚗 DDR Museum', detail: 'Karl-Liebknecht-Str. 1, 10178 Berlin (Spree side, opposite the Dom)<br>Open daily to 21:00 — book a time slot online', maps: 'DDR Museum Berlin Karl-Liebknecht-Strasse 1' },
     { kind: 'place', name: '🍖 Zur letzten Instanz', detail: 'Waisenstr. 14–16, 10179 Berlin · est. 1621<br>Reserve: +49 30 242 55 28 · U2 Klosterstraße', maps: 'Zur letzten Instanz Waisenstrasse 14 Berlin' },
     { kind: 'note', html: '<p>🌦️ <strong>Plan B / extras:</strong> if the weather is kind and nobody is museum-tired, Prater Garten (Berlin&rsquo;s oldest beer garden, 1837, Kastanienallee) is 5 min from Konnopke&rsquo;s. Fernsehturm ride up (203 m) is a fun add-on at Alexanderplatz but needs a pre-booked slot — skip if the queue is silly, the Reichstag dome tomorrow is free and arguably better.</p>' },
+    { kind: 'stories', title: 'Today&rsquo;s backstories', ids: ['berliner-mauer', 'ddr-alltag', 'karl-marx-allee', 'berlin-food'] },
   ],
 };
 days['2026-07-09'] = {
@@ -374,6 +376,7 @@ days['2026-07-09'] = {
     { kind: 'place', name: '🍜 Markthalle Neun — Street Food Thursday', detail: 'Eisenbahnstr. 42/43, 10997 Berlin-Kreuzberg<br>Thursdays 17:00–22:00 · U1 Görlitzer Bahnhof', maps: 'Markthalle Neun Eisenbahnstrasse Berlin' },
     { kind: 'place', name: '🏛️ Reichstag dome', detail: 'Platz der Republik 1, 11011 Berlin<br>Free, booked slot + passports for all four · last entry 21:45<br>Booking: bundestag.de → Visit the dome', maps: 'Reichstag Platz der Republik 1 Berlin' },
     { kind: 'note', html: '<p>🚗 <strong>Car option for today:</strong> everything runs fine on BVG, but if anyone&rsquo;s feet are done after the East Side Gallery, the Treptower memorial is the one stop where driving genuinely helps (parking on Puschkinallee). Otherwise leave the car at the hotel. 🧸 Souvenir hunt: an <strong>Ampelmännchen</strong> (the East-Berlin traffic-light man) from one of the Ampelmann shops, and a proper <strong>Pfannkuchen</strong> from any bakery — what the rest of Germany calls a &ldquo;Berliner&rdquo;, Berliners call a Pfannkuchen. Optional splurge if the kids want maximum Ost: a <strong>Trabi Safari</strong> convoy ride near Checkpoint Charlie (you drive, they ride).</p>' },
+    { kind: 'stories', title: 'Today&rsquo;s backstories', ids: ['checkpoint-charlie', 'east-side-gallery', 'treptower-ehrenmal', 'reichstag'] },
   ],
 };
 days['2026-07-10'] = {

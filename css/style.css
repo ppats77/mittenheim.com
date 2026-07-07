@@ -1284,3 +1284,61 @@ a.trip-maps-btn:hover, a.trip-maps-btn:active {
   .cup-match__time { min-width: 64px; }
   .cup-match__teams { font-size: 0.98rem; }
 }
+
+/* --- Backstory cards (trip day pages + /berlin/ index) --- */
+.story-cards__heading {
+  margin-top: 36px;
+}
+
+.story-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 20px 0 32px;
+}
+
+.story-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--bg);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 18px;
+  text-decoration: none;
+  color: var(--text);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.story-card:hover {
+  box-shadow: 6px 6px 0px #000000;
+  transform: translate(-2px, -2px);
+}
+
+.story-card:hover .story-card__title {
+  color: var(--pink-hover);
+}
+
+.story-card__emoji {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.story-card__title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.story-card__teaser {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+@media (max-width: 600px) {
+  .story-cards { grid-template-columns: 1fr; gap: 12px; }
+  .story-card { box-shadow: var(--shadow-sm); }
+}

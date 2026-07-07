@@ -1,6 +1,7 @@
 'use strict';
 
 const lib = require('./lib.js');
+const { bySlug: storiesBySlug } = require('./stories.js');
 
 const esc = (s) => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -35,9 +36,28 @@ function renderBlock(b) {
       return `<div class="trip-alert">${b.html}</div>`;
     case 'photo':
       return `<div class="recipe-photo"><img src="${esc(b.src)}" alt="${esc(b.alt || '')}" loading="lazy"></div>`;
+    case 'stories':
+      return renderStoryCards(b);
     default:
       return '';
   }
+}
+
+// Grid of clickable backstory cards ({ kind: 'stories', ids: [...] }).
+function renderStoryCards(b) {
+  const cards = (b.ids || []).map((id) => {
+    const s = storiesBySlug[id];
+    if (!s) throw new Error(`stories block references unknown story: ${id}`);
+    return `<a class="story-card" href="/trips/2026/germany/berlin/${s.slug}/">
+          <span class="story-card__emoji">${s.emoji}</span>
+          <span class="story-card__title">${esc(s.title)}</span>
+          <span class="story-card__teaser">${s.teaser}</span>
+        </a>`;
+  }).join('\n        ');
+  return `<h3 class="story-cards__heading">&#128214; ${esc(b.title || 'Backstories — tap to read')}</h3>
+      <div class="story-cards">
+        ${cards}
+      </div>`;
 }
 
 function renderBlocks(blocks) {
@@ -268,4 +288,115 @@ function renderOverview(trip, { matchDates } = {}) {
 ${FOOTER}`;
 }
 
-module.exports = { renderBlock, renderBlocks, renderDayPage, renderOverview, head, esc, FOOTER };
+// A single backstory page: black hero, story sections, "Did you know?" box,
+// maps button and a back-link to the trip day it belongs to.
+function renderStoryPage(story) {
+  const base = '/trips/2026/germany/';
+  const daySlug = lib.slugFor(story.day);
+  const p = lib.parts(story.day);
+  const url = `https://mittenheim.com${base}berlin/${story.slug}/`;
+  const sections = story.sections.map((s) => `
+      <h2>${esc(s.h)}</h2>
+      ${s.html}`).join('\n');
+  const facts = story.facts && story.facts.length ? `
+    <div class="recipe-box">
+      <h2>Did you know?</h2>
+      <ul>
+        ${story.facts.map((f) => `<li>${f}</li>`).join('\n        ')}
+      </ul>
+    </div>` : '';
+  return `${head(story.title, { description: story.teaser, url })}
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="${base}" class="nav__logo">Germany 2026</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="${base}berlin/">Berlin Backstories</a></li>
+        <li><a href="${base}">All Days</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Story Header -->
+  <div class="recipe-hero recipe-hero--text">
+    <div class="recipe-hero__inner">
+      <div class="recipe-meta">
+        <span>${story.emoji} Berlin</span>
+        <span class="tag">Backstory</span>
+      </div>
+      <h1>${esc(story.title)}</h1>
+      <div style="margin-top: 12px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">${esc(story.where)}</div>
+    </div>
+  </div>
+
+  <!-- Story Content -->
+  <div class="recipe-content">
+    <div class="recipe-story">
+${sections}
+    </div>
+${facts}
+    ${story.maps ? `<a class="trip-maps-btn" href="https://maps.google.com/?q=${encodeURIComponent(story.maps)}" target="_blank">&#128205; Open in Google Maps</a>` : ''}
+
+    <div class="trip-daynav" style="margin-top:32px;">
+      <a href="${base}${daySlug}/">&larr; Back to ${p.monthEN} ${p.day}</a>
+      <a href="${base}berlin/">All backstories</a>
+    </div>
+  </div>
+
+${FOOTER}`;
+}
+
+// Index page listing all backstories as cards (/trips/2026/germany/berlin/).
+function renderStoriesIndex(stories) {
+  const base = '/trips/2026/germany/';
+  const cards = stories.map((s) => `<a class="story-card" href="${base}berlin/${s.slug}/">
+          <span class="story-card__emoji">${s.emoji}</span>
+          <span class="story-card__title">${esc(s.title)}</span>
+          <span class="story-card__teaser">${s.teaser}</span>
+        </a>`).join('\n        ');
+  return `${head('Berlin Backstories', { description: 'History and background stories for our Berlin days — the Wall, the DDR, Checkpoint Charlie, and where to eat.', url: `https://mittenheim.com${base}berlin/` })}
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="${base}" class="nav__logo">Germany 2026</a>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="${base}">All Days</a></li>
+        <li><a href="/trips/">Trips</a></li>
+      </ul>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div class="recipe-hero recipe-hero--text">
+    <div class="recipe-hero__inner">
+      <div class="recipe-meta">
+        <span>Jul 7&ndash;10, 2026</span>
+        <span class="tag">Berlin</span>
+      </div>
+      <h1>Berlin Backstories</h1>
+      <div style="margin-top: 12px; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+        The history behind what we&rsquo;re seeing &mdash; one story per sight.
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="recipe-content">
+    <div class="story-cards">
+        ${cards}
+    </div>
+    <p style="margin-top: 32px;"><a href="${base}">&larr; Back to the trip calendar</a></p>
+  </div>
+
+${FOOTER}`;
+}
+
+module.exports = { renderBlock, renderBlocks, renderDayPage, renderOverview, renderStoryPage, renderStoriesIndex, head, esc, FOOTER };

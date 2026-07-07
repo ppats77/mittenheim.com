@@ -138,3 +138,44 @@ test('build.js writes overview + 66 day pages into target dir', () => {
 
   fs.rmSync(tmp, { recursive: true, force: true });
 });
+
+test('stories block renders clickable cards; unknown id throws', () => {
+  const html = render.renderBlocks([{ kind: 'stories', ids: ['brandenburger-tor', 'berlin-food'] }]);
+  assert.match(html, /story-card/);
+  assert.match(html, /\/trips\/2026\/germany\/berlin\/brandenburger-tor\//);
+  assert.match(html, /\/trips\/2026\/germany\/berlin\/berlin-food\//);
+  assert.throws(() => render.renderBlocks([{ kind: 'stories', ids: ['nope'] }]), /unknown story/);
+});
+
+test('renderStoryPage: full doc with facts box and back-link to its day', () => {
+  const { bySlug } = require('./stories.js');
+  const html = render.renderStoryPage(bySlug['berliner-mauer']);
+  assert.match(html, /^<!DOCTYPE html>/);
+  assert.match(html, /The Berlin Wall/);
+  assert.match(html, /Did you know\?/);
+  assert.match(html, /\/trips\/2026\/germany\/july-08\//); // back to its day
+  assert.match(html, /noindex, nofollow/);
+});
+
+test('every story is valid: unique slug, has sections, day within the trip', () => {
+  const { stories } = require('./stories.js');
+  const trip = require('./days.js');
+  const slugs = new Set();
+  for (const s of stories) {
+    assert.ok(!slugs.has(s.slug), `duplicate slug ${s.slug}`);
+    slugs.add(s.slug);
+    assert.ok(s.sections.length >= 2, `${s.slug} too thin`);
+    assert.ok(trip.days[s.day], `${s.slug} points at unknown day ${s.day}`);
+  }
+});
+
+test('build.js also writes the berlin backstory pages', () => {
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'germany-stories-'));
+  execFileSync('node', [path.join(__dirname, 'build.js'), '--out', tmp], { stdio: 'pipe' });
+  const { stories } = require('./stories.js');
+  assert.ok(fs.existsSync(path.join(tmp, 'berlin', 'index.html')), 'stories index missing');
+  for (const s of stories) {
+    assert.ok(fs.existsSync(path.join(tmp, 'berlin', s.slug, 'index.html')), `missing story ${s.slug}`);
+  }
+  fs.rmSync(tmp, { recursive: true, force: true });
+});
