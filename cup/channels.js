@@ -64,4 +64,10 @@ module.exports = {
   'USA v Belgium|2026-07-07':           { de: 'ARD', deConf: 'confirmed' }, // 2:00 AM CET (Jul 7)
   'Argentina v Egypt|2026-07-07':       { de: 'ARD', deConf: 'confirmed' },
   'Switzerland v Colombia|2026-07-07':  { de: 'ARD', deConf: 'confirmed' },
+
+  // ---- Quarter-finals (Viertelfinale) German free-TV — per ARD/sportschau official schedule ----
+  'France v Morocco|2026-07-09':        { de: 'ARD', deConf: 'confirmed' },
+  'Spain v Belgium|2026-07-10':         { de: 'ZDF', deConf: 'confirmed' },
+  'Norway v England|2026-07-11':        { de: 'MagentaTV', deConf: 'confirmed' }, // 11:00 PM CET
+  'Argentina v Switzerland|2026-07-12': { de: 'MagentaTV', deConf: 'confirmed' }, // 3:00 AM CET (Jul 12)
 };

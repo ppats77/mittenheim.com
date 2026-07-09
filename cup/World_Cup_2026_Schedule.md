@@ -279,22 +279,22 @@
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 4:00 PM | 10:00 PM | Winner 89 v Winner 90 | Match 97 | Boston |
+| 4:00 PM | 10:00 PM | France v Morocco | Match 97 | Boston |
 
 
 ### Friday, Jul 10
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 3:00 PM | 9:00 PM | Winner 93 v Winner 94 | Match 98 | Los Angeles |
+| 3:00 PM | 9:00 PM | Spain v Belgium | Match 98 | Los Angeles |
 
 
 ### Saturday, Jul 11
 
 | ET | CET | Match | Group / Round | Venue |
 |---|---|---|---|---|
-| 5:00 PM | 11:00 PM | Winner 91 v Winner 92 | Match 99 | Miami |
-| 9:00 PM | 3:00 AM (Jul 12) | Winner 95 v Winner 96 | Match 100 | Kansas City |
+| 5:00 PM | 11:00 PM | Norway v England | Match 99 | Miami |
+| 9:00 PM | 3:00 AM (Jul 12) | Argentina v Switzerland | Match 100 | Kansas City |
 
 
 ## Semi-finals
