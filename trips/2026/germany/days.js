@@ -399,17 +399,18 @@ days['2026-07-10'] = {
 // --- Leg 3: Italy (Ravenna → Crema) ---
 // Mon Jul 20 drive to Ravenna, stay through Jul 26, Mon Jul 27 → Crema (2 nts), Wed Jul 29 drive home.
 days['2026-07-20'] = {
-  title: 'Drive to Ravenna, Italy',
+  title: 'Drive to Ravenna — Casa Alighieri',
   phase: 'summer',
   type: 'travel',
   icon: '🚗',
-  summary: 'Oberschleißheim → Ravenna over the Brenner (~580 km, ~7 h).',
+  summary: 'Oberschleißheim → Ravenna over the Brenner (~580 km). Self check-in at Casa Alighieri, lockbox code 5656.',
   blocks: [
     { kind: 'place', name: '🚗 Oberschleißheim → Ravenna',
       detail: '~580 km · ~7 h driving · via the Brenner Pass (A22)<br>Through Austria & over the Alps into Emilia-Romagna' },
     { kind: 'timing', rows: [
       ['Early AM', 'Leave Oberschleißheim — full tank'],
       ['~2.5 h', 'Brenner Pass — Austrian + Italian motorway tolls'],
+      ['from 14:00', 'Check-in window opens at Casa Alighieri'],
       ['Afternoon', 'Arrive Ravenna (Adriatic coast)'],
     ] },
     { kind: 'checklist', items: [
@@ -418,6 +419,18 @@ days['2026-07-20'] = {
       'Passports/IDs; snacks, water, offline maps',
       'A/C check — it will be hot on the Adriatic',
     ] },
+
+    { kind: 'place', name: '🏠 Casa Alighieri (our apartment)',
+      detail: 'Via Beatrice Alighieri 20, 48121 Ravenna RA · Airbnb<br><strong>Check-in from 14:00 · Check-out by 10:00</strong> — ground floor',
+      maps: 'Via Beatrice Alighieri 20 48121 Ravenna' },
+    { kind: 'note', html: '<p style="background:#FF90E8;border:2px solid #000;border-radius:6px;padding:10px 14px;font-weight:600;">🔑 <strong>Getting the keys:</strong> arriving by car, stop briefly on the <strong>LEFT</strong> at the outside gate. The keys are in the <strong>lockbox attached to the gate</strong> — code <strong style="font-size:1.25em;letter-spacing:1px;">5656</strong>. The gate opens with the remote control or the small key.</p>' },
+    { kind: 'note', html: '<p>🚗 <strong>Parking:</strong> your private space is the one marked with an <strong>“X”</strong> in the photo — drive in and follow the arrows to the building entrance. The apartment is on the <strong>ground floor</strong>.<br>🌐 <strong>WiFi:</strong> network <strong>TP-Link_667A</strong> · password <strong>28579793</strong></p>' },
+    { kind: 'photo', src: '/trips/2026/germany/files/ravenna/street.jpg', alt: 'The street — Via Beatrice Alighieri, Ravenna' },
+    { kind: 'photo', src: '/trips/2026/germany/files/ravenna/gate.jpg', alt: 'The external gate to the parking and apartment' },
+    { kind: 'photo', src: '/trips/2026/germany/files/ravenna/lockbox.jpg', alt: 'The key lockbox on the gate — code 5656' },
+    { kind: 'photo', src: '/trips/2026/germany/files/ravenna/parking-x.jpg', alt: 'Park in the space marked X, then follow the arrows to the entrance' },
+    { kind: 'note', html: '<p>🗑️ <strong>Rubbish:</strong> bins are outside the building — sort plastic / glass / cardboard. The non-recyclable bins open with the <strong>magnetic card</strong> in the apartment (losing it costs €50).<br>⚠️ <strong>House rule:</strong> don’t leave any food or drinks in the apartment or fridge when you check out.</p>' },
+    { kind: 'note', html: '<p>📄 <strong><a href="/trips/2026/germany/files/ravenna/casa-alighieri-ravenna.pdf">Download the printable check-in sheet (PDF)</a></strong> &nbsp;·&nbsp; 🗺️ <a href="https://maps.app.goo.gl/k3yUiJGPAyshA6vY8" target="_blank">Open in Google Maps</a> &nbsp;·&nbsp; 📱 <a href="https://casabattisti.my.canva.site/alighieri" target="_blank">Host’s full instructions</a></p>' },
   ],
 };
 // Stay days in Ravenna (Jul 21–26): mark as "away" with the location.
