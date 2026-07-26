@@ -447,11 +447,11 @@ for (const iso of eachDate('2026-07-21', '2026-07-26')) {
   };
 }
 days['2026-07-27'] = {
-  title: 'Drive to Crema — Apartment da Irma in terrazza',
+  title: 'Drive to Crema — walking in Elio & Oliver’s footsteps',
   phase: 'summer',
   type: 'travel',
   icon: '🚗',
-  summary: 'Ravenna → Crema (Lombardy, ~290 km, ~3 h). Apartment, 2 nights.',
+  summary: 'Ravenna → Crema (Lombardy, ~290 km, ~3 h). Check in, then the Call Me By Your Name walking tour of the old town.',
   blocks: [
     { kind: 'place', name: '🚗 Ravenna → Crema',
       detail: '~290 km · ~3 h driving' },
@@ -464,15 +464,55 @@ days['2026-07-27'] = {
       'Already paid via Booking.com (€227.46 incl. cleaning fee) — no further payment due',
       'Free cancellation was until Jul 12',
     ] },
+
+    // --- Call Me By Your Name — Day 1: the town (afternoon/evening after check-in) ---
+    { kind: 'note', html: '<p>🎬 <strong>Call Me By Your Name — Day 1: Elio &amp; Oliver’s Crema.</strong> This is Phima’s day. The 2017 film was shot around Crema in the summer of 2016, and the old town looks virtually unchanged — almost every street here appears on screen. After check-in, walk into the historic centre.</p>' },
+    { kind: 'timing', rows: [
+      ['15:00', 'Check in, drop bags'],
+      ['15:45', 'Piazza del Duomo — the heart of the film: café terrace, war memorial, bicycle scenes, where Marzia &amp; Elio meet'],
+      ['16:45', 'Cathedral arch — the backdrop behind the café terrace in several scenes'],
+      ['17:00', 'Historic streets: Via XX Settembre · Via Cavour · Via Marazzi · Piazza Premoli'],
+      ['18:00', 'Porta Serio — the old town gate from the cycling scenes'],
+      ['18:30', 'Gelato break, then back to Piazza del Duomo for sunset, photos &amp; dinner'],
+    ] },
+    { kind: 'place', name: '⭐ Piazza del Duomo, Crema',
+      detail: 'The film’s emotional home. The war memorial, the café terrace and the cathedral arch all feature, and the bicycle rides start and end here. "So… what do people do around here?"',
+      maps: 'Piazza del Duomo Crema Italy' },
+    { kind: 'place', name: 'Porta Serio (town gate)',
+      detail: 'Historic gate on the edge of the old centre, seen in several of the cycling sequences.',
+      maps: 'Porta Serio Crema Italy' },
   ],
 };
 days['2026-07-28'] = {
-  title: 'Crema — Tuesday, July 28',
+  title: 'Crema — Call Me By Your Name countryside',
   phase: 'summer',
   type: 'plan',
-  summary: 'In Crema, Lombardy.',
+  summary: 'Film-location day: Villa Albergoni (Moscazzano), Moscazzano village, and Pandino — the “speak or die” piazza + the Visconti castle. A car day; the villages are 15–20 min apart.',
   blocks: [
-    { kind: 'note', html: '<p>📍 <strong>Crema, Lombardy</strong> — the town from <em>Call Me By Your Name</em>. Based at the apartment on Via Stazione. To be planned.</p>' },
+    { kind: 'note', html: '<p>🎬 <strong>Day 2: the countryside.</strong> The Perlman family villa and the film’s most famous scenes were shot in the villages just south of Crema. A short loop by car links them all — roughly 15–20 minutes between each.</p>' },
+    { kind: 'timing', rows: [
+      ['09:00', 'Villa Albergoni, Moscazzano — the Perlman house: Elio’s bedroom, garden, pool, outdoor lunches, the peach scene, the big conversations'],
+      ['10:30', 'Moscazzano village — the bar where Oliver plays cards; Marzia scenes'],
+      ['11:30', 'Pandino — Piazza Vittorio Emanuele II, the “is it better to speak or to die?” arcade'],
+      ['12:00', 'Castello Visconteo, Pandino — the moated medieval castle in the same sequence'],
+      ['13:00', 'Lunch in Pandino, or back in Crema'],
+      ['Afternoon', 'Crema — shopping, coffee, revisit favourite spots; one final sunset walk in Piazza del Duomo'],
+    ] },
+    { kind: 'alert', html: '<p>🏡 <strong>Villa Albergoni is private property.</strong> The house (“Villa Perlman” on screen) is not open to visitors — admire it from the road outside, and keep quiet for the residents.</p>' },
+    { kind: 'place', name: '⭐ Villa Albergoni, Moscazzano',
+      detail: 'The 17th-century villa that plays the Perlman family home — Elio’s bedroom, the garden, the pool, the outdoor lunches and the peach scene. Private property; view respectfully from outside.',
+      maps: 'Villa Albergoni Moscazzano Italy' },
+    { kind: 'place', name: 'Moscazzano village',
+      detail: 'The village bar where Oliver plays cards, plus several Marzia scenes.',
+      maps: 'Moscazzano CR Italy' },
+    { kind: 'place', name: '⭐ Piazza Vittorio Emanuele II, Pandino',
+      detail: 'Under these arcades Elio and Oliver have the famous “is it better to speak or to die?” conversation.',
+      maps: 'Piazza Vittorio Emanuele II Pandino Italy' },
+    { kind: 'place', name: 'Castello Visconteo, Pandino',
+      detail: 'The 14th-century moated Visconti castle, seen during the Pandino sequence.',
+      maps: 'Castello Visconteo Pandino Italy' },
+    { kind: 'note', html: '<p>🎬 <strong>Filming-location checklist:</strong> Piazza del Duomo ⭐⭐⭐⭐⭐ · Cathedral arch ⭐⭐⭐⭐ · Historic streets ⭐⭐⭐⭐ · Porta Serio ⭐⭐⭐ · Villa Albergoni ⭐⭐⭐⭐⭐ · Moscazzano ⭐⭐⭐ · Piazza Vittorio Emanuele, Pandino ⭐⭐⭐⭐⭐ · Castello Visconteo ⭐⭐⭐ · Grotte di Catullo ⭐⭐⭐⭐</p>' },
+    { kind: 'note', html: '<p>🚗 <strong>Optional excursion:</strong> the <a href="https://maps.google.com/?q=Grotte%20di%20Catullo%20Sirmione" target="_blank">Grotte di Catullo at Sirmione</a> (Lake Garda) — the Roman ruins visited near the end of the film — are ~1.5 h east. Rather than a same-day round trip, save it for the drive home tomorrow: Sirmione sits right on the A4, on the way to the Brenner.</p>' },
   ],
 };
 days['2026-07-29'] = {
@@ -489,6 +529,9 @@ days['2026-07-29'] = {
     ] },
     { kind: 'place', name: '🚗 Crema → Oberschleißheim',
       detail: '~525 km · ~5.5 h driving · via the Brenner or the Gotthard/San Bernardino' },
+    { kind: 'place', name: '🎬 Optional last stop: Grotte di Catullo, Sirmione',
+      detail: 'Lake Garda peninsula, right on the A4 toward the Brenner (~1 h from Crema). The Roman ruins visited near the end of Call Me By Your Name — a scenic leg-stretch and a fitting film farewell before the Alps.',
+      maps: 'Grotte di Catullo Sirmione Italy' },
     { kind: 'checklist', items: [
       'Settle tassa di soggiorno + return keys',
       'Full tank + tolls/vignette before the motorway',
