@@ -456,13 +456,15 @@ days['2026-07-27'] = {
     { kind: 'place', name: '🚗 Ravenna → Crema',
       detail: '~290 km · ~3 h driving' },
     { kind: 'place', name: '🏠 Apartment "da Irma in terrazza", Crema',
-      detail: 'Via Stazione 112, 1° piano, 26013 Crema, Italy<br>Check-in Mon Jul 27 (3:00–6:00 PM) · Check-out Wed Jul 29 (8:00–10:00 AM)<br>Two-Bedroom Apartment · 2 adults + 2 kids (13, 15) · 2 nights<br>Host: +39 347 768 6561 · Confirmation 6913995215<br>Someone will meet you there to hand over the keys',
+      detail: 'Via Stazione 112, 1° piano, 26013 Crema, Italy · GPS N 045° 21.976, E 09° 41.121<br>Check-in Mon Jul 27 (3:00–6:00 PM) · Check-out Wed Jul 29 (8:00–10:00 AM)<br>Two-Bedroom Apartment (private bathroom, terrace, kitchen) · 2 adults + 2 kids (13, 15) · 2 nights<br>Host: +39 347 768 6561 · Confirmation 6913.995.215 · PIN 9621<br>Someone meets you there to hand over the keys',
       maps: 'Via Stazione 112 Crema Italy' },
+    { kind: 'note', html: '<p style="background:#FF90E8;border:2px solid #000;border-radius:6px;padding:10px 14px;font-weight:600;">🅿️ <strong>No parking at the apartment.</strong> Plan a nearby public car park — easiest is by the train station (Stazione di Crema, ~400 m up Via Stazione), or street parking outside the centre. Don’t drive into the historic-centre <strong>ZTL</strong> (camera-enforced traffic zone — automatic fines).</p>' },
     { kind: 'checklist', items: [
-      'Confirmation 6913995215 + PIN handy; host meets you at check-in',
-      'Tassa di soggiorno: €2 per person per night, cash on arrival (max 3 nights)',
-      'Already paid via Booking.com (€227.46 incl. cleaning fee) — no further payment due',
-      'Free cancellation was until Jul 12',
+      'Message the host your arrival time in advance (+39 347 768 6561)',
+      'Confirmation 6913.995.215 · PIN 9621 — host meets you to hand over keys',
+      'Total €250.20 (incl. €36 cleaning); card charged €227.46 after Booking discounts — nothing due at the apartment',
+      'Non-refundable rate (free-cancellation window ended Jul 12); WiFi free in the rooms',
+      'Tourist tax (tassa di soggiorno), if charged: a few € per person per night, cash on arrival',
     ] },
 
     // --- Call Me By Your Name — Day 1: the town (afternoon/evening after check-in) ---
