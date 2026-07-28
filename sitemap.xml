@@ -631,4 +631,28 @@
     <lastmod>2026-05-31</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mittenheim.com/recipes/gorgonzola/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/gorgonzola/"/>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/de/recipes/gorgonzola/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/gorgonzola/"/>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/gorgonzola/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/gorgonzola/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/gorgonzola/"/>
+    <lastmod>2026-07-28</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>

@@ -500,6 +500,7 @@ days['2026-07-28'] = {
   summary: 'Film-location day: Villa Albergoni (Moscazzano), Moscazzano village, and Pandino — the “speak or die” piazza + the Visconti castle. A car day; the villages are 15–20 min apart.',
   blocks: [
     { kind: 'note', html: '<p>🎬 <strong>Day 2: the countryside.</strong> The Perlman family villa and the film’s most famous scenes were shot in the villages just south of Crema. A short loop by car links them all — roughly 15–20 minutes between each.</p>' },
+    { kind: 'note', html: '<p>🧀 <strong>Fresh on the blog:</strong> <a href="/recipes/gorgonzola/">Gorgonzola: A Love Letter from Crema</a> — written on Irma’s terrace this morning, starring a €3.84 tub of spoon Gorgonzola from the Famila down the road.</p>' },
     { kind: 'timing', rows: [
       ['09:00', 'Villa Albergoni, Moscazzano — the Perlman house: Elio’s bedroom, garden, pool, outdoor lunches, the peach scene, the big conversations'],
       ['10:30', 'Moscazzano village — the bar where Oliver plays cards; Marzia scenes'],
