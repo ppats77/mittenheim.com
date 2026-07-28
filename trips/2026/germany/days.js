@@ -383,7 +383,20 @@ days['2026-07-09'] = {
     { kind: 'place', name: '🍜 Markthalle Neun — Street Food Thursday', detail: 'Eisenbahnstr. 42/43, 10997 Berlin-Kreuzberg<br>Thursdays 17:00–22:00 · U1 Görlitzer Bahnhof', maps: 'Markthalle Neun Eisenbahnstrasse Berlin' },
     { kind: 'place', name: '🏛️ Reichstag dome', detail: 'Platz der Republik 1, 11011 Berlin<br>Free, booked slot + passports for all four · last entry 21:45<br>Booking: bundestag.de → Visit the dome', maps: 'Reichstag Platz der Republik 1 Berlin' },
     { kind: 'note', html: '<p>🚗 <strong>Car option for today:</strong> everything runs fine on BVG, but if anyone&rsquo;s feet are done after the East Side Gallery, the Treptower memorial is the one stop where driving genuinely helps (parking on Puschkinallee). Otherwise leave the car at the hotel. 🧸 Souvenir hunt: an <strong>Ampelmännchen</strong> (the East-Berlin traffic-light man) from one of the Ampelmann shops, and a proper <strong>Pfannkuchen</strong> from any bakery — what the rest of Germany calls a &ldquo;Berliner&rdquo;, Berliners call a Pfannkuchen. Optional splurge if the kids want maximum Ost: a <strong>Trabi Safari</strong> convoy ride near Checkpoint Charlie (you drive, they ride).</p>' },
+    { kind: 'note', html: '<p>📸 <strong>Evening add-on, as it happened:</strong> a golden-hour detour to <strong>Potsdam</strong> — strolling the Holländisches Viertel, the red-brick Dutch Quarter built in the 1730s for Dutch craftsmen invited by the Prussian kings.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/potsdam-mittelstrasse.jpg', alt: 'Phima and Natalia in golden evening light in the Holländisches Viertel, Potsdam' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/potsdam-hollaendisches-viertel.jpg', alt: 'The red-brick Dutch Quarter square in Potsdam, cafés out on the cobbles' },
     { kind: 'stories', title: 'Today&rsquo;s backstories', ids: ['checkpoint-charlie', 'east-side-gallery', 'treptower-ehrenmal', 'reichstag'] },
+  ],
+};
+days['2026-07-17'] = {
+  title: 'Plane-spotting at Munich Airport',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Evening on the grass by the MUC runway fence with friends — jets overhead.',
+  blocks: [
+    { kind: 'note', html: '<p>✈️ Evening picnic on the grass at the <strong>Munich Airport visitor hill</strong> with friends — everyone lined up along the runway fence, jets roaring over, Luca on shoulders for a better view.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/muc-planespotting.jpg', alt: 'Friends on the grass by the Munich Airport runway fence, Luca climbing for a better view' },
   ],
 };
 days['2026-07-10'] = {
@@ -438,6 +451,9 @@ days['2026-07-20'] = {
     { kind: 'photo', src: '/trips/2026/germany/files/ravenna/parking-x.jpg', alt: 'Park in the space marked X, then follow the arrows to the entrance' },
     { kind: 'note', html: '<p>🗑️ <strong>Rubbish:</strong> bins are outside the building — sort plastic / glass / cardboard. The non-recyclable bins open with the <strong>magnetic card</strong> in the apartment (losing it costs €50).<br>⚠️ <strong>House rule:</strong> don’t leave any food or drinks in the apartment or fridge when you check out.</p>' },
     { kind: 'note', html: '<p>📄 <strong><a href="/trips/2026/germany/files/ravenna/casa-alighieri-ravenna.pdf">Download the printable check-in sheet (PDF)</a></strong> &nbsp;·&nbsp; 🗺️ <a href="https://maps.app.goo.gl/k3yUiJGPAyshA6vY8" target="_blank">Open in Google Maps</a> &nbsp;·&nbsp; 📱 <a href="https://casabattisti.my.canva.site/alighieri" target="_blank">Host’s full instructions</a></p>' },
+    { kind: 'note', html: '<p>📸 <strong>As it happened:</strong> found the gate, cracked the lockbox, parked square on the “X” — then straight into the centro for a first-night dinner under the umbrellas.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/ravenna-parcheggio-x.jpg', alt: 'The car parked in the space marked X in the Casa Alighieri courtyard — exactly as instructed' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/ravenna-centro-dinner.jpg', alt: 'Phima and Luca at the first-night dinner table under the umbrellas in the centro' },
   ],
 };
 // Stay days in Ravenna (Jul 21–26): mark as "away" with the location.
@@ -453,6 +469,53 @@ for (const iso of eachDate('2026-07-21', '2026-07-26')) {
     ],
   };
 }
+// Overrides for Ravenna days we have photos & plans for (evidence via EXIF).
+days['2026-07-21'] = {
+  title: 'Ravenna — settling in',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'First full day in Ravenna: Byzantine mosaics town, long night walk through the centro storico.',
+  blocks: [
+    { kind: 'note', html: '<p>📍 <strong>Ravenna, Emilia-Romagna</strong> — three-time capital (Western Roman Empire, Ostrogoths, Byzantines) with the best early-Christian mosaics on Earth. First full day: settle in, wander late. The centro at night is all warm stone and cobbles.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/ravenna-night-walk.jpg', alt: 'The three walking a cobbled Ravenna lane at night' },
+  ],
+};
+days['2026-07-24'] = {
+  title: 'Beach day — Lido Adriano',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'To the Adriatic: umbrella rows, warm sea and golden hour at Lido Adriano, 15 min from the apartment.',
+  blocks: [
+    { kind: 'note', html: '<p>🏖️ <strong>Lido Adriano</strong> — Ravenna&rsquo;s beach, a straight 15-minute shot east of the apartment. Umbrella rows, warm shallow Adriatic, and a golden hour that goes on forever.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/lido-adriano-backseat.jpg', alt: 'Three in the back seat, beach-bound' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/lido-adriano-golden.jpg', alt: 'Natalia at golden hour among the closed umbrellas, Lido Adriano' },
+  ],
+};
+days['2026-07-25'] = {
+  title: 'Lido Adriano — pizza, spritz & a long evening',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Beach day two: pizza on the loungers, a sunset spritz, and the beach to ourselves into the evening.',
+  blocks: [
+    { kind: 'note', html: '<p>🍕 Beach day two at <strong>Lido Adriano</strong>, done properly: pizza straight on the loungers, a spritz as the sun dropped, and nobody in a hurry to leave.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/lido-adriano-pizza.jpg', alt: 'Phima and a slice of pizza on the beach' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/lido-adriano-hug.jpg', alt: 'Natalia and Luca hugging between the loungers' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/lido-adriano-luca.jpg', alt: 'Luca against the blue sky, cap on backwards' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/lido-adriano-spritz.jpg', alt: 'A golden-hour spritz on the beach' },
+  ],
+};
+days['2026-07-26'] = {
+  title: 'Last day in Ravenna — gelato & goodbye',
+  phase: 'summer',
+  type: 'plan',
+  summary: 'Final evening in the centro: gelato, a sunset walk, and a farewell look at the station.',
+  blocks: [
+    { kind: 'note', html: '<p>🍦 Last Ravenna evening: gelato in the centro, a sunset walk with arms around each other, and a farewell wander past the <em>stazione</em> before tomorrow&rsquo;s drive to Crema. Don&rsquo;t forget: empty the fridge tonight — house rule, no food or drinks left at checkout.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/ravenna-gelato.jpg', alt: 'Gelato hour — Luca mid-lick, Phima checking her camera' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/ravenna-sunset-walk.jpg', alt: 'The three walking into the sunset on a Ravenna street, arms around each other' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/ravenna-stazione.jpg', alt: 'Luca on the platform under the Ravenna station sign at dusk' },
+  ],
+};
 days['2026-07-27'] = {
   title: 'Drive to Crema — walking in Elio & Oliver’s footsteps',
   phase: 'summer',
@@ -498,6 +561,10 @@ days['2026-07-27'] = {
       detail: '<strong>🎬 In the film:</strong> the old gate the bikes roll through in the cycling sequences.<br><strong>🏛 History:</strong> one of Crema’s two surviving town gates, on the east road toward the Serio river. Crema spent 350 years (1449–1797) as the <em>westernmost outpost of the Republic of Venice</em> — a fortified island of Venetian territory inside Milanese Lombardy, which is why the old town feels subtly different from its neighbours.',
       maps: 'Porta Serio Crema Italy' },
     { kind: 'note', html: '<p>🍬 <strong>About those tortelli cremaschi:</strong> Crema’s signature pasta is stuffed with amaretti, candied citron, raisins and spices — a sweet-savoury combination that is a direct legacy of the Venetian spice trade that ran through the town for centuries. Nobody else in Italy makes them like this.</p>' },
+    { kind: 'note', html: '<p>📸 <strong>As it happened:</strong> the evening walk delivered — window-peeking through the closed shutters, the piazza by Porta Serio at golden hour, and the view through the arches off Piazza del Duomo at dusk.</p>' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/crema-shutter.jpg', alt: 'All three peering through a closed shop shutter in Crema — what does one do around here?' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/crema-porta-serio.jpg', alt: 'Crossing the cobbled piazza by Porta Serio at golden hour, bikes everywhere' },
+    { kind: 'photo', src: '/trips/2026/germany/photos/crema-arco-dusk.jpg', alt: 'Through the arches off Piazza del Duomo at dusk, Crema' },
   ],
 };
 days['2026-07-28'] = {
