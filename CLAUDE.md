@@ -116,13 +116,19 @@ Create `recipes/[slug]/index.html`. Use this exact structure:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[Recipe Title] - Mittenheim</title>
   <meta name="description" content="[Short description]">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="alternate" hreflang="en" href="/recipes/[slug]/">
-  <link rel="alternate" hreflang="de" href="/de/recipes/[slug]/">
-  <link rel="alternate" hreflang="bar" href="/by/recipes/[slug]/">
+  <link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/[slug]/">
+  <link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/[slug]/">
+  <link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/[slug]/">
+  <link rel="alternate" hreflang="x-default" href="https://mittenheim.com/recipes/[slug]/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://mittenheim.com/recipes/[slug]/">
+  <!-- plus og:/twitter: meta, Recipe (or Article) JSON-LD, and BreadcrumbList JSON-LD
+       (Home → Recipes → [Title]; DE/BY use Start → Rezepte) — copy from any recent recipe page -->
 </head>
 <body>
 
@@ -131,8 +137,9 @@ Create `recipes/[slug]/index.html`. Use this exact structure:
     <div class="container nav__inner">
       <a href="/" class="nav__logo">Mittenheim</a>
       <ul class="nav__links" id="nav-links">
-        <li><a href="/recipes.html">Recipes</a></li>
-        <li><a href="/about.html">About</a></li>
+        <li><a href="/recipes">Recipes</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/trips/">Trips</a></li>
         <li><a href="/de/recipes/[slug]/" class="nav__lang">DE</a></li>
         <li><a href="/by/recipes/[slug]/" class="nav__lang">BY</a></li>
       </ul>
@@ -185,7 +192,7 @@ Create `recipes/[slug]/index.html`. Use this exact structure:
       </ul>
     </div>
 
-    <p><a href="/recipes.html">&larr; Back to all recipes</a></p>
+    <p><a href="/recipes">&larr; Back to all recipes</a></p>
   </div>
 
   <!-- Footer -->
@@ -209,7 +216,7 @@ Create `de/recipes/[slug]/index.html` with translated content. Key differences:
 - Tags display in standard German (but `data-tags` stay in English)
 - Date format: `15. Februar 2026`
 - Footer: "Mit Liebe und guten Zutaten gemacht."
-- Back link: "← Zurück zu allen Rezepten" linking to `/de/recipes.html`
+- Back link: "← Zurück zu allen Rezepten" linking to `/de/recipes`
 - **Important**: Use proper Hochdeutsch only — no Bavarian dialect
 
 ### Step 2b: Create the Bavarian recipe page
@@ -221,7 +228,7 @@ Create `by/recipes/[slug]/index.html` with Bavarian dialect content. Key differe
 - Tags display in Bavarian (Abendessn, Oafach, Backn, Mittogessn, Früahstück, Feiertog, Getränke, etc.) but `data-tags` stay in English
 - Date format: `15. Februar 2026`
 - Footer: "Mit Liab und guade Zuatatn gmacht."
-- Back link: "← Zruck zu olle Rezepte" linking to `/by/recipes.html`
+- Back link: "← Zruck zu olle Rezepte" linking to `/by/recipes`
 - `og:locale` = `de_DE` (no standard Bavarian locale exists)
 - Full Bavarian dialect throughout: story, recipe box, instructions, notes, JSON-LD
 
@@ -293,6 +300,15 @@ GitHub Actions auto-deploys to Cloudflare Pages within ~30 seconds.
 | easy | Easy | Einfach | Oafach |
 | vegan | Vegan | Vegan | Vegan |
 | middle eastern | Middle Eastern | Nahöstlich | Nahöstlich |
+
+## SEO Conventions (do not regress)
+- **Extensionless internal links**: Cloudflare Pages serves pretty URLs — `/recipes.html` 308-redirects to `/recipes`. ALWAYS link internally to `/recipes`, `/about`, `/de/recipes`, `/de/about`, `/by/recipes`, `/by/about` (never `.html`). Recipe pages use directory URLs `/recipes/[slug]/` (trailing slash).
+- **Canonical + og:url**: absolute, extensionless (`https://mittenheim.com/recipes`, not `.../recipes.html`).
+- **hreflang**: absolute URLs (Google requirement), all three languages + `x-default` pointing to the EN version. Same cluster in `sitemap.xml` per `<url>` block.
+- **Robots meta**: every indexable page carries `<meta name="robots" content="index, follow, max-image-preview:large">`. Trip pages (`trips/`) and `cup/` are deliberately `noindex, nofollow` (family content / schedule data) — keep them that way and out of the sitemap.
+- **Structured data**: homepages have `WebSite` JSON-LD; recipe pages have `Recipe` (or `Article` for guides) + `BreadcrumbList` (Home → Recipes → Title; DE/BY: Start → Rezepte). Never add fake `aggregateRating`.
+- **Routing files**: `_redirects` 301s `www.mittenheim.com` and `mittenheim.pages.dev` to the apex; `404.html` is the branded not-found page; `robots.txt` points to the sitemap.
+- **Sitemap**: blog pages only (extensionless), each entry with 4-way hreflang (en/de/bar/x-default) + `lastmod`. Add new recipes in all three language variants.
 
 ## Infrastructure Details
 - **Cloudflare Account ID**: `c2d8b5aa95401b0321bd5160cecfed48`

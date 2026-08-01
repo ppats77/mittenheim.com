@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mittenheim - A Food Blog</title>
   <meta name="description" content="Mittenheim is a food blog sharing heartfelt recipes, stories, and the joy of home cooking.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="alternate" hreflang="en" href="/">
-  <link rel="alternate" hreflang="de" href="/de/">
-  <link rel="alternate" hreflang="bar" href="/by/">
+  <link rel="alternate" hreflang="en" href="https://mittenheim.com/">
+  <link rel="alternate" hreflang="de" href="https://mittenheim.com/de/">
+  <link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/">
+  <link rel="alternate" hreflang="x-default" href="https://mittenheim.com/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="canonical" href="https://mittenheim.com/">
   <meta property="og:type" content="website">
@@ -26,6 +28,16 @@
   <meta name="twitter:title" content="Mittenheim - A Food Blog">
   <meta name="twitter:description" content="Mittenheim is a food blog sharing heartfelt recipes, stories, and the joy of home cooking.">
   <meta name="twitter:image" content="https://mittenheim.com/images/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "name": "Mittenheim",
+    "url": "https://mittenheim.com/",
+    "inLanguage": "en",
+    "publisher": { "@type": "Person", "name": "Natalia" }
+  }
+  </script>
 </head>
 <body>
 
@@ -34,8 +46,8 @@
     <div class="container nav__inner">
       <a href="/" class="nav__logo">Mittenheim</a>
       <ul class="nav__links" id="nav-links">
-        <li><a href="/recipes.html">Recipes</a></li>
-        <li><a href="/about.html">About</a></li>
+        <li><a href="/recipes">Recipes</a></li>
+        <li><a href="/about">About</a></li>
         <li><a href="/trips/">Trips</a></li>
         <li><a href="/de/" class="nav__lang">DE</a></li>
         <li><a href="/by/" class="nav__lang">BY</a></li>
@@ -61,7 +73,7 @@
     <div class="container">
       <div class="section-header">
         <h2>Latest Recipes</h2>
-        <a href="/recipes.html">View all &rarr;</a>
+        <a href="/recipes">View all &rarr;</a>
       </div>
 
       <div class="recipes-grid" id="latest-recipes">
