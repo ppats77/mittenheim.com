@@ -286,6 +286,24 @@ a.card:hover .card__title {
   color: var(--black);
 }
 
+/* Inline reply badge inside a story (the "Ok" bubbles) */
+.ok {
+  display: inline-block;
+  padding: 1px 10px;
+  margin: 0 2px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  border: 1.5px solid var(--black);
+  background: var(--pink);
+  color: var(--black);
+  box-shadow: 2px 2px 0px var(--black);
+  vertical-align: middle;
+}
+
 /* --- Filter Bar --- */
 .filter-bar {
   display: flex;
