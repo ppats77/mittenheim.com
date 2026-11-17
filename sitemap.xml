@@ -739,4 +739,31 @@
     <lastmod>2026-07-28</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mittenheim.com/recipes/tefteli/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mittenheim.com/recipes/tefteli/"/>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/de/recipes/tefteli/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mittenheim.com/recipes/tefteli/"/>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mittenheim.com/by/recipes/tefteli/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mittenheim.com/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mittenheim.com/de/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="bar" href="https://mittenheim.com/by/recipes/tefteli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mittenheim.com/recipes/tefteli/"/>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
